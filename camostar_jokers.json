@@ -1,0 +1,16 @@
+{
+    "id": "SMSN",
+    "name": "Berries And Honey",
+    "author": ["Camostar34"],
+    "description": "Self Insert mod with an overall picnic-core theme",
+    "prefix": "smsn",
+    "main_file": "main.lua",
+    "priority": "99",
+    "badge_color": "2596be",
+    "badge_text_color": "2596be",
+    "display_name": "Berries And Honey",
+    "version": "1.0.0",
+    "dependecies": [
+	"Steamodded (>=1.*)"
+    ]
+}
