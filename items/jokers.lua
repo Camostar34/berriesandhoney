@@ -571,10 +571,10 @@ SMODS.Joker {
     name = "Mint Jams",
 
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
+    pos = { x = 3, y = 3 },
 
-    config = { extra = {odds = 2 } },
-    rarity = 1,
+    config = { extra = {odds = 4 } },
+    rarity = 2,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
