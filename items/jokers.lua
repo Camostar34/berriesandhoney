@@ -657,14 +657,34 @@ SMODS.Joker {
     }
     end
 
-    if context.mod_probability and not context.blueprint then
-    if SMODS.has_enhancement(context.trigger_obj, "m_glass") and SMODS.has_enhancement(context.trigger_obj, "m_gold") then 
-        return { numerator = context.numerator * 2 }
-    end
+    if context.mod_probability and context.trigger_obj and not context.blueprint then
+        if SMODS.has_enhancement(context.trigger_obj, "m_glass") and SMODS.has_enhancement(context.trigger_obj, "m_gold") then
+            return { numerator = context.numerator * 2 }
+        end
     end
 
     end,
 }
+
+-- god damnit why is this so hard
+SMODS.Enhancement:take_ownership("gold",
+    {
+        loc_vars = function(self, info_queue, card)
+            if next(SMODS.find_card("j_smsn_honeycombtoffee")) then
+                local fake_glass = G.P_CENTERS.m_glass:create_fake_card()
+                local v = {}
+                v[1] = fake_glass.ability.Xmult
+                local num, den = SMODS.get_probability_vars(card, 1, fake_glass.ability.extra, "glass")
+                v[2] = num
+                v[3] = den
+                info_queue[#info_queue + 1] = { set = "Enhanced", key = "m_glass", vars = v, config = v }
+            end
+            local dollar = card.config.h_dollars or card.config.center.config.h_dollars
+            return { vars = {SMODS.signed_dollars(dollar)}, key = "m_gold" }
+        end
+    },
+    true
+)
 
 SMODS.Joker {
     key = "hothoney",
