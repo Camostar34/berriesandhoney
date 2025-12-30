@@ -1,46 +1,7 @@
-SMODS.Joker { --Samson
+SMODS.Joker {
 
-    key = "microplastics",
-    name = "Full of Microplastics",
-
-    atlas = "crossmodjokers",
-    pos = { x = 0, y = 0 },
-    pools = {
-        ["silicon"] = true,
-    },
-    config = { extra = { } },
-    rarity = 2,
-    unlocked = true,
-    discovered = true,
-    cost = 5,
-    blueprint_compat = false,
-    eternal_compat = true,
-    perishable_compat = true,
-    demicolon_compat = true,
-
-    loc_vars = function(self, info_queue, card)
-        return { vars = {} }
-    end,
-
-    calculate = function(self, card, context)
-
-        if context.setting_blind and G.GAME.blind.boss then
-            
-
-            for i = 1, G.nflame_get_silicontotal(context) do
-            SMODS.add_card({set = "Berry", area = G.consumeables})
-            end
-
-        end
-       
-
-    end,
-}
-
-SMODS.Joker { 
-
-    key = "rabbick",
-    name = "Rabbick Sappy",
+    key = "thegoteam",
+    name = "Thunder, Lightning, Strike!!",
 
     atlas = "crossmodjokers",
     pos = { x = 0, y = 0 },
@@ -64,11 +25,64 @@ SMODS.Joker {
     end,
 }
 
+SMODS.Joker { 
+
+    key = "kuchinohanabi",
+    name = "Kuchinohanabi",
+
+    atlas = "crossmodjokers",
+    pos = { x = 0, y = 0 },
+    config = { extra = { } },
+    rarity = 2,
+    unlocked = true,
+    discovered = true,
+    cost = 5,
+    blueprint_compat = false,
+    eternal_compat = true,
+    perishable_compat = true,
+    demicolon_compat = true,
+
+    loc_vars = function(self, info_queue, card)
+        return { vars = {} }
+    end,
+
+    calculate = function(self, card, context)
+       
+
+    end,
+}
 
 SMODS.Joker { 
 
-    key = "yappy",
-    name = "Evil Sappy (Yappy)",
+    key = "gushers",
+    name = "Gushers",
+
+    atlas = "crossmodjokers",
+    pos = { x = 0, y = 0 },
+    config = { extra = { } },
+    rarity = 2,
+    unlocked = true,
+    discovered = true,
+    cost = 5,
+    blueprint_compat = false,
+    eternal_compat = true,
+    perishable_compat = true,
+    demicolon_compat = true,
+
+    loc_vars = function(self, info_queue, card)
+        return { vars = {} }
+    end,
+
+    calculate = function(self, card, context)
+       
+
+    end,
+}
+
+SMODS.Joker { 
+
+    key = "thunderstorm",
+    name = "Storm",
 
     atlas = "crossmodjokers",
     pos = { x = 0, y = 0 },

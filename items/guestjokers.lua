@@ -2,41 +2,12 @@ to_big = to_big or function(x) return x end
 
 -- GUEST JOKERS 
 
-
-
 SMODS.Joker {
-    key = "peapod",
-    name = "Pea Pod",
+    key = "sappy",
+    name = "Sappy",
 
     atlas = "jokers",
-    pos = { x = 2, y = 0 },
-
-    config = { extra = { chip_bonus = 15, stolen_goods = 0, chips_to_give = 0,} },
-    rarity = 1,
-    cost = 3,
-    blueprint_compat = false,
-       unlocked = true,
-    discovered = true,
-    eternal_compat = true,
-    perishable_compat = true,
-    demicolon_compat = true,
-
-    loc_vars = function(self, info_queue, card)
-        return { vars = {card.ability.extra.chip_bonus, card.ability.extra.chips_to_give} }
-    end,
-
-    calculate = function(self, card, context)
-       
-
-    end,
-}
-
-SMODS.Joker {
-    key = "cass",
-    name = "Texas Hold 'Em",
-
-    atlas = "jokers",
-    pos = { x = 0, y = 0 },
+    pos = { x = 2, y = 4 },
 
     config = { extra = { evil_xmult = 0, addxmult = 0.5, } },
     rarity = 1,
@@ -58,13 +29,12 @@ SMODS.Joker {
     end,
 }
 
-
 SMODS.Joker {
     key = "puddinhg",
     name = "Puddinhg",
 
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
+    pos = { x = 7, y = 1 },
 
     config = { extra = { payout = 3,} },
     rarity = 1,
@@ -92,7 +62,7 @@ SMODS.Joker {
     name = "Gordon",
 
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
+    pos = { x = 4, y = 0 },
 
     config = { extra = { multbonus = 2,} },
     rarity = 1,
@@ -147,11 +117,38 @@ end,
 
 
 SMODS.Joker {
+    key = "peapod",
+    name = "Pea Pod",
+
+    atlas = "jokers",
+    pos = { x = 2, y = 0 },
+
+    config = { extra = { chip_bonus = 15, stolen_goods = 0, chips_to_give = 0,} },
+    rarity = 1,
+    cost = 3,
+    blueprint_compat = false,
+       unlocked = true,
+    discovered = true,
+    eternal_compat = true,
+    perishable_compat = true,
+    demicolon_compat = true,
+
+    loc_vars = function(self, info_queue, card)
+        return { vars = {card.ability.extra.chip_bonus, card.ability.extra.chips_to_give} }
+    end,
+
+    calculate = function(self, card, context)
+       
+
+    end,
+}
+
+SMODS.Joker {
     key = "astro",
     name = "Astro",
 
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
+    pos = { x = 7, y = 0 },
 
     config = { extra = { } },
     rarity = 1,
@@ -213,23 +210,21 @@ SMODS.Joker{
     discovered = true, --whether or not it starts discovered
     blueprint_compat = true, --can it be blueprinted/brainstormed/other
     eternal_compat = true, --can it be eternal
-    pos = {x =0, y = 0},
+    pos = {x =3, y = 0},
     config = { extra = {
         AddMult = 0,
         tally = 0,
-        bonus = 2
+        bonus = 2,
     }
 },
-    loc_vars = function(self,info_queue,center)
-        return {vars = {center.ability.extra.AddMult}}
+    loc_vars = function(self,info_queue,card)
+        return {vars = {card.ability.extra.bonus, card.ability.extra.AddMult}}
     end,
     calculate = function(self,card,context)
         if context.joker_main then
             return {
                 card = card,
-                mult_mod = card.ability.extra.AddMult,
-                message = '+' .. card.ability.extra.AddMult .. ' Mult',
-                colour = G.C.MULT
+                mult = card.ability.extra.AddMult
             }
         end
 
@@ -295,7 +290,7 @@ SMODS.Joker {
     name = "Angel",
 
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
+    pos = { x = 6, y = 0 },
 
     config = { extra = { evil_xmult = 0, addxmult = 0.5, } },
     rarity = 1,
@@ -343,3 +338,4 @@ SMODS.Joker {
 
     end,
 }
+

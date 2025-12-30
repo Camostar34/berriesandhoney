@@ -153,7 +153,7 @@ return {
                                 name = "Hercule",
                                 text = {
                                     "Always draws {C:attention}#1#{} extra",
-                                    "card when you {C:blue}Play{} or {C:red}Discard{}",
+                                    "cards when you {C:blue}Play{} or {C:red}Discard{}",
                                 }
                             },
 
@@ -161,7 +161,7 @@ return {
                                 name = "Emmy Bunderbatch",
                                 text = {
                                     "Gains {C:red}+#1#{} Mult and {C:blue}+#2#{} Chips",
-                                    "when a {C:dark_edition}Berry{} card is used",
+                                    "when a {C:dark_edition}Berry Card{} is used",
                                     "{C:inactive}(Currently{} {C:red}+#3#{} {C:inactive}Mult and {C:blue}+#4#{} {C:inactive}Chips){}",
                                 }
                             },
@@ -217,16 +217,18 @@ return {
                                 }
                             },
                             
-                            j_smsn_fruitjelly = {
-                                name = "Gusher Fruit Snacks",
+
+                              j_smsn_pepperjelly = {
+                                name = "Ghost Pepper Jelly",
                                 text = {
-                                    "When you sell a ",
-                                    "scoring {C:dark_edition}Berry Card{}, store {C:attention}x#1#{} its values",
-                                    "Effect decreases when a hand is played",
-                                    "{C:inactive,s:0.8}(Currently {C:blue}+#2#{C:inactive,s:0.8} Chips, {C:red}+#3#{C:inactive,s:0.8} Mult, and {X:mult,C:white}x#4#{C:inactive,s:0.8} Mult)"
+                                    "{C:dark_edition}Berry Cards{} held in your consumables",
+                                    "give {X:mult,C:white}x#1#{} Mult",
+                                    "{C:green}#2# in #3#{} chance to destroy",
+                                    "a berry when activated"
                                 }
                             },
-                              j_smsn_pepperjelly = {
+
+                                j_smsn_spooky= {
                                 name = "Ghost Pepper Jelly",
                                 text = {
                                     "Sell this card to create",
@@ -254,26 +256,27 @@ return {
                             j_smsn_uncommonrambley = {
                                 name = "Rambleberry RFRSHR",
                                 text = {
-                                    "Sell this card to create {C:attention}#1#{}",
-                                    "{C:dark_edition}Negative Rambleberries{}",
+                                    "Click to pay {C:money}$5{} and create",
+                                    "a {C:dark_edition}Rambleberry{}.",
+                                    "{C:inactive}Usable once per Ante; refills each Ante.{}",
                                 }
                             },
 
                              j_smsn_rarerambley= {
                                 name = "Retro Rambley",
                                 text = {
-                                    "{C:green}#1# in #2#{} chance to create",
-                                    "a {C:dark_edition}Rambleberry{} when a",
-                                    "{C:attention}booster pack{} is opened",
+                                    "Creates a {C:dark_edition}Rambleberry{}",
+                                    "when a {C:attention}booster pack{}",
+                                    "is opened",
                                 }
                             },
 
                              j_smsn_legendaryrambley= {
                                 name = "Rambley The Raccoon",
                                 text = {
-                                    "Copies effects of all {C:attention}Rambley{}",
-                                    "Jokers from this mod",
-                                    "Balances {C:purple}#1#%{} of Mult and Chips",
+                                    "Has the combined effects of all",
+                                    "{C:purple}Rambley{} Jokers from this mod",
+                                    "Balances {C:purple}#1#%{} of {C:blue}Chips{} and {C:red}Mult{}",
                                     "Increases by {C:attention}#2#%{} when a {C:dark_edition}Rambleberry{} is used",
                                 }
                             },
@@ -303,20 +306,11 @@ return {
                                 }
                             },
 
-                            j_smsn_fluffernutter = {
-                                name = "Fluffernutter Sandwich",
-                                text = {
-                                    "Every {C:attention}held in hand{}",
-                                    "card permamently gains {C:red}+1{} Mult",
-                                    "Eaten if score catches on fire",
-                                }
-                            },
-
                              j_smsn_marmalade = {
                                 name = "Marmalade Sandwich",
                                 text = {
-                                    "{C:money}$#1#{} for every {C:diamonds}Diamond{} suit",
-                                    "{C:attention}held in hand{} at the end of a round",
+                                    "{C:diamonds}Diamond{} cards held in hand",
+                                    "permamently gain {C:red}+#1#{} Mult",
                                     "Eaten if a played hand leaves you",
                                     "with no {C:diamonds}Diamond{} cards in hand",
                                 }
@@ -341,7 +335,8 @@ return {
                              j_smsn_mycom = {
                                 name = "MYCOM MAIM MARIONETTE",
                                 text = {
-                                    "{X:mult,C:white}x#1#{} per {C:attention}consecutive{} hand played",
+                                    "Gains {X:mult,C:white}x#1#{} when a hand is played",
+                                    "containing an {C:attention}unscored{} card",
                                     "{C:attention}Resets{} on discard",
                                     "{C:inactive,s:0.8}(Currently {X:mult,C:white}x#2#{C:inactive,s:0.8} Mult)",
                                 }
@@ -372,6 +367,81 @@ return {
                                 }
                             },
 
+                             j_smsn_allberries = {
+                                name = "Oops! All Berries",
+                                text = {
+                                    "The shop {C:attention}only{} contains",
+                                    "{C:dark_edition}Berry Cards{} and {C:dark_edition}Picnic Packs{}",
+                                    "{C:inactive,s:0.8}(Have we come full circle?)",
+                                }
+                            },
+
+                                j_smsn_airfreshener = {
+                                name = "Air Freshener",
+                                text = {
+                                    "Create #1# {C:dark_edition}Berry Cards{}",
+                                    " when {C:attention}Small Blind{}",
+                                    "is selected",
+                                    "{C:inactive,s:0.8}(Must have room)",
+                                }
+                            },
+
+                            j_smsn_dieting = {
+                                name = "Dieting Joker",
+                                text = {
+                                    "{C:blue}+#1#{} Chips per",
+                                    "per item in your",
+                                    "consumable area,"
+                                }
+                            },
+
+
+                              j_smsn_weightlossshake = {
+                                name = "Weight Loss Shake",
+                                text = {
+                                    "{C:green}+#1#{} to all",
+                                    "listed proabilities",
+                                    "{C:red}-1{} when a {C:attention}consumable{}",
+                                    "is used"
+                                }
+                            },
+
+                            j_smsn_memory = {
+                                name = "Apprenticeship  Memory",
+                                text = {
+                                    "Create a {C:dark_edition}Negative Berry Card",
+                                    "when {C:attention}#1#{} or more face",
+                                    "cards are discarded"
+                                }
+                            },
+
+                             j_smsn_twistedgarden = {
+                                name = "Twisted  Garden",
+                                text = {
+                                    "All {C:dark_edition}Berry Cards{}",
+                                    "added to your consumables",
+                                    "become {C:dark_edition}Negative{}"
+                                }
+                            },
+
+                            j_smsn_bearstack = {
+                                name = "Bear Stack",
+                                text = {
+                                    "Retrigger all cards",
+                                    "if played hand contains",
+                                    "a {C:attention}Three of a Kind{}"
+                                }
+                            },
+
+                            j_smsn_sticker = {
+                                name = "Scented Sticker",
+                                text = {
+                                    "Retrigger a played card with a {C:attention}seal{}",
+                                    "per the amount of",
+                                    "{C:dark_edition}Berry Cards{} you own"
+                                }
+                            },
+
 
                             -- CROSSMOD JOKERS
 
@@ -382,6 +452,57 @@ return {
                                     "{C:nflame_silicon}Silicon{} card owned",
                                     "when a {C:attention}Boss Blind{} is selected",
                                     "{C:inactive,s:0.8}(Does not have to have room)",
+                                }
+                            },
+                                    j_smsn_rabbick = {
+                                name = "Rabbick Sappy",
+                                text = {
+                                    "Retrigger a {C:attention}Rouxles Karrd{}",
+                                    "of a {C:clubs}Clubs{} suit",
+                                }
+                            },
+
+                                     j_smsn_yappy = {
+                                name = "Evil Sappy (Yappy)",
+                                text = {
+                                    "",
+                                }
+                            },
+
+                            j_smsn_thegoteam = {
+                                name = "Thunder, Lightning, Strike!!",
+                                text = {
+                                    "{C:red}+#1#{} Mult and {C:money}$#2#{}",
+                                    "if hand contains a {C:attention}Flash{}",
+                                    "and a {C:attention}Queen{}"
+                                }
+                            },
+
+                              j_smsn_kuchinohanabi = {
+                                name = "Kuchinohanabi",
+                                text = {
+                                    "Earn {C:money}$#1#{} if {C:attention}Flash{}",
+                                    "was the only hand type",
+                                    "played this round"
+                                }
+                            },
+
+                            j_smsn_gushers = {
+                                name = "Gushers",
+                                text = {
+                                    "Create a {C:dark_edition}Berry Card{}",
+                                    "when a {C:attention}Flash{}",
+                                    "is played",
+                                    "Consumed in #1# rounds",
+                                }
+                            },
+
+                            j_smsn_thunderstorm = {
+                                name = "Stormcloud",
+                                text = {
+                                    "{X:chips,C:white}X#1#{} on the",
+                                    "first {C:attention}Flash{}",
+                                    "of the round",
                                 }
                             },
 
@@ -415,20 +536,6 @@ return {
                             },
                         },
 
-                         j_smsn_cass = {
-                                name = "Texas Hold 'Em",
-                                text = {
-                                    {
-                                    "Steals a random {C:attention}Consumable{} at the end of round",
-                                    "Gains {C:blue}+#1#{} Chips for every taken Consumable",
-                                    "{C:inactive}(Currently{} {C:blue}+#2#{} {C:inactive}Chips){}",
-                                    },
-                                    {
-                                        "{C:blue,s:0.7,E:2}Character by : cassknows{}"
-                                    }
-                            },
-                        },
-
                          j_smsn_shadow = {
                                 name = "Shadow Wizard",
                                 text = {
@@ -444,7 +551,11 @@ return {
                                 name = "Rose",
                                 text = {
                                     {
-                                    "",
+                                    "{C:red}Debuffs{} all face cards",
+                                    "{C:red}+#1#{} Mult for every face",
+                                    "card in your {C:attention}full deck{}",
+                                    "{C:inactive,s:0.8}(Currently {C:red}+#2#{C:inactive,s:0.8} Mult)",
+                                    
                                     },
                             },
                         },
@@ -506,6 +617,20 @@ return {
                                     },
                                     {
                                         "{C:blue,s:0.7,E:2}Character by : shinysilvershins{}"
+                                    }
+                            },
+                        },
+
+                         j_smsn_sappy = {
+                                name = "Sappy",
+                                text = {
+                                    {
+                                    'Draw an extra card per',
+                                    '{C:diamonds}Diamonds{} or {C:money}Gold Seals{}',
+                                    "scored the previous hand"
+                                    },
+                                    {
+                                        "{C:blue,s:0.7,E:2}Character by : {}"
                                     }
                             },
                         },

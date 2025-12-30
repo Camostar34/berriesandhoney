@@ -27,6 +27,6 @@ So far, there are crossmod jokers with:
 - Neonflames
 
 ### Credits
-- candycaneanniahlator(etherware2) - Code Help, Feedback, Playtesting, and being a wonderful slime friend 
+- candycaneanniahlator(etherware2) - Honeycomb Toffee's effect, general Code Help, Feedback, Playtesting, and being a wonderful slime friend 
 - Astro - Feedback and Playtesting 
 - Offical Balatro Server for coding help

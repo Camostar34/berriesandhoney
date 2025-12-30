@@ -23,6 +23,7 @@ end
 
 local crossmodfiles = {
    "nflame",
+   "starspace",
 }
 
 for i, v in pairs(files) do
