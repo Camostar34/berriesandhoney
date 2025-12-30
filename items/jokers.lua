@@ -877,7 +877,7 @@ SMODS.Joker {
 SMODS.Enhancement:take_ownership("gold",
     {
         loc_vars = function(self, info_queue, card)
-            if next(SMODS.find_card("j_smsn_honeycombtoffee")) then
+            if next(SMODS.find_card("j_smsn_honeycombtoffee")) and not card.fake_card then
                 local fake_glass = G.P_CENTERS.m_glass:create_fake_card()
                 local v = {}
                 v[1] = fake_glass.ability.Xmult
@@ -885,8 +885,12 @@ SMODS.Enhancement:take_ownership("gold",
                 v[2] = num
                 v[3] = den
                 info_queue[#info_queue + 1] = { set = "Enhanced", key = "m_glass", vars = v, config = v }
+                -- info_queue[#info_queue + 1] = G.P_CENTERS.m_glass
             end
-            local dollar = card.config.h_dollars or card.config.center.config.h_dollars
+            local dollar = self.config.h_dollars
+            if card and card.config then
+                dollar = card.config.h_dollars or dollar
+            end
             return { vars = {SMODS.signed_dollars(dollar)}, key = "m_gold" }
         end
     },
