@@ -2,7 +2,7 @@ SMODS.ConsumableType {
     key = "Berry",
     primary_colour = HEX("A5477B"),
     secondary_colour = HEX("CF70A5"),
-    shop_rate = 1.0,
+    shop_rate = 0,
     can_stack = false,
     can_divide = false,
     select_card = 'consumeables',
@@ -338,6 +338,13 @@ SMODS.Consumable {
   keep_on_use = function(self, card)
     return true
   end,
+
+
+
+in_pool = function(self, args)
+    return false
+end,
+
 
   calculate = function(self, card, context)
     if context.initial_scoring_step and card.ability.extra.in_use then

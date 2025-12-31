@@ -27,6 +27,10 @@ SMODS.Joker {
        
 
     end,
+    credits = {
+		character = "Candycanearter07",              -- you can also leave out fields if you wish
+        idea = "Candycanearter07"
+	}
 }
 
 SMODS.Joker {
@@ -54,6 +58,9 @@ SMODS.Joker {
     calc_dollar_bonus = function(self, card)
         return G.GAME.strawberries_used * card.ability.extra.payout or nil
     end,
+    credits = {
+		character = "puddinhgexists"              -- you can also leave out fields if you wish
+	}
        
 }
 
@@ -113,6 +120,9 @@ SMODS.Joker {
         
     
 end,
+ credits = {
+		character = "Kidma64 / Shinysilversins"              -- you can also leave out fields if you wish
+	}
 }
 
 
@@ -141,6 +151,9 @@ SMODS.Joker {
        
 
     end,
+     credits = {
+		character = "Maridaka"              -- you can also leave out fields if you wish
+	}
 }
 
 SMODS.Joker {
@@ -168,6 +181,10 @@ SMODS.Joker {
        
 
     end,
+     credits = {
+		character = "Astro",              -- you can also leave out fields if you wish
+        idea = "Astro"
+	}
 }
 
 
@@ -196,6 +213,10 @@ SMODS.Joker {
        
 
     end,
+     credits = {
+		art = "octaandfnaf",              -- you can also leave out fields if you wish
+        idea = "octaandfnaf"
+	}
 }
 
 
@@ -283,6 +304,9 @@ SMODS.Joker {
        
 
     end,
+     credits = {
+		character = "Reaver of Souls"              -- you can also leave out fields if you wish
+	}
 }
 
 SMODS.Joker {
@@ -310,6 +334,9 @@ SMODS.Joker {
        
 
     end,
+     credits = {
+		character = "FunnyToonDerg"              -- you can also leave out fields if you wish
+	}
 }
 
 SMODS.Joker {
@@ -337,5 +364,8 @@ SMODS.Joker {
        
 
     end,
+     credits = {
+		character = "Reaver of Souls"              
+	}
 }
 

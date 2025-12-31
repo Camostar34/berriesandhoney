@@ -6,163 +6,222 @@ SMODS.Atlas {
     py = 95
 }
 
-CardSleeves.Sleeve({ -- Covetous Sleeve
-    name = "Sticky Sleeve",
-    key = "stickysleeve",
-    loc_txt = {
-        name = "Sticky Sleeve",
-        text = {
-        "Start with a",
-        "{C:attention,T:j_picubed_shoppingtrolley}#1#{},",
-        "{C:attention,T:j_picubed_preorderbonus}#2#{},",
-        "and {C:attention,T:v_seed_money}#3#{}",
-        },
-    },
-    pos = { x = 0, y = 0 },
-    atlas = "smsnsleeve",
-    unlocked = true,
-    loc_vars = function(self)
-        local key, vars
-        if self.get_current_deck_key() == "b_smsn_sticky" then
-            key = self.key .. "_alt"
-            vars = { 
-                localize { type = 'name_text', set = 'Joker', key = 'j_picubed_shoppingtrolley' },
-                localize { type = 'name_text', set = 'Joker', key = 'j_picubed_preorderbonus' },
-                localize { type = 'name_text', set = 'Voucher', key = 'v_seed_money' },
-                localize { type = 'name_text', set = 'Voucher', key = 'v_money_tree' },
-            }
-        else
-            key = self.key
-            vars = { 
-                localize { type = 'name_text', set = 'Joker', key = 'j_picubed_shoppingtrolley' },
-                localize { type = 'name_text', set = 'Joker', key = 'j_picubed_preorderbonus' },
-                localize { type = 'name_text', set = 'Voucher', key = 'v_seed_money' },
-            }
-        end
-        return { key = key, vars = vars }
-    end,
-    apply = function(self)
-        if self.get_current_deck_key() == "b_smsn_sticky" then
-            G.E_MANAGER:add_event(Event({
-                func = function()
-                    G.GAME.used_vouchers['v_money_tree'] = true
-                    G.GAME.interest_cap = 100
-                    SMODS.add_card({set = 'Joker', area = G.jokers, skip_materialize = true, key = "j_picubed_shoppingtrolley", no_edition = true})
-                    SMODS.add_card({set = 'Joker', area = G.jokers, skip_materialize = true, key = "j_picubed_shoppingtrolley", no_edition = true})
-                    return true 
-                end
-            }))
-        else
-            G.E_MANAGER:add_event(Event({
-                func = function()
-                    G.GAME.used_vouchers['v_seed_money'] = true
-                    G.GAME.interest_cap = 50
-                    SMODS.add_card({set = 'Joker', area = G.jokers, skip_materialize = true, key = "j_picubed_shoppingtrolley", no_edition = true})
-                    SMODS.add_card({set = 'Joker', area = G.jokers, skip_materialize = true, key = "j_picubed_preorderbonus", no_edition = true})
-                    return true 
-                end
-            }))
-        end
+CardSleeves.Sleeve({
+  name = "Sticky Sleeve",
+  key  = "stickysleeve",
+  pos  = { x = 0, y = 0 },
+  atlas = "smsnsleeve",
+  unlocked = true,
+
+  config = {
+    extrahandsize = -1,  -- -1 hand size
+    penalty       = 1,   -- 1$ penalty
+  },
+
+  loc_vars = function(self)
+    local key
+    if self.get_current_deck_key() == "b_smsn_sticky" then
+      key = self.key .. "_alt"
+    else
+      key = self.key
     end
+    return {
+      key  = key,
+      vars = { self.config.penalty, self.config.extrahandsize },
+    }
+  end,
+
+  apply = function(self)
+    if self.get_current_deck_key() == "b_smsn_sticky" then
+      G.E_MANAGER:add_event(Event({
+        func = function()
+          SMODS.add_card{
+            set             = 'Joker',
+            area            = G.jokers,
+            skip_materialize = true,
+            key             = "j_smsn_samson",
+            no_edition      = true,
+          }
+          return true
+        end
+      }))
+    else
+      if G and G.GAME and G.GAME.starting_params then
+        G.GAME.starting_params.hand_size =
+          (G.GAME.starting_params.hand_size or 0) + (self.config.extrahandsize or 0)
+      end
+
+      G.E_MANAGER:add_event(Event({
+        func = function()
+          SMODS.add_card{
+            set             = 'Joker',
+            area            = G.jokers,
+            skip_materialize = true,
+            key             = "j_smsn_beehive",
+            no_edition      = true,
+          }
+          SMODS.add_card{
+            set             = 'Joker',
+            area            = G.jokers,
+            skip_materialize = true,
+            key             = "j_smsn_honeyjar",
+            no_edition      = true,
+          }
+          return true
+        end
+      }))
+    end
+  end,
+
+  calculate = function(self, back, context)
+    if context.pre_discard
+       and #G.hand.highlighted >= 3
+       and self.get_current_deck_key() ~= "b_smsn_sticky" then
+      return {
+        dollars = -(self.config.penalty or 0),
+      }
+    end
+
+    if context.end_of_round
+       and context.beat_boss
+       and self.get_current_deck_key() == "b_smsn_sticky" then
+
+      local honeyjar = SMODS.find_card("j_smsn_honeyjar", true)
+      if honeyjar then
+        for _, v in pairs(honeyjar) do
+           v.ability.extra.odds = math.ceil(v.ability.extra.odds / 2)
+          return {
+            card = honeyjar,
+            message = "Odds Up!"
+          }
+        end
+      end
+    end
+  end,
 })
 
-CardSleeves.Sleeve({ -- my epic sleeve by pi_cubed
-    name = "Gingham Sleeve",
-    key = "picnicsleeve",
-    loc_txt = {
-        name = "Gingham Sleeve",
-        text = {
-            "{C:tarot}pi_cubed's Jokers{}' {C:attention}Jokers{}",
-            "are {C:attention}3x{} more likely to appear,",
-            "Start with an extra {C:money}$#1#",
-        },
-    },
-    pos = { x = 1, y = 0 },
-    atlas = "smsnsleeve",
-    unlocked = true,
-    loc_vars = function(self)
-        local key, vars
-        if self.get_current_deck_key() == "b_smsn_picnic" then
-            key = self.key .. "_alt"
-            vars = { 
-                11,
-                localize { type = 'name_text', set = 'Joker', key = 'j_picubed_inkjetprinter' }
-            }
-        else
-            key = self.key
-            vars = { 
-                6
-            }
-        end
-        return { key = key, vars = vars }
-    end,
-    apply = function(self)
-        if self.get_current_deck_key() == "b_smsn_picnic" then
-            G.E_MANAGER:add_event(Event({
-                func = function()
-                    G.GAME.dollars = G.GAME.dollars + 5
-                    SMODS.add_card({set = 'Joker', area = G.jokers, skip_materialize = true, key = "j_picubed_inkjetprinter", no_edition = true})
-                    return true 
-                end
-            }))
-        else
-            G.E_MANAGER:add_event(Event({
-                func = function()
-                    G.GAME.dollars = G.GAME.dollars + 6
-                    return true 
-                end
-            }))
-        end
+CardSleeves.Sleeve({ 
+  name = "Gingham Sleeve",
+  key  = "picnicsleeve",
+  pos  = { x = 1, y = 0 },
+  atlas = "smsnsleeve",
+  unlocked = true,
+
+  config = {
+    consume    = 2,  
+    joker_slot = 1, 
+  },
+
+  loc_vars = function(self)
+    local key, vars
+    if self.get_current_deck_key() == "b_smsn_picnic" then
+      key = self.key .. "_alt"
+      vars = {
+      }
+    else
+      key = self.key
+      vars = { 6 }
     end
+    return { key = key, vars = vars, self.config.consume, self.config.joker_slot }
+  end,
+
+  apply = function(self)
+    if self.get_current_deck_key() == "b_smsn_picnic" then
+      G.E_MANAGER:add_event(Event({
+        func = function()
+          SMODS.add_card{
+            set             = 'Spectral',
+            area            = G.consumeables,
+            skip_materialize = true,
+            key             = "c_smsn_retinalbloom",
+            no_edition      = true,
+          }
+          return true
+        end
+      }))
+    end
+    if self.get_current_deck_key() ~= "b_smsn_picnic" then
+      if not (G and G.GAME and G.GAME.starting_params) then return end
+
+      local sp = G.GAME.starting_params
+      sp.consumable_slots = (sp.consumable_slots or 0) + (self.config.consume    or 0)
+      sp.joker_slots      = (sp.joker_slots      or 0) - (self.config.joker_slot or 0)
+    end
+  end,
 })
 
--- relies on additional functions present in lovely/myepicdeck.toml
 
-CardSleeves.Sleeve({ -- Medusa Sleeve
-    name = "Defunct Sleeve",
-    key = "defunctsleeve",
-    loc_txt = {
-        name = "Defunct Sleeve",
-        text = {
-            "Start with 8 {C:attention,T:m_stone}Stone cards{}",
-            "instead of Kings and Queens",
-        },
-    },
-    pos = { x = 2, y = 0 },
-    atlas = "smsnsleeve",
-    unlocked = true,
-    loc_vars = function(self)
-        local key
-        if self.get_current_deck_key() == "b_smsn_defunct" then
-            key = self.key .. "_alt"
-        else
-            key = self.key
+
+CardSleeves.Sleeve({ 
+  name     = "Defunct Sleeve",
+  key      = "defunctsleeve",
+  pos      = { x = 2, y = 0 },
+  atlas    = "smsnsleeve",
+  unlocked = true,
+ config = { voucher = 'v_magic_trick'},
+  
+
+  loc_vars = function(self)
+    local key
+    if self.get_current_deck_key() == "b_smsn_defunct" then
+      key = self.key .. "_alt"
+    else
+      key = self.key
+    end
+    return { key = key,
+    vars = { localize { type = 'name_text', key = self.config.voucher, set = 'Voucher' } }
+        }
+  end,
+
+  apply = function(self, back)
+    if self.get_current_deck_key() ~= "b_smsn_defunct" then
+    
+      if G and G.GAME and G.GAME.starting_params then
+        G.GAME.starting_params.no_faces = true
+      end
+
+      G.E_MANAGER:add_event(Event({
+        func = function()
+          SMODS.add_card{
+            set             = 'Joker',
+            area            = G.jokers,
+            skip_materialize = true,
+            key             = "j_smsn_legendaryrambley",
+            no_edition      = true,
+          }
+          return true
         end
-        return { key = key }
-    end,
-    apply = function(self)
-        if self.get_current_deck_key() == "b_smsn_defunct" then
-            G.E_MANAGER:add_event(Event({
-            func = function()
-                for k, v in pairs(G.playing_cards) do
-                    if v:get_id() == 2 or v:get_id() == 3 then
-                        v:set_ability('m_stone', nil, true)
+      }))
+    end
+
+
+  if self.get_current_deck_key() == "b_smsn_defunct" then
+    
+        G.GAME.used_vouchers[self.config.voucher] = true
+                G.GAME.starting_voucher_count = (G.GAME.starting_voucher_count or 0) + 1
+                G.E_MANAGER:add_event(Event({ -- Adding back objects of any type from a deck MUST be done within an event
+                    func = function()
+                        back:apply_to_run(nil, G.P_CENTERS[self.config.voucher])
+                        return true
                     end
-                end
-                return true
+                }))
             end
-        }))
-        else
-            G.E_MANAGER:add_event(Event({
-                func = function()
-                    for k, v in pairs(G.playing_cards) do
-                        if v:get_id() == 13 or v:get_id() == 12 then
-                            v:set_ability('m_stone', nil, true)
-                        end
-                    end
-                    return true
-                end
-            }))
+  end,
+
+  calculate = function(self, back, context)
+    if context.playing_card_added and context.cards then
+      local using_defunct = (self.get_current_deck_key() == "b_smsn_defunct")
+
+      for _, _card in pairs(context.cards) do
+        if _card:is_face() then
+          if using_defunct then
+            _card:set_edition(G.P_CENTERS.e_polychrome, false, false)
+          else
+            _card:set_edition(G.P_CENTERS.e_holo, false, false)
+          end
         end
+      end
     end
+  end,
 })
+

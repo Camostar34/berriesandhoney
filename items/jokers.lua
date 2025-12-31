@@ -664,6 +664,9 @@ SMODS.Joker {
        
 
     end,
+    credits = {
+		art = "Candycanearter07"        
+	}
 }
 
 
@@ -868,6 +871,9 @@ SMODS.Joker {
     end
 
     end,
+    credits = {
+		code = "Candycanearter07"        
+	}
 }
 
 -- Thank you for all your help, Sappy!
@@ -1124,7 +1130,9 @@ SMODS.Joker {
         end
     end,
 
-    
+    credits = {
+		art = "Astro"        
+	}
 }
 
 SMODS.Joker {
@@ -1177,6 +1185,10 @@ SMODS.Joker {
             end
         end
     end,
+
+     credits = {
+		character = "UniqueGeese / JakeNeutron"              -- you can also leave out fields if you wish
+	}
 }
 
 
@@ -1206,6 +1218,9 @@ SMODS.Joker {
        
 
     end,
+    credits = {
+		character = "UniqueGeese / JakeNeutron"              -- you can also leave out fields if you wish
+	}
 }
 
 SMODS.Joker {
@@ -1234,6 +1249,9 @@ SMODS.Joker {
        
 
     end,
+    credits = {
+		character = "UniqueGeese / JakeNeutron"              -- you can also leave out fields if you wish
+	}
 }
 
 SMODS.Joker {
@@ -1261,6 +1279,9 @@ soul_pos = { x = 4, y = 3 },
        
 
     end,
+    credits = {
+		character = "UniqueGeese / JakeNeutron"              -- you can also leave out fields if you wish
+	}
 }
 
 SMODS.Joker {
@@ -1324,6 +1345,9 @@ SMODS.Joker {
                 end
 
             end,
+            credits = {
+		character = "UniqueGeese / JakeNeutron"              -- you can also leave out fields if you wish
+	}
 }
 
 SMODS.Joker {
@@ -1451,6 +1475,9 @@ SMODS.Joker {
           end
 
     end,
+        credits = {
+		art = "lord-ruby"        
+	}
 }
 
 SMODS.Joker {
