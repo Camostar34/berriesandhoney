@@ -199,6 +199,7 @@ return {
                 text = {
                     "Creates a {C:dark_edition}Berry Card{}",
                     "Every {C:attention}#1#{} {C:inactive}[#2#]{} hands played",
+                                       "{C:inactive,s:0.8}(Must have room)",
                 },
             },
 
@@ -208,6 +209,7 @@ return {
                     "Scored cards without a {C:attention}modifier{} have a",
                     "{C:green}#1# in #2#{} to create a {C:dark_edition}Berry Card{}",
                     "Consumed if a modified card is scored",
+                                       "{C:inactive,s:0.8}(Must have room)",
                 },
             },
 
@@ -226,6 +228,7 @@ return {
                 text = {
                     "Sell this card to create",
                     "2 Negative {C:dark_edition}Berry Cards{}.",
+                                       "{C:inactive,s:0.8}(Must have room)",
                 },
             },
 
@@ -261,6 +264,7 @@ return {
                     "Creates a {C:dark_edition}Rambleberry{}",
                     "when a {C:attention}booster pack{}",
                     "is opened",
+                                       "{C:inactive,s:0.8}(Must have room)",
                 },
             },
 
@@ -317,11 +321,22 @@ return {
                 },
             },
 
+                        j_smsn_americanbrunch = {
+                name = "American Brunch",
+                text = {
+                    "If first hand of a round",
+                    "contains an {C:attention}unscored{} card",
+                    "destroy it and gain {C:attention}#1#{}",
+                    "{C:dark_edition}Berry Cards{}",
+                                       "{C:inactive,s:0.8}(Must have room)",
+                },
+            },
+
             j_smsn_hothoney = {
                 name = "Hot Honey",
                 text = {
-                    "Scored {C:attention}Gold Cards{} give {X:mult,C:white}x#1#{} Mult",
-                    "Lose {C:money}$#2#{} when a Gold Card is scored",
+                    "Scored {C:attention}Gold Cards{} permanetly gain {X:mult,C:white}x#1#{} Mult",
+                    "but lose {C:money}$#2#{} of held in hand value",
                 },
             },
 
@@ -424,6 +439,55 @@ return {
                 },
             },
 
+                        j_smsn_coughdrops = {
+                name = "Honey Cough Drops",
+                text = {
+                    "Retrigger held and",
+                    "scored {C:attention}Gold Cards{}",
+                    "Eaten if Hand is played",
+                    "with {C:money}$25{} or more",
+                },
+            },
+
+                    j_smsn_chantilly = {
+                name = "Chantilly Cake",
+                text = {
+                    "Gives {X:mult,C:white}xMult{} for",
+                    "number of unique",
+                    "{C:attention}Consumable types{}",
+                    "in your Consumable area"
+                },
+            },
+
+                j_smsn_sorbet = {
+                name = "Sorbet",
+                text = {
+                    "{C:dark_edition}Berry Cards{} held in your consumables",
+                    "give {X:chips,C:white}x#1#{} Chips",
+                    "{C:green}#2# in #3#{} be consumed when",
+                    "a berry is sold or activated"
+                },
+            },
+
+                        j_smsn_compost = {
+                name = "Compost Bin",
+                text = {
+                    "Gain {C:gold}$#1#{} of",
+                    "payout value every #2#",
+                    "{C:dark_edition}Berry Cards{} sold",
+                    "{C:inactive,s:0.8}(Currently {C:gold}$#3#{C:inactive,s:0.8})",
+                },
+            },
+
+                j_smsn_manicface = {
+                name = "Manic Face",
+                text = {
+                    "Played {C:attention}face{} cards give",
+                    "[misprint text] when scored",
+                },
+            },
+
+
             j_smsn_sticker = {
                 name = "Scented Sticker",
                 text = {
@@ -442,6 +506,16 @@ return {
                     "{C:nflame_silicon}Silicon{} card owned",
                     "when a {C:attention}Boss Blind{} is selected",
                     "{C:inactive,s:0.8}(Does not have to have room)",
+                },
+            },
+
+             j_smsn_grenade = {
+                name = "Flash Grenade",
+                text = {
+                    "Playing a {C:attention}Flash{}",
+                    "counts as your",
+                    "{C:attention}most played Poker Hand{}",
+                    "{C:inactive,s:0.8}(Usable once per round)",
                 },
             },
 
@@ -491,12 +565,17 @@ return {
             j_smsn_thunderstorm = {
                 name = "Stormcloud",
                 text = {
-                    "{X:chips,C:white}X#1#{} on the",
-                    "first {C:attention}Flash{}",
+                    "The first {C:attention}Flash{}",
                     "of the round",
+                    "gives {X:chips,C:white}X#1#{} Chips",
                 },
             },
-
+            j_smsn_evilflashcard = {
+                name = "'Flash' Card",
+                text = {
+                    "Huh??????????",
+                },
+            },
             -- GUEST JOKERS 
 
             j_smsn_peapod = {

@@ -5,12 +5,12 @@ to_big = to_big or function(x) return x end
 SMODS.Joker {
     key = "sappy",
     name = "Sappy",
-
+     pronouns = "he_him",
     atlas = "jokers",
     pos = { x = 2, y = 4 },
 
     config = { extra = { evil_xmult = 0, addxmult = 0.5, } },
-    rarity = 1,
+    rarity = 2,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
@@ -36,12 +36,12 @@ SMODS.Joker {
 SMODS.Joker {
     key = "puddinhg",
     name = "Puddinhg",
-
+    pronouns = "he_him",
     atlas = "jokers",
     pos = { x = 7, y = 1 },
 
     config = { extra = { payout = 3,} },
-    rarity = 1,
+    rarity = 2,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
@@ -67,12 +67,12 @@ SMODS.Joker {
 SMODS.Joker {
     key = "gordon",
     name = "Gordon",
-
+ pronouns = "he_him",
     atlas = "jokers",
     pos = { x = 4, y = 0 },
 
     config = { extra = { multbonus = 2,} },
-    rarity = 1,
+    rarity = 2,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
@@ -129,7 +129,7 @@ end,
 SMODS.Joker {
     key = "peapod",
     name = "Pea Pod",
-
+     pronouns = "he_him",
     atlas = "jokers",
     pos = { x = 2, y = 0 },
 
@@ -159,12 +159,12 @@ SMODS.Joker {
 SMODS.Joker {
     key = "astro",
     name = "Astro",
-
+ pronouns = "he_him",
     atlas = "jokers",
     pos = { x = 7, y = 0 },
 
     config = { extra = { } },
-    rarity = 1,
+    rarity = 3,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
@@ -191,7 +191,7 @@ SMODS.Joker {
 SMODS.Joker {
     key = "shadow",
     name = "Shadow Wizard",
-
+ pronouns = "he_him",
     atlas = "jokers",
     pos = { x = 0, y = 0 },
 
@@ -223,6 +223,7 @@ SMODS.Joker {
 
 SMODS.Joker{
     key = 'rose', --joker key
+     pronouns = "she_her",
     atlas = 'jokers',
     rarity = 2, --rarity: 1 = Common, 2 = Uncommon, 3 = Rare, 4 = Legendary
     --soul_pos = { x = 0, y = 0 },
@@ -282,12 +283,12 @@ end,
 SMODS.Joker {
     key = "pedro",
     name = "Pedro Pave",
-
+ pronouns = "he_him",
     atlas = "jokers",
     pos = { x = 0, y = 0 },
 
     config = { extra = { evil_xmult = 0, addxmult = 0.5, } },
-    rarity = 1,
+    rarity = 3,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
@@ -312,7 +313,7 @@ SMODS.Joker {
 SMODS.Joker {
     key = "angel",
     name = "Angel",
-
+ pronouns = "he_him",
     atlas = "jokers",
     pos = { x = 6, y = 0 },
 
@@ -342,12 +343,12 @@ SMODS.Joker {
 SMODS.Joker {
     key = "cozy",
     name = "Cozy Fluffer Snugglepaws",
-
+ pronouns = "any_all",
     atlas = "jokers",
     pos = { x = 0, y = 0 },
 
     config = { extra = { evil_xmult = 0, addxmult = 0.5, } },
-    rarity = 1,
+    rarity = 2,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,

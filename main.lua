@@ -36,6 +36,32 @@ for i, v in pairs(crossmodfiles) do
  end
 end
 
+local bnh = SMODS.current_mod.config
+SMODS.current_mod.config_tab = function()
+    return {
+        n = G.UIT.ROOT,
+        config = { align = "cm", padding = 0.1, colour = G.C.BLACK, r=0.1, emboss = 0.05 },
+        nodes = {
+            {
+                n = G.UIT.R, config = { align = "cm", padding = 0 },
+                nodes = {
+                    { n = G.UIT.C, config = { align = "cm", padding = 0.05},
+                      nodes = {
+                          create_toggle{
+                              label = "Shitpost Jokers in Pool",
+                              active_colour = G.C.GREEN,
+                              ref_table = bnh,
+                              ref_value = "smsn_shitpostjokers"
+                          }
+                      }
+                    },
+                    
+                }
+            }
+        }
+    }
+end
+
 
 CreditLib = {}
 

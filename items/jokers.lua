@@ -2,16 +2,17 @@ to_big = to_big or function(x) return x end
 
 
 
+
 SMODS.Joker { --Samson
 
     key = "samson",
     name = "Samson",
-
+    pronouns = "he_him",
     atlas = "jokers",
     pos = { x = 5, y = 3 },
 
     config = { extra = { } },
-    rarity = 1,
+    rarity = 2,
     unlocked = true,
     discovered = true,
     cost = 3,
@@ -35,12 +36,12 @@ SMODS.Joker { --Samson
 SMODS.Joker { 
     key = "bash",
     name = "Bashkelox",
-
+    pronouns = "he_him",
     atlas = "jokers",
     pos = { x = 0, y = 0 },
 
     config = { extra = { 
-        blind_reduce = 0.1, 
+        blind_reduce = 0.2, 
         odds = 2, 
     debuffed = true} },
     rarity = 1,
@@ -94,7 +95,7 @@ SMODS.Joker {
 SMODS.Joker { 
     key = "hercule",
     name = "Hercule",
-
+    pronouns = "he_they",
     atlas = "jokers",
     pos = { x = 0, y = 0 },
 
@@ -133,7 +134,7 @@ SMODS.Joker {
 SMODS.Joker { 
     key = "emmy",
     name = "Emmy Bunderbatch",
-
+    pronouns = "she_her",
     atlas = "jokers",
     pos = { x = 0, y = 0 },
 
@@ -141,7 +142,7 @@ SMODS.Joker {
         mult_gain = 3,
     chip_gain = 14,
     counter = 0 } },
-    rarity = 1,
+    rarity = 2,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
@@ -177,7 +178,7 @@ SMODS.Joker {
 SMODS.Joker { 
     key = "denali",
     name = "Denali",
-
+    pronouns = "she_her",
   atlas = "jokers",
     pos = { x = 0, y = 0 },
 
@@ -239,7 +240,7 @@ end,
 SMODS.Joker { 
     key = "luzia",
     name = "Luzia",
-
+    pronouns = "she_her",
     atlas = "jokers",
     pos = { x = 0, y = 0 },
 
@@ -301,7 +302,7 @@ end,
 SMODS.Joker {
     key = "gardener",
     name = "Gardener",
-
+    pronouns = "any_all",
     atlas = "jokers",
     pos = { x = 2, y = 1 },
 
@@ -384,7 +385,7 @@ SMODS.Joker {
     pos = { x = 0, y = 0 },
 
     config = { extra = {bonus = 45} },
-    rarity = 1,
+    rarity = 2,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
@@ -408,7 +409,7 @@ SMODS.Joker {
 SMODS.Joker { --ROA Samson
     key = "rivalssamson",
     name = "ROA Samson",
-
+    pronouns = "he_him",
     atlas = "jokers",
     pos = { x = 1, y = 0 },
 
@@ -463,7 +464,7 @@ SMODS.Joker {
 SMODS.Joker { 
     key = "bearstack",
     name = "Bear Stack",
-
+       pronouns = "they_them",
     atlas = "jokers",
     pos = { x = 0, y = 0 },
 
@@ -491,13 +492,13 @@ SMODS.Joker {
 SMODS.Joker { 
     key = "honeyjar",
     name = "Honey Jar",
-
+       pronouns = "she_it",
     atlas = "jokers",
     pos = { x = 6, y = 3 },
 
     config = { extra = { 
         odds = 1, } },
-    rarity = 1,
+    rarity = 2,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
@@ -548,7 +549,7 @@ SMODS.Joker {
 SMODS.Joker {
     key = "airfreshener",
     name = "Air Freshener",
-
+       pronouns = "it_its",
     atlas = "jokers",
     pos = { x = 5, y = 2 },
 
@@ -588,7 +589,7 @@ SMODS.Joker {
 SMODS.Joker {
     key = "memory",
     name = "Memory of Apprenticeship",
-
+       pronouns = "she_they",
     atlas = "jokers",
     pos = { x = 0, y = 0 },
 
@@ -615,12 +616,12 @@ SMODS.Joker {
 SMODS.Joker {
     key = "twistedgarden",
     name = "Twisted Garden",
-
+       pronouns = "it_its",
     atlas = "jokers",
     pos = { x = 0, y = 0 },
 
     config = { extra = {} },
-    rarity = 1,
+    rarity = 3,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
@@ -642,12 +643,12 @@ SMODS.Joker {
 SMODS.Joker {
     key = "allberries",
     name = "Oops! All Berries!",
-
+       pronouns = "he_him",
     atlas = "jokers",
     pos = { x = 0, y = 0 },
 
     config = { extra = { } },
-    rarity = 3,
+    rarity = 2,
     cost = 4,
     blueprint_compat = false,
        unlocked = true,
@@ -674,12 +675,12 @@ SMODS.Joker {
 SMODS.Joker {
     key = "pepperjelly",
     name = "Ghost Pepper Jelly",
-
+       pronouns = "she_it",
     atlas = "jokers",
     pos = { x = 0, y = 4 },
 
     config = { extra = { } },
-    rarity = 1,
+    rarity = 2,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
@@ -715,7 +716,7 @@ SMODS.Joker {
 SMODS.Joker {
     key = "mintjams",
     name = "Mint Jams",
-
+       pronouns = "he_they",
     atlas = "jokers",
     pos = { x = 6, y = 1 },
 
@@ -774,11 +775,11 @@ end,
 }
 
 SMODS.Joker {
-    key = "allberries",
-    name = "Oops! All Berries",
-
+    key = "chantilly",
+    name = "Chantilly Cake",
+   pronouns = "she_her",
     atlas = "jokers",
-    pos = { x = 3, y = 4 },
+    pos = { x = 0, y = 0 },
 
     config = { extra = { evil_xmult = 0, addxmult = 0.5, } },
     rarity = 1,
@@ -800,16 +801,98 @@ SMODS.Joker {
     end,
 }
 
+SMODS.Joker {
+    key = "sorbet",
+    name = "Sorbet",
+   pronouns = "she_they",
+    atlas = "jokers",
+    pos = { x = 0, y = 0 },
+
+    config = { extra = { evil_xmult = 0, addxmult = 0.5, } },
+    rarity = 1,
+    cost = 4,
+    blueprint_compat = false,
+       unlocked = true,
+    discovered = true,
+    eternal_compat = true,
+    perishable_compat = true,
+    demicolon_compat = false,
+
+    loc_vars = function(self, info_queue, card)
+        return { vars = {} }
+    end,
+
+    calculate = function(self, card, context)
+       
+
+    end,
+}
+
+SMODS.Joker {
+    key = "compost",
+    name = "Compost Bin",
+   pronouns = "it_its",
+    atlas = "jokers",
+    pos = { x = 0, y = 0 },
+
+    config = { extra = { payout = 2, current = 0, gain = 1, } },
+    rarity = 1,
+    cost = 4,
+    blueprint_compat = false,
+       unlocked = true,
+    discovered = true,
+    eternal_compat = true,
+    perishable_compat = true,
+    demicolon_compat = false,
+
+    loc_vars = function(self, info_queue, card)
+        return { vars = {card.ability.extra.gain, card.ability.extra.payout, card.ability.extra.current} }
+    end,
+
+    calculate = function(self, card, context)
+       
+
+    end,
+}
+
+SMODS.Joker {
+    key = "americanbrunch",
+    name = "American Brunch",
+      pronouns = "she_her",
+    atlas = "jokers",
+    pos = { x = 0, y = 0 },
+
+    config = { extra = { berrybonus = 2 } },
+    rarity = 2,
+    cost = 4,
+    blueprint_compat = false,
+       unlocked = true,
+    discovered = true,
+    eternal_compat = true,
+    perishable_compat = true,
+    demicolon_compat = false,
+
+    loc_vars = function(self, info_queue, card)
+        return { vars = {card.ability.extra.berrybonus} }
+    end,
+
+    calculate = function(self, card, context)
+       
+
+    end,
+}
+
+
 
 SMODS.Joker {
     key = "sticker",
     name = "Scented Sticker",
-
+    pronouns = "it_its",
     atlas = "jokers",
     pos = { x = 1, y = 4 },
 
     config = { extra = {bonus = 45} },
-    rarity = 1,
+    rarity = 2,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
@@ -838,12 +921,12 @@ SMODS.Joker {
 SMODS.Joker {
     key = "honeycombtoffee",
     name = "Honeycomb Toffee",
-
+    pronouns = "she_they",
     atlas = "jokers",
     pos = { x = 4, y = 2 },
 
     config = { extra = { } },
-    rarity = 1,
+    rarity = 2,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
@@ -883,35 +966,78 @@ SMODS.Joker {
 SMODS.Enhancement:take_ownership("gold",
     {
         loc_vars = function(self, info_queue, card)
-            if next(SMODS.find_card("j_smsn_honeycombtoffee")) and not card.fake_card then
+            
+            if next(SMODS.find_card("j_smsn_honeycombtoffee")) and card and not card.fake_card then
                 local fake_glass = G.P_CENTERS.m_glass:create_fake_card()
                 local v = {}
                 v[1] = fake_glass.ability.Xmult
                 local num, den = SMODS.get_probability_vars(card, 1, fake_glass.ability.extra, "glass")
                 v[2] = num
                 v[3] = den
-                info_queue[#info_queue + 1] = { set = "Enhanced", key = "m_glass", vars = v, config = v }
-                -- info_queue[#info_queue + 1] = G.P_CENTERS.m_glass
+                info_queue[#info_queue + 1] = {
+                    set = "Enhanced",
+                    key = "m_glass",
+                    vars = v,
+                    config = v,
+                }
             end
-            local dollar = self.config.h_dollars
-            if card and card.config then
-                dollar = card.config.h_dollars or dollar
+
+        
+            local dollar = self.config.h_dollars   
+
+            if card and card.ability and card.ability.h_dollars then
+                dollar = card.ability.h_dollars
             end
-            return { vars = {SMODS.signed_dollars(dollar)}, key = "m_gold" }
-        end
+   
+
+            return {
+                vars = { SMODS.signed_dollars(dollar) },
+                key  = "m_gold",
+            }
+        end,
     },
     true
 )
 
 SMODS.Joker {
+    key = "coughdrops",
+    name = "Honey Cough Drops",
+
+    atlas = "jokers",
+    pos = { x = 0, y = 0 },
+
+    config = { extra = { } },
+    rarity = 1,
+    cost = 3,
+    blueprint_compat = false,
+       unlocked = true,
+    discovered = true,
+    eternal_compat = true,
+    perishable_compat = true,
+    demicolon_compat = true,
+
+    loc_vars = function(self, info_queue, card)
+        return { vars = {} }
+    end,
+
+    calculate = function(self, card, context)
+       
+        if context.end_of_round and context.cardarea == G.jokers then
+
+        end
+
+    end,
+}
+
+SMODS.Joker {
     key = "hothoney",
     name = "Hot Honey",
-
+      pronouns = "he_they",
     atlas = "jokers",
     pos = { x = 1, y = 1 },
 
-    config = { extra = { xmultbonus = 2, penalty = 1, } },
-    rarity = 1,
+    config = { extra = { xmultbonus = 0.25, penalty = 1, } },
+    rarity = 2,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
@@ -926,11 +1052,15 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
             if context.individual and context.cardarea == G.play and SMODS.has_enhancement(context.other_card, 'm_gold') then
+                   
+                print(tostring(context.other_card.ability.h_dollars))
+                context.other_card.ability.h_dollars = context.other_card.ability.h_dollars - card.ability.extra.penalty
+                 context.other_card.ability.perma_x_mult = context.other_card.ability.perma_x_mult or 1
+                context.other_card.ability.perma_x_mult = context.other_card.ability.perma_x_mult + card.ability.extra.xmultbonus
                     
                     return {
-                        xmult = card.ability.extra.xmultbonus,
-                        dollars = card.ability.extra.penalty * -1,
-                        
+                        extra = { message = localize('k_upgrade_ex'), colour = G.C.MULT },
+                         card = card
                     }
                 
             end
@@ -949,7 +1079,7 @@ SMODS.Joker {
     pos = { x = 6, y = 2 },
 
     config = { extra = { reward = 15 } },
-    rarity = 1,
+    rarity = 2,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
@@ -986,12 +1116,12 @@ SMODS.Joker {
 SMODS.Joker {
     key = "beehive",
     name = "Beehive",
-
+      pronouns = "they_them",
     atlas = "jokers",
     pos = { x = 2, y = 2 },
     soul_pos = { x = 3, y = 2 },
     config = { extra = { bonus = 1, } },
-    rarity = 1,
+    rarity = 3,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
@@ -1049,6 +1179,8 @@ SMODS.Joker {
 
     end,
 }
+
+
 
 SMODS.Sound ({
     key = 'rollup',
@@ -1138,7 +1270,7 @@ SMODS.Joker {
 SMODS.Joker {
     key = "commonrambley",
     name = "Rambley Railway",
-
+      pronouns = "he_him",
     atlas = "jokers",
     pos = { x = 0, y = 0 },
 
@@ -1196,12 +1328,12 @@ SMODS.Joker {
 SMODS.Joker {
     key = "uncommonrambley",
     name = "Rambley RFRSHR",
-
+    pronouns = "he_him",
     atlas = "jokers",
     pos = { x = 0, y = 0 },
 
     config = { extra = { } },
-    rarity = 1,
+    rarity = 2,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
@@ -1226,13 +1358,13 @@ SMODS.Joker {
 SMODS.Joker {
     key = "rarerambley",
     name = "Retro Rambley",
-
+    pronouns = "he_him",
     atlas = "jokers",
     pos = { x = 4, y = 1 },
     soul_pos = { x = 5, y = 1 },
 
     config = { extra = { } },
-    rarity = 1,
+    rarity = 3,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
@@ -1257,12 +1389,12 @@ SMODS.Joker {
 SMODS.Joker {
     key = "legendaryrambley",
     name = "Rambley The Raccoon",
-
+    pronouns = "he_him",
     atlas = "jokers",
     pos = { x = 3, y = 3 },
 soul_pos = { x = 4, y = 3 },
     config = { extra = { } },
-    rarity = 1,
+    rarity = 4,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
@@ -1287,12 +1419,12 @@ soul_pos = { x = 4, y = 3 },
 SMODS.Joker {
     key = "rambleydumpy",
     name = "Rambley Dumpy",
-
+    pronouns = "he_him",
     atlas = "jokers",
     pos = { x = 0, y = 0 },
 
     config = { extra = { } },
-    rarity = 1,
+    rarity = 3,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
@@ -1353,13 +1485,13 @@ SMODS.Joker {
 SMODS.Joker {
     key = "littlelad",
     name = "Little Lad",
-
+    pronouns = "he_him",
     atlas = "jokers",
     pos = { x = 7, y = 2 },
     soul_pos = { x = 0, y = 3 },
 
     config = { extra = { bonus_chips = 0, bonus_mult = 0, bonus_xmult = 1,} },
-    rarity = 1,
+    rarity = 4,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
@@ -1411,13 +1543,13 @@ SMODS.Joker {
 SMODS.Joker {
     key = "paddington",
     name = "Paddington Bear",
-
+    pronouns = "he_him",
     atlas = "jokers",
     pos = { x = 1, y = 3 },
     soul_pos = { x = 2, y = 3 },
 
     config = { extra = { } },
-    rarity = 1,
+    rarity = 4,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
@@ -1439,12 +1571,12 @@ SMODS.Joker {
 SMODS.Joker {
     key = "femtanyl",
     name = "KATAMARI",
-
+    pronouns = "she_her",
     atlas = "jokers",
     pos = { x = 4, y = 4 },
 
     config = { extra = { addxmult = 0.1, } },
-    rarity = 1,
+    rarity = 3,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
@@ -1483,12 +1615,12 @@ SMODS.Joker {
 SMODS.Joker {
     key = "mycom",
     name = "MYCOM MAIM MARIONETTE",
-
+    pronouns = "she_they",
     atlas = "jokers",
     pos = { x = 1, y = 2 },
 
     config = { extra = { counter = 0, xmultbonus = 0.20 } },
-    rarity = 1,
+    rarity = 3,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
@@ -1586,3 +1718,32 @@ SMODS.Joker {
 end,
 }
 
+SMODS.Joker {
+    key = "manicface",
+    name = "Manic Face",
+
+    atlas = "jokers",
+    pos = { x = 7, y = 3 },
+
+    config = { extra = { } },
+    rarity = 1,
+    cost = 3,
+    blueprint_compat = false,
+       unlocked = true,
+    discovered = true,
+    eternal_compat = true,
+    perishable_compat = true,
+    demicolon_compat = true,
+
+    loc_vars = function(self, info_queue, card)
+        return { vars = {} }
+    end,
+
+    calculate = function(self, card, context)
+       
+        if context.end_of_round and context.cardarea == G.jokers then
+
+        end
+
+    end,
+}
