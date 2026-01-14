@@ -100,12 +100,41 @@ return {
                 },
             },
 
+                j_smsn_joylon = {
+                name = "Joylon Amurr",
+                text = {
+                    "{C:attention}Gold Cards{} in hand",
+                    "and scored give {C:blue}#1#{} Chips",
+                },
+            },
+
+            j_smsn_grouphug = {
+                name = "Group Hug!!",
+                text = {
+                    "{C:attention}OC{} and {C:attention}Guest Jokers{}",
+                    "from this mod",
+                    "each give {C:red}#1#{} Mult",
+                },
+            },
+
             j_smsn_bash = {
                 name = "Bashkelox",
                 text = {
                     "{C:attention}x#1#{} Blind requirement",
                     "{C:green}#2# in 2{} chance to {C:red}debuff{} at the end of round",
                     "{C:attention}Resets{} every Ante",
+                },
+            },
+
+            j_smsn_sytoroonson = {
+                name = {
+                    'Sytoroonson',
+                    '{s:0.75}Comfort Dreamon',
+                },
+                text = {
+                    "Retrigger all cards if",
+                    "hand contains a {C:attention}[rank]{} of {C:hearts}Hearts{}",
+                    "{C:inactive}(Rank changes every round){}",
                 },
             },
 
@@ -130,18 +159,26 @@ return {
             j_smsn_rivalshercule = {
                 name = "ROA Hercule",
                 text = {
-                    "Earn #1# chips in {C:attention}#2# rounds{}",
-                    "to permamently gain {C:blue}+1{} hand every round,",
-                    "otherwise permamently {C:red}lose{} a hand",
+                    "{C:attention}+#1#{} hand size",
+                    "when a hand is played",
+                    "resets on round end",
+                },
+            },
+
+            j_smsn_rivalsemmy = {
+                name = "ROA Emmy",
+                text = {
+                    "{C:dark_edition}Berry Card{} effects",
+                    "are {C:attention}doubled{}",
                 },
             },
 
             j_smsn_rivalssamson = {
                 name = "ROA Samson",
                 text = {
-                    "Earn {C:blue}#1#{} Chips in {C:attention}#2# rounds{}",
-                    "to gain {C:money}#3#${}",
-                    "otherwise {C:red}lose{} {C:money}#3#${}",
+                    "If hand contains one single {C:attention}Gold Card{},",
+                    "destroy it and turn {C:attention}#1#{}",
+                    "cards in hand into Gold Cards",
                 },
             },
 
@@ -153,8 +190,48 @@ return {
                 },
             },
 
+                        j_smsn_bountifuljoker = {
+                name = "Bountiful Joker",
+                text = {
+                    "{C:attention}Berry Cards{} in your",
+                    "consumable area",
+                    "each give {C:red}+#1#{} Mult",
+                },
+            },
+
+
+            
+                        j_smsn_strawbnyan = {
+                name = "Strawbnyan",
+                text = {
+                    "Using a {C:dark_edition}Berry Card{}",
+                    "reduces the Blind requirement",
+                    "by {C:attention}#1#%{}",
+                },
+            },
+
+            j_smsn_berrypicking = {
+                name = "Berry Picking",
+                text = {
+                    "{C:attention}Picnic Packs{} show 1 extra card",
+                    "and let you choose 1 extra card",
+                },
+            },
+
+                    j_smsn_cherrybomb = {
+                name = "Cherry Bomb",
+                text = {
+                    "{X:mult,C:white}x#1#{} Mult",
+                    "{C:green}#1# in #2#{} chance to destroy",
+                    "played cards and {C:attention}self destruct{}",
+                },
+            },
+
             j_smsn_emmy = {
-                name = "Emmy Bunderbatch",
+                name = {
+                    'Emmy Bunderbatch',
+                    '{s:0.75}Confectionary Witch',
+                },
                 text = {
                     "Gains {C:red}+#1#{} Mult and {C:blue}+#2#{} Chips",
                     "when a {C:dark_edition}Berry Card{} is used",
@@ -177,7 +254,10 @@ return {
             },
 
             j_smsn_femtanyl = {
-                name = "KATAMARI",
+                name = {
+                    'KATAMARI',
+                    '{s:0.75}by FEMTANYL',
+                },
                 text = {
                     "{X:mult,C:white}x#1#{} Mult for every",
                     "reroll done this run",
@@ -194,6 +274,81 @@ return {
                 },
             },
 
+                        j_smsn_koban = {
+                name = "Koban",
+                text = {
+                    "{C:green}+1{} to probabilites",
+                    "per {C:attention}#1#{} Gold Cards",
+                    "in hand",
+                },
+            },
+
+
+                    j_smsn_goldenparachute = {
+                name = "Golden Parachute",
+                text = {
+                    "{C:attention}Prevents Death{} if there",
+                    "is at least one {C:attention}Gold Card{}",
+                    "in hand, then destroys all",
+                         "{C:attention}Gold Cards{} in your full deck",
+                },
+            },
+
+                        j_smsn_goldentooth = {
+                name = "Golden Tooth",
+                text = {
+                    "{C:green}#1# in #2#{} chance to create",
+                    "a {C:attention}Gold Card{} when purchasing",
+                    "an item from the shop",
+                },
+            },
+
+                    j_smsn_hunnabee = {
+                name = "Hunnabee",
+                text = {
+                    "Create {C:attention}#1#{} Gold Cards",
+                    "when a Face card",
+                    "is destoryed",
+                },
+            },
+
+                    j_smsn_golddigger = {
+                name = "Gold Digger",
+                text = {
+                    "Earn {C:money}$#1#{} when",
+                    "a [rank] of [suit]",
+                    "is scored",
+                     "{C:inactive}(Card changes every round){}",
+                },
+            },
+
+
+                j_smsn_chamoille = {
+                name = "Honey Chamoille Tea",
+                text = {
+                    "{C:attention}Gold Cards{} cannot",
+                    "be debuffed",
+                },
+            },
+
+                            j_smsn_honeybutterchips = {
+                name = "Honey Butter Chips",
+                text = {
+                    "The first {C:attention}Gold Card{} scored ",
+                    "gives {X:blue,C:white}X#1#{} Chips",
+                    "loses {X:blue,C:white}X#2#{} Chips when activated",
+                },
+            },
+
+                        j_smsn_fortunecookie = {
+                name = "Fortune Cookie",
+                text = {
+                    "Earn {C:money}$#1#{} at the end of round",
+                    "Payout decreases by 2 when activated",
+                    "Gain {C:purple}The Devil{} when depleated",
+                },
+            },
+
             j_smsn_gardener = {
                 name = "Gardener",
                 text = {
@@ -204,10 +359,13 @@ return {
             },
 
             j_smsn_mintjams = {
-                name = "Mint Jams",
+                name = {
+                    'Mint Jams',
+                    '{s:0.75}By Casiopea',
+                },
                 text = {
                     "Scored cards without a {C:attention}modifier{} have a",
-                    "{C:green}#1# in #2#{} to create a {C:dark_edition}Berry Card{}",
+                    "{C:green}#1# in #2#{} chance to create a {C:dark_edition}Berry Card{}",
                     "Consumed if a modified card is scored",
                                        "{C:inactive,s:0.8}(Must have room)",
                 },
@@ -229,6 +387,26 @@ return {
                     "Sell this card to create",
                     "2 Negative {C:dark_edition}Berry Cards{}.",
                                        "{C:inactive,s:0.8}(Must have room)",
+                },
+            },
+
+                        j_smsn_razzby = {
+                name = "Black Razzby",
+                text = {
+                    "Create a {C:dark_edition}Negative Berry Card{}",
+                    "when a Joker is {C:attention}sold{} or {C:attention}destoryed{}",
+                },
+            },
+
+            j_smsn_strabby = {
+                name = "Strabby",
+                text = {
+                    "Gains {X:mult,C:white}x#1#{} Mult when using",
+                    "a {C:dark_edition}Berry Card{}, then has a",
+                    "{C:green}#2# in #3#{} chance to destroy a random Joker",
+                    "{C:red}self-destructs{} if no Jokers avaliable",
+                    "{C:inactive,s:0.8}(Currently {X:mult,C:white}x#2#{}{C:inactive,s:0.8} Mult)",
+
                 },
             },
 
@@ -316,13 +494,17 @@ return {
             j_smsn_honeycombtoffee = {
                 name = "Honeycomb Toffee",
                 text = {
-                    "Scored {C:attention}Gold Cards{} are treated as {C:attention}Glass Cards{}",
+                    "Scored {C:attention}Gold Cards{} are treated",
+                    "as {C:attention}Glass Cards{}",
                     "But are {C:green}twice as likely{} to break",
                 },
             },
 
                         j_smsn_americanbrunch = {
-                name = "American Brunch",
+                name = {
+                    'American Brunch',
+                    '{s:0.75}By The Buttertones',
+                },
                 text = {
                     "If first hand of a round",
                     "contains an {C:attention}unscored{} card",
@@ -340,8 +522,31 @@ return {
                 },
             },
 
-            j_smsn_mycom = {
-                name = "MYCOM MAIM MARIONETTE",
+            j_smsn_boykisser = {
+                name = "Boykisser",
+                text = {
+                    "Scored {C:attention}Kings{} and {C:attention}Jacks{}",
+                    "permamently gain {C:red}+#1#{} Mult",
+                },
+            },
+
+            j_smsn_strawberrygirl = {
+                name = {
+                    'Strawberry Girl',
+                    '{s:0.75}By Odyssey Eurobeat',
+                },
+                text = {
+                    "Create a {C:dark_edition}Strawberry{}",
+                    "when a {C:hearts}Heart Flush{}",
+                    "is played",
+                },
+            },
+
+             j_smsn_mycom = {
+                name = {
+                    'MYCOM MAIM MARIONETTE',
+                    '{s:0.75}By Kidorikko',
+                },
                 text = {
                     "Gains {X:mult,C:white}x#1#{} when a hand is played",
                     "containing an {C:attention}unscored{} card",
@@ -350,15 +555,22 @@ return {
                 },
             },
 
+
             j_smsn_stomachbook = {
-                name = "GOODNIGHT HYPNOPOMP",
+                name = {
+                    'GOODNIGHT HYPNOPOMP',
+                    '{s:0.75}By STOMACH BOOK',
+                },
                 text = {
                     "",
                 },
             },
 
             j_smsn_robotface = {
-                name = "Robot Face",
+                name = {
+                    'Robot Face',
+                    '{s:0.75}By Caravan Palace',
+                },
                 text = {
                     "Scored {C:attention}Face Cards{} have a {C:green}#1# in #2#{} chance",
                     "to become a {C:attention}Steel Card{}",
@@ -433,9 +645,8 @@ return {
             j_smsn_bearstack = {
                 name = "Bear Stack",
                 text = {
-                    "Retrigger all cards",
-                    "if played hand contains",
-                    "a {C:attention}Three of a Kind{}",
+                    "Retrigger a {C:attention}Three of a Kind{}",
+                    "if the hand contains one",
                 },
             },
 
@@ -459,8 +670,8 @@ return {
                 },
             },
 
-                j_smsn_sorbet = {
-                name = "Sorbet",
+                j_smsn_fruitsando = {
+                name = "Fruit Sando",
                 text = {
                     "{C:dark_edition}Berry Cards{} held in your consumables",
                     "give {X:chips,C:white}x#1#{} Chips",
@@ -469,13 +680,140 @@ return {
                 },
             },
 
+                        j_smsn_secondhelping = {
+                name = "Second Helping",
+                text = {
+                    "{C:dark_edition}Berry Cards{} have a",
+                    "{C:green}#1# in #2#{} chance to",
+                    "trigger {C:attention}twice{}",
+            
+
+                    
+                },
+            },
+
+
+            j_smsn_flowworm = {
+                name = "Flow Worm",
+                text = {
+                    "Retrigger every {C:attention}seventh{} scored card",
+                    "{C:green}#1# in #2#{} chance to upgrade",
+                    "at end of round",
+                },
+            },
+
+                j_smsn_negativeflowworm = {
+                name = "Flow Worm (Backlight)",
+                text = {
+                    "Every {C:attention}seventh{} card",
+                    "discarded becomes {C:dark_edition}Negative{}",
+                    "Reverts at end of round",
+                },
+            },
+
+            j_smsn_keepyapping = {
+                name = "Keep Yapping Your Mouth Buddy",
+                text = {
+                    "{C:red}+#1#{} Mult per",
+                    "{C:attention}character{} in Boss Blind",
+                    "description"
+                },
+            },
+
+            j_smsn_tamago = {
+                name = "Tamago Sando",
+                text = {
+                    "{C:money}$#1#{} per held",
+                    "{C:diamonds}Diamond{} at end of the round",
+                    "Eaten if hand is played",
+                    "without holding any {C:diamonds}Diamond{} suits",
+                },
+            },
+
+             j_smsn_grilledcheese = {
+                name = "Grilled Cheese",
+                text = {
+                    "{C:spades}Spade{} suits held",
+                    "in hand give {C:red}+#1#{} Mult each",
+                    "Eaten if hand is played",
+                    "without holding any {C:spades}Spade{} suits",
+                },
+            },
+
+             j_smsn_clubsandwich = {
+                name = "Club Sandwich",
+                text = {
+                    "{C:clubs}Club{} suits held",
+                    "in hand give {C:blue}+#1#{} Chips each",
+                    "Eaten if hand is played",
+                    "without holding any {C:clubs}Club{} suits",
+                },
+            },
+
+                j_smsn_ruben = {
+                name = "Ruben Sandwich",
+                text = {
+                    "{C:hearts}Heart{} suits held",
+                    "in hand give {X:mult,C:white}x#1#{} Mult each",
+                    "Eaten if hand is played",
+                    "without holding any {C:hearts}Heart{} suits",
+                },
+            },
+
+                    j_smsn_cannery = {
+                name = "Cannery",
+                text = {
+                    "Discarded cards have a",
+                    "{C:green}#1# in #2#{} chance to",
+                    "gain a {C:blue}Freshness Seal{}",
+            
+
+                    
+                },
+            },
+
+                    j_smsn_mouse = {
+                name = "Mouse Joker",
+                text = {
+                    "When you discard a",
+                    "single {C:attention}Gold Card{},",
+                    "remove its Enhancement and",
+                    "gain {C:attention}double{} its held",
+                    "in hand value",
+            
+
+                },  
+                },
+
+                     j_smsn_muffintray = {
+                name = "Muffin Tray",
+                text = {
+                    "Trigger all {C:attention}Bonus Cards{}",
+                    "and {C:attention}Mult Cards{}",
+                    "held in hand",
+            
+
+                    
+                },
+            },
+
+                    j_smsn_muffintray = {
+                name = "Muffin Tray",
+                text = {
+                    "Trigger all {C:attention}Bonus Cards{}",
+                    "and {C:attention}Mult Cards{}",
+                    "held in hand",
+            
+                }
+                    
+                },
+
                         j_smsn_compost = {
                 name = "Compost Bin",
                 text = {
-                    "Gain {C:gold}$#1#{} of",
-                    "payout value every #2#",
+                    "This Joker gains {C:gold}$#1#{} of",
+                    "sell value every #2#",
                     "{C:dark_edition}Berry Cards{} sold",
-                    "{C:inactive,s:0.8}(Currently {C:gold}$#3#{C:inactive,s:0.8})",
                 },
             },
 
@@ -519,7 +857,7 @@ return {
                 },
             },
 
-            j_smsn_rabbick = {
+            j_smsn_rabbicksappy = {
                 name = "Rabbick Sappy",
                 text = {
                     "Retrigger a {C:attention}Rouxles Karrd{}",
@@ -527,15 +865,42 @@ return {
                 },
             },
 
-            j_smsn_yappy = {
+            j_smsn_evilsappy = {
                 name = "Evil Sappy (Yappy)",
+                text = {
+                    "{X:mult,C:white}x#1#{} Mult",
+                    "Gains {X:mult,C:white}x#2#{} per card scored",
+                    "with a {C:attention}Permament Bonus{}",
+                    "then removes card bonuses",
+
+                    
+                },
+            },
+            
+
+            j_smsn_papersappy = {
+                name = "Paper Sappy",
+                text = {
+                    "After {C:attention}#1#{} rounds,",
+                    "Sell this card to replenish",
+                    "your {C:blue}Hands{} and {C:red}Discards{}",
+                    "and reduce Blind size by {C:attention}#2#%{}",
+                     "{C:inactive}(#3# / #1#)"
+                },
+            },
+
+                        j_smsn_nostalgicsappy = {
+                name = "Nostalgic Sappy",
                 text = {
                     "",
                 },
             },
 
             j_smsn_thegoteam = {
-                name = "Thunder, Lightning, Strike!!",
+                name = {
+                    'Thunder, Lightning, Strike!!',
+                    '{s:0.75}By The Go! Team',
+                },
                 text = {
                     "{C:red}+#1#{} Mult and {C:money}$#2#{}",
                     "if hand contains a {C:attention}Flash{}",
@@ -544,7 +909,10 @@ return {
             },
 
             j_smsn_kuchinohanabi = {
-                name = "Kuchinohanabi",
+                name = {
+                    'Kuchinohanabi',
+                    '{s:0.75}By Hakushi Hasegawa',
+                },
                 text = {
                     "Earn {C:money}$#1#{} if {C:attention}Flash{}",
                     "was the only hand type",
@@ -621,8 +989,31 @@ return {
                 },
             },
 
+                        j_smsn_cheese = {
+                name = "Cheese & Jeremy",
+                text = {
+                    {
+                        "not sure what they do yet",
+                            "but they are so cute!",
+
+                    },
+                },
+            },
+
+                                    j_smsn_jadepenguin = {
+                name = "Jade Penguin",
+                text = {
+                    "",
+                    "",
+              
+                },
+            },
+
             j_smsn_pedro = {
-                name = "Pedro Pave",
+                name = {
+                    'Pedro Pavé',
+                    '{s:0.75}The Pipedream Painter',
+                },
                 text = {
                     {
                         "",
@@ -649,7 +1040,10 @@ return {
             },
 
             j_smsn_angel = {
-                name = "Angel",
+                name = {
+                    'Angel',
+                    '{s:0.75}The Toon Dragon',
+                },
                 text = {
                     {
                         "does a {C:attention}silly{}",

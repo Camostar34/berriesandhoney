@@ -6,12 +6,12 @@ A "kitchen sink + self insert" mod with a general theme of picnics/food/cottagec
 Requires Steamodded [smods-1.0.0-beta-1016c](https://github.com/Steamodded/smods) and [Lovely](https://github.com/ethangreen-dev/lovely-injector)
 
 ## Additions:
-- Adds 49 Jokers (as of now)
-- - 18 Common
-- - 17 Uncommon
-- - 11 Rare
+- Adds 85 Jokers (as of now)
+- - 22 Common
+- - 40 Uncommon
+- - 22 Rare
 - - 3 Legendaries 
-- - 2 "Shitpost Jokers", which are semi-serious jokers based on funny ideas and inside jokes. There is an option to not have them appear in pools in-game. 
+- - 4 "Shitpost Jokers", which are semi-serious jokers based on funny ideas and inside jokes. There is an option to not have them appear in pools in-game. 
 - 21 Berries, a new consumable type
 - 3 Decks 
 - 2 Spectral Cards

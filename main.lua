@@ -1,8 +1,6 @@
 
 local files = {
       "lib/atlas",
-      "items/jokers",
-         "items/guestjokers",
       "items/item",
 	  "items/backs",
      "items/berries",
@@ -11,6 +9,128 @@ local files = {
      "items/globals"
       -- "items/edition",
 }
+
+
+--used because there is no custom order SMODS function yet, please can someone add one
+
+joker_order = {
+    ------- OC Jokers
+	"samson",
+    "bash",
+    "hercule",
+    "emmy",
+    "sytoroonson",
+    ----
+	"denali",
+    "luzia",
+    "joylon",
+    "bearstack",
+    "grouphug",
+    ---- Picnic Themed jokers 
+    "tamago",
+    "grilledcheese",
+    "clubsandwich",
+    "ruben",
+    "fruitsando",
+    ----
+    "marmalade",
+    "weightlossshake",
+    "muffintray",
+    "dieting",
+    "bountifuljoker",
+    ---- berry themed jokers --
+    "gardener",
+    "spooky",
+    "berrypicking",
+    "secondhelping",
+    "memory",
+    ----
+    "cannery",
+    "mintjams",
+    "airfreshener",
+    "sticker",
+    "compost",
+    ----
+    "cherrybomb",
+    "americanbrunch",
+    "strawbnyan",
+    "allberries",
+    "twistedgarden",
+    ----
+    "razzby",
+    "strawberrygirl",
+    "strabby",
+    "chantilly",
+    "pepperjelly",
+    ----
+    "commonrambley",
+    "uncommonrambley",
+    "rarerambley",
+    "legendaryrambley",
+    "shitpost/rambleydumpy",
+    ---- honey themed jokers --
+    "fortunecookie",
+    "goldentooth",
+    "piggybank",
+    "coughdrops",
+    "mouse",
+    ----
+    "honeycombtoffee",
+    "chamoille",
+    "hothoney",
+    "honeybutterchips",
+    "golddigger",
+    ----
+    "beehive",
+    "koban",
+    "honeyjar",
+    "goldenparachute",
+    "hunnabee",
+    ---- Legendary / Retro Jokers
+    "littlelad",
+    "rivalshercule",
+    "rivalssamson",
+    "rivalsemmy",
+    "paddington",
+    ------- Misc / Kitchen sink jokers 
+    "damacy",
+    "femtanyl",
+    "mycom",
+    ---
+    "flowworm",
+    "negativeflowworm",
+    ---- shitpost jokers
+    "shitpost/boykisser",
+    "shitpost/manicface",
+    "shitpost/keepyapping",
+
+
+
+        ---- GUEST JOKERS --
+    "guest/gordon",
+    "guest/puddinhg",
+    "guest/sappy",
+    "guest/peapod",
+    "guest/astro",
+    ----
+    "guest/cheese",
+    "guest/jadepenguin",
+    "guest/pedro",
+    "guest/cozy",
+    "guest/rose",
+   
+    ----
+    "guest/shadow",
+     "guest/angel",
+
+}
+
+-- load all jokers
+for i = 1, #joker_order do
+	assert(SMODS.load_file("items/jokers/" .. joker_order[i] .. ".lua"))()
+end
+
+
 SMODS.current_mod.optional_features = function()
     return { quantum_enhancements = true,
     	

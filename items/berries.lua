@@ -269,7 +269,91 @@ SMODS.Consumable {
     end
 }
 
+SMODS.Consumable {
+  key = "booberry",
+  set = "Berry",
 
+  atlas = "berries",
+  pos = { x = 0, y = 0 },
+
+  config = {
+    extra = {
+        berry_money = 5,
+      activity = "inactive",
+      in_use = false,
+    }
+  },
+
+  loc_vars = function(self, info_queue, card)
+    info_queue[#info_queue + 1] = G.P_CENTERS[card.ability.mod_conv]
+    return { vars = { card.ability.extra.berry_money, card.ability.extra.activity } }
+  end,
+
+  keep_on_use = function(self, card)
+    return true
+  end,
+
+    calc_dollar_bonus = function(self, card)
+    if card.ability.extra.in_use then
+        SMODS.destroy_cards(card)
+        return card.ability.extra.berry_money
+    end
+    end,
+
+    can_use = function(self, card)
+    return not card.ability.extra.in_use
+  end,
+
+  use = function(self, card, area)
+    card.ability.extra.activity = "active!"
+    card.ability.extra.in_use = true
+         local eval = function(card) return not card.REMOVED and not G.RESET_JIGGLES end
+                juice_card_until(card, eval, true)
+  end,
+}
+
+SMODS.Consumable {
+  key = "frankenberry",
+  set = "Berry",
+
+  atlas = "berries",
+  pos = { x = 0, y = 0 },
+
+  config = {
+    extra = {
+        berry_money = 5,
+      activity = "inactive",
+      in_use = false,
+    }
+  },
+
+  loc_vars = function(self, info_queue, card)
+    info_queue[#info_queue + 1] = G.P_CENTERS[card.ability.mod_conv]
+    return { vars = { card.ability.extra.berry_money, card.ability.extra.activity } }
+  end,
+
+  keep_on_use = function(self, card)
+    return true
+  end,
+
+    calc_dollar_bonus = function(self, card)
+    if card.ability.extra.in_use then
+        SMODS.destroy_cards(card)
+        return card.ability.extra.berry_money
+    end
+    end,
+
+    can_use = function(self, card)
+    return not card.ability.extra.in_use
+  end,
+
+  use = function(self, card, area)
+    card.ability.extra.activity = "active!"
+    card.ability.extra.in_use = true
+         local eval = function(card) return not card.REMOVED and not G.RESET_JIGGLES end
+                juice_card_until(card, eval, true)
+  end,
+}
 
 SMODS.Consumable {
   key = "cuberry",
