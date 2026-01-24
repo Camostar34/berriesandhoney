@@ -4,7 +4,7 @@ SMODS.Joker {
     name = "Gold Digger",
     pronouns = "any_all",
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
+    pos = { x = 6, y = 5 },
 
     config = { extra = { } },
     rarity = 2,

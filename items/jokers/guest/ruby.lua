@@ -1,17 +1,17 @@
-SMODS.Joker { 
 
-    key = "negativeflowworm",
-    name = "Flow Worm (Backlight)",
-    pronouns = "any_all",
+SMODS.Joker {
+    key = "ruby",
+    name = "Ruby",
+ pronouns = "she_her",
     atlas = "jokers",
-    pos = { x = 5, y = 5 },
+    pos = { x = 0, y = 0 },
 
-    config = { extra = { } },
+    config = { extra = { evil_xmult = 0, addxmult = 0.5, } },
     rarity = 2,
-    unlocked = true,
-    discovered = true,
     cost = 3,
     blueprint_compat = false,
+       unlocked = true,
+    discovered = true,
     eternal_compat = true,
     perishable_compat = true,
     demicolon_compat = true,
@@ -22,6 +22,10 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
        
- -- Samson himself does nothing, the stupid idiot. A lovely patch is doing all the work. 
+
     end,
+     credits = {
+		character = "lord-ruby",             
+	}
 }
+

@@ -1,17 +1,15 @@
-SMODS.Joker { 
+SMODS.Joker {
+    key = "pooh",
+    name = "Winnie The Pooh",
 
-    key = "negativeflowworm",
-    name = "Flow Worm (Backlight)",
-    pronouns = "any_all",
     atlas = "jokers",
-    pos = { x = 5, y = 5 },
-
+    pos = { x = 4, y = 7 },
     config = { extra = { } },
     rarity = 2,
-    unlocked = true,
-    discovered = true,
     cost = 3,
     blueprint_compat = false,
+       unlocked = true,
+    discovered = true,
     eternal_compat = true,
     perishable_compat = true,
     demicolon_compat = true,
@@ -22,6 +20,10 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
        
- -- Samson himself does nothing, the stupid idiot. A lovely patch is doing all the work. 
+    
+
+    end,
+    in_pool = function(self, args)
+        return false
     end,
 }

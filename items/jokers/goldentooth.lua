@@ -4,7 +4,7 @@ SMODS.Joker {
     name = "Golden Tooth",
     pronouns = "she_her",
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
+    pos = { x = 0, y = 5 },
 
     config = { extra = { } },
     rarity = 2,

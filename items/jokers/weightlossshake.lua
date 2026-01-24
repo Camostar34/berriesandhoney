@@ -3,7 +3,7 @@ SMODS.Joker {
     name = "Weight Loss Shake",
 
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
+    pos = { x = 2, y = 5 },
 
     config = { extra = {bonus = 45} },
     rarity = 2,

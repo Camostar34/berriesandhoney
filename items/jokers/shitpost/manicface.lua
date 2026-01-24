@@ -3,8 +3,8 @@ SMODS.Joker {
     name = "Manic Face",
 
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
-
+    pos = { x = 3, y = 6 },
+ soul_pos = { x = 4, y = 6 },
     config = { extra = { } },
     rarity = 1,
     cost = 3,

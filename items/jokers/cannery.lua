@@ -3,7 +3,7 @@ SMODS.Joker {
     name = "Cannery",
 
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
+    pos = { x = 1, y = 7 },
 
     config = { extra = {bonus = 45} },
     rarity = 1,
@@ -24,4 +24,7 @@ SMODS.Joker {
        
 
     end,
+     credits = {
+		art = "Candycanearter07"        
+	}
 }

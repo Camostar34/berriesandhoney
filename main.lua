@@ -33,7 +33,7 @@ joker_order = {
     "ruben",
     "fruitsando",
     ----
-    "marmalade",
+    "pipingbag",
     "weightlossshake",
     "muffintray",
     "dieting",
@@ -99,11 +99,15 @@ joker_order = {
     ---
     "flowworm",
     "negativeflowworm",
+    "hamtaro",
+    "stilton",
     ---- shitpost jokers
     "shitpost/boykisser",
     "shitpost/manicface",
     "shitpost/keepyapping",
-
+     "shitpost/pooh",
+     "shitpost/berryboy",
+    -------
 
 
         ---- GUEST JOKERS --
@@ -120,6 +124,7 @@ joker_order = {
     "guest/rose",
    
     ----
+    "guest/ruby",
     "guest/shadow",
      "guest/angel",
 
@@ -144,6 +149,8 @@ end
 local crossmodfiles = {
    "nflame",
    "starspace",
+   "busterb",
+
 }
 
 for i, v in pairs(files) do

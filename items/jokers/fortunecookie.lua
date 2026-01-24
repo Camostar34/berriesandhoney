@@ -4,7 +4,7 @@ SMODS.Joker {
     name = "Fortune Cookie",
     pronouns = "she_her",
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
+    pos = { x = 1, y = 6 },
 
     config = { extra = { } },
     rarity = 2,

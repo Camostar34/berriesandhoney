@@ -4,7 +4,7 @@ SMODS.Joker {
     name = "Flow Worm",
     pronouns = "any_all",
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
+    pos = { x = 4, y = 5 },
 
     config = { extra = { } },
     rarity = 2,

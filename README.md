@@ -27,7 +27,7 @@ So far, there are crossmod content with:
 - Neonflames
 
 ### Credits
-- candycaneanniahlator(etherware2) - Honeycomb Toffee's effect, Oops! All Berries Art, general Code Help, Feedback, Playtesting, and being a wonderful slime friend 
+- candycaneanniahlator(etherware2) - Honeycomb Toffee's effect, Oops! All Berries Art, Cannery Art, general Code Help, Feedback, Playtesting, and being a wonderful slime friend 
 - Astro - Katamari Damacy art, Feedback and Playtesting
 - lord-ruby - KATAMARI art
 - Offical Balatro Server for coding help

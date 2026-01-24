@@ -3,7 +3,7 @@ SMODS.Joker {
     name = "Dieting Joker",
 
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
+    pos = { x = 0, y = 6 },
 
     config = { extra = {bonus = 45} },
     rarity = 1,

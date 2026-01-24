@@ -1,9 +1,9 @@
-SMODS.Joker {
-    key = "jadepenguin",
-    name = "Jade Penguin",
-
+SMODS.Joker { 
+    key = "berryboy",
+    name = "Berryboy Joker",
+       pronouns = "he_him",
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
+    pos = { x = 3, y = 1 },
 
     config = { extra = { } },
     rarity = 1,
@@ -16,14 +16,11 @@ SMODS.Joker {
     demicolon_compat = true,
 
     loc_vars = function(self, info_queue, card)
-        return { vars = {} }
+        return { vars = {card.ability.extra.miniboss, card.ability.extra.time_limit,} }
     end,
 
     calculate = function(self, card, context)
        
-        if context.end_of_round and context.cardarea == G.jokers then
-
-        end
 
     end,
 }

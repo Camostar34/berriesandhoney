@@ -1,12 +1,12 @@
 SMODS.Joker {
-    key = "chantilly",
-    name = "Chantilly Cake",
-   pronouns = "she_her",
+    key = "pipingbag",
+    name = "Piping Bag",
+       pronouns = "he_him",
     atlas = "jokers",
-    pos = { x = 2, y = 6 },
+    pos = { x = 3, y = 7 },
 
-    config = { extra = { evil_xmult = 0, addxmult = 0.5, } },
-    rarity = 1,
+    config = { extra = { } },
+    rarity = 2,
     cost = 4,
     blueprint_compat = false,
        unlocked = true,
@@ -23,4 +23,7 @@ SMODS.Joker {
        
 
     end,
+    credits = {
+		code = "Candycanearter07"        
+	}
 }

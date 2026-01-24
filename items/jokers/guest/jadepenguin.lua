@@ -1,13 +1,12 @@
-
 SMODS.Joker {
     key = "jadepenguin",
     name = "Jade Penguin",
- pronouns = "he_him",
-    atlas = "jokers",
-    pos = { x = 0, y = 0 },
 
-    config = { extra = { evil_xmult = 0, addxmult = 0.5, } },
-    rarity = 2,
+    atlas = "jokers",
+    pos = { x = 5, y = 4 },
+     soul_pos = { x = 6, y = 4 },
+    config = { extra = { } },
+    rarity = 1,
     cost = 3,
     blueprint_compat = false,
        unlocked = true,
@@ -22,10 +21,9 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
        
+        if context.end_of_round and context.cardarea == G.jokers then
+
+        end
 
     end,
-     credits = {
-		character = "JPenguin"              
-	}
 }
-

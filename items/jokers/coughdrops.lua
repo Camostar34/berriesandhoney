@@ -3,7 +3,7 @@ SMODS.Joker {
     name = "Honey Cough Drops",
 
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
+    pos = { x = 7, y = 6 },
 
     config = { extra = { } },
     rarity = 1,

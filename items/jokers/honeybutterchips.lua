@@ -4,7 +4,7 @@ SMODS.Joker {
     name = "Honey Butter Chips",
     pronouns = "she_her",
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
+    pos = { x = 6, y = 6 },
 
     config = { extra = { } },
     rarity = 2,

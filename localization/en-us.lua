@@ -825,6 +825,16 @@ return {
                 },
             },
 
+                    j_smsn_berryboy = {
+                name = "Berryboy Joker",
+                text = {
+                    "{C:green}#1# in #2#{} chance to",
+                    "create a {C:purple}Death{} Tarot when",
+                    "a {C:negative_edition}Berry Card{} is sold"
+                },
+            },
+
+
 
             j_smsn_sticker = {
                 name = "Scented Sticker",
@@ -835,9 +845,56 @@ return {
                 },
             },
 
+            
+            j_smsn_hamtaro = {
+                name = "Hamtaro",
+                text = {
+                    "Earn {C:money}$#1#{} for",
+                    "every card {C:attention}held in hand{}",
+                    "at the end of the round",
+                },
+            },
+
+                    j_smsn_stilton = {
+                name = "Geronimo Stilton",
+                text = {
+                    "Create a {C:purple}Tarot{} Card",
+                    "when a {C:money}Gold Seal{}",
+                    "is scored",
+                },
+            },
+
+                        j_smsn_pooh = {
+                name = "Winnie The Pooh",
+                text = {
+                    "Gain {C:money}$3{} when-",
+                    "Wait, where is he??",
+                    "{s:1.2,E:1}     Oh Bother...{}     ",
+                },
+            },
+
+            j_smsn_pipingbag = {
+                name = "Piping Bag",
+                text = {
+                    "[Suit] are shuffled",
+                    "to the {C:attention}top{} of your deck",
+                    "{C:inactive}(Suit changes at the end of round){}",
+                },
+            },
+
             -- CROSSMOD JOKERS
 
             j_smsn_microplastics = {
+                name = "Full of Microplastics",
+                text = {
+                    "Create 1 {C:dark_edition}Berry Card{} per",
+                    "{C:nflame_silicon}Silicon{} card owned",
+                    "when a {C:attention}Boss Blind{} is selected",
+                    "{C:inactive,s:0.8}(Does not have to have room)",
+                },
+            },
+
+            j_smsn_secretsamson= {
                 name = "Full of Microplastics",
                 text = {
                     "Create 1 {C:dark_edition}Berry Card{} per",
@@ -854,6 +911,13 @@ return {
                     "counts as your",
                     "{C:attention}most played Poker Hand{}",
                     "{C:inactive,s:0.8}(Usable once per round)",
+                },
+            },
+
+                j_smsn_jollysappy = {
+                name = "Jolly Sappy",
+                text = {
+                    "{s:4}pair{}",
                 },
             },
 
@@ -993,8 +1057,9 @@ return {
                 name = "Cheese & Jeremy",
                 text = {
                     {
-                        "not sure what they do yet",
-                            "but they are so cute!",
+                        "If played hand contains a",
+                            "{C:attention}Gold Card{}, destroy it and upgrade",
+                            "{C:attention}poker hand{} per cards destroyed",
 
                     },
                 },
@@ -1003,8 +1068,9 @@ return {
                                     j_smsn_jadepenguin = {
                 name = "Jade Penguin",
                 text = {
-                    "",
-                    "",
+                    "When you discard {C:attention}#1#{} or more cards at once",
+                    "{C:green}#2# in #3#{} chance to destroy a random card",
+                    "and gain {C:money}$#4#{}"
               
                 },
             },
@@ -1030,11 +1096,29 @@ return {
                 },
             },
 
+             j_smsn_ruby = {
+                name = {
+                    'Ruby',
+                    '{s:0.75}Lord of Hope',
+                },
+                text = {
+                    {
+                        "Create a {C:spectral}Spectral{} card",
+                        "on your {C:attention}final hand{}",
+                        "with {C:attention}0{} discards remaining",
+                    },
+                },
+            },
+
             j_smsn_astro = {
                 name = "Astro",
                 text = {
                     {
-                        "{C:attention}Doubles{} all {C:blue}Chip{} effects.",
+                         "Adjacent Jokers that give {C:red}+Mult{} also give",
+                            "{C:chips}#1#x{} that amount in Chips; those that give",
+                            "{X:mult,C:white}XMult{} also multiply Chips by",
+                            "{X:chips,C:white}X#2#{} of that value.",
+                             "{C:inactive,s:0.8}(xMult must be greater than 1)",
                     },
                 },
             },

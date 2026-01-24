@@ -3,7 +3,7 @@ SMODS.Joker {
     name = "Compost Bin",
    pronouns = "it_its",
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
+    pos = { x = 0, y = 7 },
 
     config = { extra = { payout = 2, current = 0, gain = 1, } },
     rarity = 1,
