@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "pooh",
     name = "Winnie The Pooh",
-
+    pools = { shitpost = true },
     atlas = "jokers",
     pos = { x = 4, y = 7 },
     config = { extra = { } },

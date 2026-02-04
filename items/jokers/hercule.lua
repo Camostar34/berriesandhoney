@@ -4,7 +4,7 @@ SMODS.Joker {
     pronouns = "he_they",
     atlas = "jokers",
     pos = { x = 0, y = 0 },
-
+    pools = { oc = true, wip = true },
     config = { extra = { cards_draw = 1, hand_played = false,} },
     rarity = 1,
     cost = 3,
@@ -14,6 +14,7 @@ SMODS.Joker {
     eternal_compat = true,
     perishable_compat = true,
     demicolon_compat = true,
+
 
     loc_vars = function(self, info_queue, card)
         return { vars = {card.ability.extra.cards_draw} }

@@ -3,8 +3,8 @@ SMODS.Joker {
     name = "Tamago Sando",
 
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
-
+    pos = { x = 5, y = 7 },
+    pools = { wip = true},
     config = { extra = {bonus = 1} },
     rarity = 1,
     cost = 3,

@@ -3,8 +3,8 @@ SMODS.Joker {
     name = "Second Helping",
 
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
-
+    pos = { x = 3, y = 5 },
+    pools = { wip = true},
     config = { extra = {bonus = 45} },
     rarity = 1,
     cost = 3,

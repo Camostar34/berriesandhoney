@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "sytoroonson",
     name = "Sytoroonson",
-
+    pools = { oc = true, wip = true },
     atlas = "jokers",
     pos = { x = 0, y = 0 },
 

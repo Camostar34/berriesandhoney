@@ -4,8 +4,8 @@ SMODS.Joker {
     name = "Honey Chamoille Tea",
     pronouns = "she_her",
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
-
+    pos = { x = 2, y = 8 },
+    pools = { wip = true},
     config = { extra = { } },
     rarity = 2,
     unlocked = true,

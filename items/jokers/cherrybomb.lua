@@ -4,8 +4,8 @@ SMODS.Joker {
     name = "Cherry Bomb",
     pronouns = "they_them",
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
-
+    pos = { x = 4, y = 9 },
+    pools = { wip = true},
     config = { extra = { } },
     rarity = 2,
     unlocked = true,

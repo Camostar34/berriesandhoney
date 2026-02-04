@@ -4,7 +4,7 @@ SMODS.Joker {
     name = "Berry Picking",
     pronouns = "she_her",
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
+    pos = { x = 7, y = 8 },
 
     config = { extra = { } },
     rarity = 2,

@@ -3,6 +3,7 @@ SMODS.Joker {
     name = "Astro",
  pronouns = "he_him",
     atlas = "jokers",
+    pools = { guest = true, wip = true  },
     pos = { x = 7, y = 0 },
 
     config = { extra = { } },

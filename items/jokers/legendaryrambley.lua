@@ -2,6 +2,7 @@ SMODS.Joker {
     key = "legendaryrambley",
     name = "Rambley The Raccoon",
     pronouns = "he_him",
+    pools = { rambley = true, wip = true },
     atlas = "jokers",
     pos = { x = 3, y = 3 },
 soul_pos = { x = 4, y = 3 },

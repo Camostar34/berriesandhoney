@@ -4,7 +4,7 @@ SMODS.Joker { --ROA Samson
     pronouns = "he_him",
     atlas = "jokers",
     pos = { x = 1, y = 0 },
-
+    pools = { oc = true, wip = true },
     config = { extra = { miniboss = 4000, time_limit = 3, reward = 25,} },
     rarity = 3,
     cost = 3,

@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "manicface",
     name = "Manic Face",
-
+    pools = { shitpost = true, wip = true },
     atlas = "jokers",
     pos = { x = 3, y = 6 },
  soul_pos = { x = 4, y = 6 },

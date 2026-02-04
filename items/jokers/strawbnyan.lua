@@ -4,8 +4,8 @@ SMODS.Joker {
     name = "Strawbnyan",
     pronouns = "she_her",
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
-
+    pos = { x = 6, y = 9 }, --69 HAHAHAHAHHAHAHAHAAHA!!!!!!!!!!!!!!!!!!!!
+    pools = { ykw = true, wip = true },
     config = { extra = { } },
     rarity = 2,
     unlocked = true,

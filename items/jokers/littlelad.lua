@@ -6,7 +6,7 @@ SMODS.Joker {
     atlas = "jokers",
     pos = { x = 7, y = 2 },
     soul_pos = { x = 0, y = 3 },
-
+    pools = { starburst = true },
     config = { extra = { bonus_chips = 0, bonus_mult = 0, bonus_xmult = 1,} },
     rarity = 4,
     cost = 3,

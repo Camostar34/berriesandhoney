@@ -4,6 +4,7 @@ SMODS.Joker {
     name = "Cheese and Jeremy",
  pronouns = "he_him",
     atlas = "jokers",
+    pools = { guest = true, wip = true  },
     pos = { x = 7, y = 4 },
 
     config = { extra = { evil_xmult = 0, addxmult = 0.5, } },

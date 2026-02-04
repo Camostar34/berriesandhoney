@@ -4,7 +4,7 @@ SMODS.Joker {
      pronouns = "he_him",
     atlas = "jokers",
     pos = { x = 2, y = 0 },
-
+    pools = { guest = true, wip = true  },
     config = { extra = { chip_bonus = 15, stolen_goods = 0, chips_to_give = 0,} },
     rarity = 1,
     cost = 3,

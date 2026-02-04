@@ -1,5 +1,51 @@
 return {
     descriptions = {
+        Edition = {
+      e_smsn_redglaze = {
+        name = "Strawberry Glazed",
+        text = {
+          "{X:mult,C:white}X#1#{} Mult",
+          "{C:attention}Removes{} edition",
+          "after scoring",
+        }
+      },
+      e_smsn_blueglaze = {
+        name = "Blueberry Glazed",
+        text = {
+          "{X:chips,C:white}X#1#{} Chips",
+          "{C:attention}Removes{} edition",
+          "after scoring",
+        }
+      },
+      e_smsn_brownglaze = {
+        name = "Maple Glazed",
+        text = {
+          "{C:attention}+#1#{} hand size",
+          "{C:attention}Removes{} edition",
+          "after scoring or discard",
+        }
+      },
+      e_smsn_yellowglaze = {
+        name = "Lemon Poppy Glazed",
+        text = {
+          "Earn {C:money}$#1#{} when",
+          "played and scored",
+          "{C:attention}Removes{} edition",
+          "after scoring",
+        }
+      },
+
+      e_smsn_orangeglaze = {
+        name = "Honey Glazed",
+        text = {
+          "Return to hand",
+          "after scoring",
+          "{C:attention}Removes{} edition",
+          "after scoring",
+        }
+      },
+      
+    },
         Back = {
             b_smsn_picnic = {
                 name = "Gingham Deck",
@@ -114,6 +160,51 @@ return {
                     "{C:attention}OC{} and {C:attention}Guest Jokers{}",
                     "from this mod",
                     "each give {C:red}#1#{} Mult",
+                },
+            },
+
+                        j_smsn_frostingknife= {
+                name = "Frosting Knife",
+                text = {
+                    "Played {C:attention}glazed{} cards",
+                    "have a {C:green}#1# in #2#{} chance",
+                    "to give an adjacent card the same Glaze",
+                },
+            },
+
+                j_smsn_doubledipping= {
+                name = "Double Dipping",
+                text = {
+                    "Retrigger all",
+                    "{C:attention}Glazed{} cards",
+                },
+            },
+
+                j_smsn_goldenoreo = {
+                name = "Golden Oreo ",
+                text = {
+                    "Gain {C:money}$#1#{} when a",
+                    "{C:attention}Cookie Card{} is scored",
+                },
+            },
+
+               j_smsn_honeyslime = {
+                name = "Honey Slime ",
+                text = {
+                    "{C:green}#1# in #2#{} chance to add",
+                    "a {C:money}Gold Seal{} to first",
+                    "played card when a",
+                    "{C:negative_edition}Berry Card{} is used",
+                },
+            },
+
+               j_smsn_goldenslime = {
+                name = "{C:edition}Golden Slime{}",
+                text = {
+                    "Gain {C:money}$#1#{} when a",
+                    "{C:attention}Consumable{} is used",
+                    "{C:green}#2# in #3#{} chance to disappear",
+                    "at the end of the round",
                 },
             },
 
@@ -419,6 +510,41 @@ return {
                 },
             },
 
+            
+
+                j_smsn_donuts = {
+                name = "Box of Donuts",
+                text = {
+                    "{C:attention}Glazed{} cards will not lose their edition",
+                    "expires after #1# hands",
+                },
+            },
+
+                 j_smsn_ginghamjoker = {
+                name = "Gingham Joker",
+                text = {
+                    "{C:attention}Gingham Cards{} are considered Wild Cards",
+                    "and cannot be {C:attention}debuffed{}",
+                },
+            },
+
+                             j_smsn_cookiemonster = {
+                name = "Cookie Monster",
+                text = {
+                    "Gains {X:chips,C:white}x#1#{} Chips when a",
+                    "{C:attention}Cookie Card{} is destroyed",
+                },
+            },
+
+                j_smsn_cookiejar = {
+                name = "Cookie Jar",
+                text = {
+                    "Add a {C:attention}Cookie Card{} to your hand",
+                    "at the beginning of the round",
+                    "Depleated after {C:attention}#1#{} rounds",
+                },
+            },
+
             j_smsn_commonrambley = {
                 name = "Rambley Railroad",
                 text = {
@@ -514,6 +640,19 @@ return {
                 },
             },
 
+               j_smsn_teteatete = {
+                name = {
+                    'tete-a-tete',
+                    '{s:0.75}By OSTER Project',
+                },
+                text = {
+                    "{C:attention}Pairs{} can be made with",
+                    "any 2 {C:attention}Face Cards{}"
+                   
+                },
+            },
+
+
             j_smsn_hothoney = {
                 name = "Hot Honey",
                 text = {
@@ -523,6 +662,14 @@ return {
             },
 
             j_smsn_boykisser = {
+                name = "Boykisser",
+                text = {
+                    "Scored {C:attention}Kings{} and {C:attention}Jacks{}",
+                    "permamently gain {C:red}+#1#{} Mult",
+                },
+            },
+
+            j_smsn_glazer = {
                 name = "Boykisser",
                 text = {
                     "Scored {C:attention}Kings{} and {C:attention}Jacks{}",
@@ -556,13 +703,17 @@ return {
             },
 
 
-            j_smsn_stomachbook = {
+            j_smsn_bambi = {
                 name = {
-                    'GOODNIGHT HYPNOPOMP',
+                    'BAMBI',
                     '{s:0.75}By STOMACH BOOK',
                 },
                 text = {
-                    "",
+                    "Destroy the first card scored",
+                    "if a {C:dark_edition}Negative Berry Card{}",
+                    "was consumed this hand",
+                    "{s:0.75,E:1,C:inactive}What a merry way to rot~!"
+
                 },
             },
 
@@ -642,13 +793,15 @@ return {
                 },
             },
 
-            j_smsn_bearstack = {
-                name = "Bear Stack",
+            j_smsn_calvana = {
+                name = "Calvana Family",
                 text = {
                     "Retrigger a {C:attention}Three of a Kind{}",
                     "if the hand contains one",
                 },
             },
+
+            
 
                         j_smsn_coughdrops = {
                 name = "Honey Cough Drops",
@@ -707,7 +860,7 @@ return {
                 text = {
                     "Every {C:attention}seventh{} card",
                     "discarded becomes {C:dark_edition}Negative{}",
-                    "Reverts at end of round",
+                    "{C:attention}Reverts{} at end of round",
                 },
             },
 
@@ -772,6 +925,49 @@ return {
                 },
             },
 
+                            j_smsn_peanutbutter = {
+                name = "Peanut Butter",
+                text = {
+                    "Cards return to your hand after scoring",
+                    "Consumed after {C:attention}#1#{} hands",
+                },
+            },
+
+                        j_smsn_peoplepleaser= {
+                name = "People Pleaser",
+                text = {
+                    "Face cards gain a",
+                    "random {C:attention}Glaze{} after scoring",
+                },
+            },
+
+                        j_smsn_crazyglazer = {
+                name = "Crazy Glazer",
+                text = {
+                    "Cards drawn during a round",
+                    "have a {C:green}#1# in #2#{} chance",
+                    "to gain a random {C:attention}Glaze{}"
+                },
+            },
+
+
+                        j_smsn_commonrambley = {
+                name = "Rambley Railroad",
+                text = {
+                    "Create a {C:dark_edition}Rambleberry{} if hand contains",
+                    "a {C:attention}face card{} and a {C:attention}Straight{}",
+                },
+            },
+
+                    j_smsn_fireblanket = {
+                name = "Fire Blanket",
+                text = {
+                    "{C:attention}Gingham Cards{} have a {C:green}#1# in #2#{}",
+                    "chance to give {X:mult,C:white}xMult{}",
+                    "for every unique suit in hand",
+                },
+            },
+
                     j_smsn_mouse = {
                 name = "Mouse Joker",
                 text = {
@@ -829,7 +1025,7 @@ return {
                 name = "Berryboy Joker",
                 text = {
                     "{C:green}#1# in #2#{} chance to",
-                    "create a {C:purple}Death{} Tarot when",
+                    "create a {C:purple}Death{} or {C:purple}Hanged Man{} Tarot when",
                     "a {C:negative_edition}Berry Card{} is sold"
                 },
             },
@@ -1032,6 +1228,17 @@ return {
                 },
             },
 
+                    j_smsn_cassknows = {
+                name = "Cassknows",
+                text = {
+                    {
+                        "A random played card",
+                        "gains a random {C:attention}Glaze{}",
+                        "before scoring",
+                    },
+                },
+            },
+
             j_smsn_shadow = {
                 name = "Shadow Wizard",
                 text = {
@@ -1167,6 +1374,27 @@ return {
                     "card in your hand",
                 },
             },
+        },
+
+         Enhanced = {
+            m_smsn_gingham = {
+                name = "Gingham Card",
+                text = {
+                "{C:red}+#1#{} Mult per {C:attention}unique{}",
+                "suit scored this hand",
+            }
+            },
+
+            m_smsn_cookie = {
+                name = "Cookie Card",
+            text = {
+                "{C:blue}+#1#{} Chips and {C:red}+#2#{} Mult",
+                "no rank or suit",
+                "Consumed after {C:attention}#3#{} triggers",
+            }
+            },
+
+        
         },
 
         Berry = {
@@ -1351,6 +1579,37 @@ return {
             k_smsn_berry            = "Berry Card",
             k_plus_commonrambley    = "All Aboard!",
             k_littlelad             = "Upgrade!!",
+
+
+
+             k_oc = "Original Character",
+             k_guest = "Guest Joker",
+             k_shitpost = "Shitpost Joker",
+             k_bitsandbops = "Bits & Bops",
+             k_sesamestreet = "Sesame Street",
+             k_hamtaro = "Hamtaro",
+             k_schoolastic = "Scholastic",
+             k_rambley = "Indigo Park",
+             k_starburst = "Starburst",
+             k_warioware = "Warioware",
+             k_slimerancher = "Slime Rancher",
+             k_ykw  = "Yokai Watch",
+             k_bugsnax  = "Bugsnax",
+             k_wip  = "NOT CODED",
+
+
         },
+        labels = {
+      -- Editions
+      smsn_redglaze = "Strawberry Glazed",
+      smsn_blueglaze = "Blueberry Glazed",
+      smsn_yellowglaze = "Lemon Poppy Glazed",
+      smsn_brownglaze = "Maple Glazed",
+      smsn_orangeglaze = "Honey Glazed",
+
+      -- Seals
+      smsn_freshness = "Freshness Seal",
+
+    },
     },
 }

@@ -1,7 +1,7 @@
 SMODS.Joker { 
     key = "rivalsemmy",
     name = "ROA Emmy",
-
+    pools = { oc = true, wip = true },
     atlas = "jokers",
     pos = { x = 5, y = 0 },
 

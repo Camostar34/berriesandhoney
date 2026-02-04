@@ -3,8 +3,8 @@ SMODS.Joker {
     name = "Grilled Cheese",
 
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
-
+    pos = { x = 6, y = 7 }, --67 HAHAHAHAHHAHAHA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    pools = { wip = true},
     config = { extra = {bonus = 10} },
     rarity = 1,
     cost = 3,

@@ -1,5 +1,6 @@
 SMODS.Joker{
     key = 'rose', --joker key
+        pools = { guest = true,},
      pronouns = "she_her",
     atlas = 'jokers',
     rarity = 2, --rarity: 1 = Common, 2 = Uncommon, 3 = Rare, 4 = Legendary

@@ -5,7 +5,7 @@ SMODS.Joker { --Samson
     pronouns = "he_him",
     atlas = "jokers",
     pos = { x = 0, y = 0 },
-
+    pools = { oc = true, wip = true },
     config = { extra = { } },
     rarity = 1,
     unlocked = true,

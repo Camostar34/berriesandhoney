@@ -1,13 +1,15 @@
 
 local files = {
       "lib/atlas",
+      "lib/pool",
       "items/item",
 	  "items/backs",
      "items/berries",
      "items/seals",
      "items/boosters",
-     "items/globals"
-      -- "items/edition",
+     "items/globals",
+        "items/centers",
+      "items/editions",
 }
 
 
@@ -20,24 +22,30 @@ joker_order = {
     "hercule",
     "emmy",
     "sytoroonson",
-    ----
-	"denali",
-    "luzia",
-    "joylon",
-    "bearstack",
-    "grouphug",
     ---- Picnic Themed jokers 
     "tamago",
     "grilledcheese",
     "clubsandwich",
     "ruben",
     "fruitsando",
-    ----
-    "pipingbag",
-    "weightlossshake",
+    -----
     "muffintray",
+    "donuts",
+    "pipingbag",
+    "ginghamjoker",
+    "cookiejar",
+    ----
+    "cookiemonster",
+    "peanutbutter",
+    "weightlossshake",
     "dieting",
     "bountifuljoker",
+    -----
+    "crazyglazer",
+    "fireblanket",
+    "peoplepleaser",
+    "doubledipping",
+    "frostingknife",
     ---- berry themed jokers --
     "gardener",
     "spooky",
@@ -62,7 +70,7 @@ joker_order = {
     "strabby",
     "chantilly",
     "pepperjelly",
-    ----
+    ---- Rambleberry Jokers
     "commonrambley",
     "uncommonrambley",
     "rarerambley",
@@ -86,6 +94,10 @@ joker_order = {
     "honeyjar",
     "goldenparachute",
     "hunnabee",
+    ----
+    "honeyslime",
+    "goldenoreo",
+    "goldenslime",
     ---- Legendary / Retro Jokers
     "littlelad",
     "rivalshercule",
@@ -96,11 +108,19 @@ joker_order = {
     "damacy",
     "femtanyl",
     "mycom",
+    "bambi",
+    "teteatete",
     ---
     "flowworm",
     "negativeflowworm",
     "hamtaro",
     "stilton",
+    ---- These are the Other OC jokers. Too much on the first page will  make people think this is a self insert mod. 
+	"denali",
+    "luzia",
+    "joylon",
+    "calvana",
+    "grouphug",
     ---- shitpost jokers
     "shitpost/boykisser",
     "shitpost/manicface",
@@ -115,18 +135,20 @@ joker_order = {
     "guest/puddinhg",
     "guest/sappy",
     "guest/peapod",
-    "guest/astro",
+    "guest/cassknows",
     ----
+    "guest/astro",
     "guest/cheese",
     "guest/jadepenguin",
     "guest/pedro",
     "guest/cozy",
-    "guest/rose",
+    
    
     ----
+    "guest/rose",
     "guest/ruby",
     "guest/shadow",
-     "guest/angel",
+    "guest/angel",
 
 }
 

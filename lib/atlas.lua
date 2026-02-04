@@ -45,3 +45,9 @@ SMODS.Atlas({
 })
 
 
+SMODS.Atlas({
+	key = "centers",
+	path = "enchanments.png",
+	px = 71,
+	py = 95
+})

@@ -3,8 +3,8 @@ SMODS.Joker {
     name = "Muffin Tray",
 
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
-
+    pos = { x = 5, y = 9 },
+    pools = { wip = true},
     config = { extra = {bonus = 45} },
     rarity = 1,
     cost = 3,

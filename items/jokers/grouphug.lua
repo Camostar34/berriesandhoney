@@ -5,7 +5,7 @@ SMODS.Joker {
     pronouns = "any_all",
     atlas = "jokers",
     pos = { x = 0, y = 0 },
-
+    pools = { wip = true},
     config = { extra = { } },
     rarity = 2,
     unlocked = true,

@@ -6,7 +6,7 @@ A "kitchen sink + self insert" mod with a general theme of picnics/food/cottagec
 Requires Steamodded [smods-1.0.0-beta-1016c](https://github.com/Steamodded/smods) and [Lovely](https://github.com/ethangreen-dev/lovely-injector)
 
 ## Additions:
-- Adds 85 Jokers (as of now)
+- Adds over 100 Jokers (as of now)
 - - 22 Common
 - - 40 Uncommon
 - - 22 Rare
@@ -28,6 +28,7 @@ So far, there are crossmod content with:
 
 ### Credits
 - candycaneanniahlator(etherware2) - Honeycomb Toffee's effect, Oops! All Berries Art, Cannery Art, general Code Help, Feedback, Playtesting, and being a wonderful slime friend 
+- cassknows - Glaze Editions
 - Astro - Katamari Damacy art, Feedback and Playtesting
 - lord-ruby - KATAMARI art
 - Offical Balatro Server for coding help

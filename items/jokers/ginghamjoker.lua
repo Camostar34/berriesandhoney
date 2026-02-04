@@ -1,11 +1,11 @@
-SMODS.Joker { 
-    key = "bearstack",
-    name = "Bear Stack",
-       pronouns = "they_them",
-    atlas = "jokers",
-    pos = { x = 0, y = 0 },
+SMODS.Joker {
+    key = "ginghamjoker",
+    name = "Gingham Joker",
 
-    config = { extra = { miniboss = 1000, time_limit = 3,} },
+    atlas = "jokers",
+    pos = { x = 7, y = 9 },
+    pools = { wip = true},
+    config = { extra = {} },
     rarity = 1,
     cost = 3,
     blueprint_compat = false,
@@ -16,11 +16,12 @@ SMODS.Joker {
     demicolon_compat = true,
 
     loc_vars = function(self, info_queue, card)
-        return { vars = {card.ability.extra.miniboss, card.ability.extra.time_limit,} }
+        return { vars = {card.ability.extra.bonus} }
     end,
 
     calculate = function(self, card, context)
-       
+
+      
 
     end,
 }

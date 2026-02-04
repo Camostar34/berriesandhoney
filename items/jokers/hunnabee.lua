@@ -4,8 +4,8 @@ SMODS.Joker {
     name = "Hunnabee",
     pronouns = "she_her",
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
-
+    pos = { x = 4, y = 8 },
+    pools = { bugsnax = true, wip = true },
     config = { extra = { } },
     rarity = 2,
     unlocked = true,

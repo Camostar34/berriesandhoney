@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "jadepenguin",
     name = "Jade Penguin",
-
+    pools = { guest = true, wip = true  },
     atlas = "jokers",
     pos = { x = 5, y = 4 },
      soul_pos = { x = 6, y = 4 },

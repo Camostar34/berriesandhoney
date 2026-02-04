@@ -5,8 +5,8 @@ SMODS.Joker {
     pronouns = "any_all",
     atlas = "jokers",
     pos = { x = 0, y = 0 },
-
-    config = { extra = { } },
+    pools = { shitpost = true, wip = true },
+    config = { extra = { multper = 1, current = 0 } },
     rarity = 2,
     unlocked = true,
     discovered = true,
@@ -17,11 +17,30 @@ SMODS.Joker {
     demicolon_compat = true,
 
     loc_vars = function(self, info_queue, card)
-        return { vars = {} }
+        return { vars = {card.ability.extra.multper, card.ability.extra.multper} }
     end,
 
     calculate = function(self, card, context)
-       
- -- Samson himself does nothing, the stupid idiot. A lovely patch is doing all the work. 
+
+       if context.joker_main then
+        return { mult = char_count * card.ability.extra.multper}
+       end
+
     end,
+
+
+    update = function(self, card, dt)
+    if G.GAME and G.GAME.blind and G.GAME.blind.config and G.GAME.blind.config.blind then
+        local center = G.GAME.blind.config.blind
+
+            local lines = localize{
+                type = "descriptions",
+                set  = center.set or "Blind",
+                key  = center.key,
+            } or {}
+
+            local desc = table.concat(lines, " ")
+            local char_count = #desc
+    end
+    end
 }

@@ -5,7 +5,7 @@ SMODS.Joker {
     pronouns = "any_all",
     atlas = "jokers",
     pos = { x = 6, y = 5 },
-
+    pools = { warioware = true, wip = true },
     config = { extra = { } },
     rarity = 2,
     unlocked = true,

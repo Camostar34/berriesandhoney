@@ -3,8 +3,8 @@ SMODS.Joker {
     name = "Strabby",
 
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
-
+    pos = { x = 3, y = 8 },
+    pools = { bugsnax = true, wip = true },
     config = { extra = { } },
     rarity = 1,
     cost = 3,

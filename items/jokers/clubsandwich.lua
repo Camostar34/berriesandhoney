@@ -3,8 +3,8 @@ SMODS.Joker {
     name = "Club Sandwich",
 
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
-
+    pos = { x = 7, y = 7 },
+    pools = { wip = true},
     config = { extra = {bonus = 30} },
     rarity = 1,
     cost = 3,

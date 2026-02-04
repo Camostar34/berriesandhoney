@@ -2,9 +2,9 @@
 SMODS.Joker {
     key = "boykisser",
     name = "Boykisser",
-
+    pools = { shitpost = true, wip = true },
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
+    pos = { x = 6, y = 8 },
 
     config = { extra = {bonus = 2} },
     rarity = 1,
