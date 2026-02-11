@@ -10,6 +10,8 @@ local files = {
      "items/globals",
         "items/centers",
       "items/editions",
+      "items/pokerhands",
+
 }
 
 
@@ -98,6 +100,20 @@ joker_order = {
     "honeyslime",
     "goldenoreo",
     "goldenslime",
+    "workerbee",
+    "beebear",
+    ----
+    "stingy",
+    "bumbling",
+    "colony",
+    "meltingpot",
+    "bearclaws",
+    ----
+    "meadbarrel",
+    "apiary",
+    "crystalized",
+    "lasthoneyjoker",
+    "honeyqueen", 
     ---- Legendary / Retro Jokers
     "littlelad",
     "rivalshercule",
@@ -111,6 +127,7 @@ joker_order = {
     "bambi",
     "teteatete",
     ---
+    "buttercream",
     "flowworm",
     "negativeflowworm",
     "hamtaro",
