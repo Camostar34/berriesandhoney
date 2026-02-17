@@ -5,7 +5,7 @@ SMODS.Joker {
     atlas = "jokers",
     pos = { x = 6, y = 8 },
 
-    config = { extra = { bonus = 1 } },
+    config = { extra = { bonus = 2 } },
     rarity = 2,
     cost = 5,
     blueprint_compat = false,

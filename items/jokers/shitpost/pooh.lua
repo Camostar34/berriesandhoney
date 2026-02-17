@@ -4,11 +4,11 @@ SMODS.Joker {
     pools = { shitpost = true },
     atlas = "jokers",
     pos = { x = 4, y = 7 },
-    config = { extra = { } },
+    config = { extra = {} },
     rarity = 2,
     cost = 3,
     blueprint_compat = false,
-       unlocked = true,
+    unlocked = true,
     discovered = true,
     eternal_compat = true,
     perishable_compat = true,
@@ -19,8 +19,6 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-       
-    
 
     end,
     in_pool = function(self, args)

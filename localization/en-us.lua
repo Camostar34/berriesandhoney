@@ -1125,8 +1125,8 @@ return {
             j_smsn_berryboy = {
                 name = "Berryboy Joker",
                 text = {
-                    "{C:green}#1# in #2#{} chance to",
-                    "create a {C:purple}Death{} or {C:purple}Hanged Man{} Tarot when",
+                    "Creates a {C:purple}Death{} or",
+                    "{C:purple}Hanged Man{} Tarot when",
                     "a {C:negative_edition}Berry Card{} is sold"
                 },
             },
