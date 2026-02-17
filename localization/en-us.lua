@@ -841,8 +841,8 @@ return {
             j_smsn_allberries = {
                 name = "Oops! All Berries",
                 text = {
-                    "The shop {C:attention}only{} contains",
-                    "{C:dark_edition}Berry Cards{} and {C:dark_edition}Picnic Packs{}",
+                    "The shop is {C:attention}Guarnteed{}",
+                    "to contain a {C:dark_edition}Mega Picnic Pack{}",
                     "{C:inactive,s:0.8}(Have we come full circle?)",
                 },
             },
