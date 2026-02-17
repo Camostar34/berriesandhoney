@@ -4,7 +4,7 @@ SMODS.Joker {
        pronouns = "he_him",
     atlas = "jokers",
     pos = { x = 3, y = 4 },
-   pools = { wip = true},
+   pools = {},
     config = { extra = { } },
     rarity = 2,
     cost = 4,
@@ -27,3 +27,21 @@ SMODS.Joker {
 		art = "Candycanearter07"        
 	}
 }
+
+
+
+local ref_get_pack = get_pack
+
+function get_pack(_key, _type)
+
+    if SMODS.find_card("j_smsn_allberries")[1] then
+        
+
+        if G.shop_booster and #G.shop_booster.cards == 0 then
+            return G.P_CENTERS["p_smsn_berrypack"]
+        end
+    end
+
+  
+    return ref_get_pack(_key, _type)
+end

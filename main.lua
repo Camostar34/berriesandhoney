@@ -151,7 +151,7 @@ joker_order = {
     "guest/gordon",
     "guest/puddinhg",
     "guest/sappy",
-    "guest/peapod",
+    "guest/ghost",
     "guest/cassknows",
     ----
     "guest/astro",
@@ -165,7 +165,7 @@ joker_order = {
     "guest/rose",
     "guest/ruby",
     "guest/shadow",
-    "guest/angel",
+    "guest/peapod",
 
 }
 

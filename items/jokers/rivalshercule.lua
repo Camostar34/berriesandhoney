@@ -5,7 +5,7 @@ SMODS.Joker {
     atlas = "jokers",
     pos = { x = 5, y = 0 },
 
-    config = { extra = { miniboss = 1000, time_limit = 3,} },
+    config = { extra = { hand = 2,} },
     rarity = 1,
     cost = 3,
     blueprint_compat = false,
@@ -16,7 +16,7 @@ SMODS.Joker {
     demicolon_compat = true,
 
     loc_vars = function(self, info_queue, card)
-        return { vars = {card.ability.extra.miniboss, card.ability.extra.time_limit,} }
+        return { vars = {card.ability.extra.hand,} }
     end,
 
     calculate = function(self, card, context)

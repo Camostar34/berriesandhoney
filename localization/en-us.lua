@@ -510,7 +510,14 @@ return {
                 },
             },
 
-            
+                j_smsn_honeyqueen = {
+                name = "Honey Queen",
+                text = {
+                    "Retrigger all {C:attention}Queens{}",
+                    "per {C:attention}Gold Cards{}",
+                    "held in hand",
+                },
+            },
 
                 j_smsn_donuts = {
                 name = "Box of Donuts",
@@ -616,6 +623,100 @@ return {
                     "with no {C:diamonds}Diamond{} cards in hand",
                 },
             },
+
+                  j_smsn_bumbling = {
+        name = "Bumbling Joker",
+        text = {
+          "{C:mult}+#1#{} Mult if played",
+          "hand contains",
+          "a {C:attention}Honeypot{}"
+        }
+      },
+
+                        j_smsn_stingy = {
+        name = "Stingy Joker",
+        text = {
+          "{C:chips}+#1#{} Chips if played",
+          "hand contains",
+          "a {C:attention}Honeypot{}"
+        }
+      },
+
+            j_smsn_colony = {
+        name = "The Colony",
+        text = {
+          "{X:mult,C:white}X#1#{} Mult if played",
+          "hand contains",
+          "a {C:attention}Honeypot{}"
+        }
+      },
+
+                  j_smsn_meltingpot = {
+        name = "Melting Pot",
+        text = {
+          "{C:attention}Honeypot{} hands can be",
+          "made with {C:money}Gold Seals{}",
+          "and {C:attention}Honey Glaze{}"
+        }
+      },
+
+            j_smsn_meadbarrel = {
+        name = "Mead Barrel",
+        text = {
+          "{C:attention}Gold Card{} values are doubled",
+          "Earn no {C:attention}Interest{}",
+        }
+      },
+
+                  j_smsn_apiary = {
+        name = "Apiary",
+        text = {
+          "{C:attention}Gold Cards{} give money",
+          "when {C:attention}drawn{} instead",
+          "at the end of the round"
+        }
+      },
+
+            j_smsn_workerbee = {
+        name = "Worker Bee",
+        text = {
+          "{C:attention}6{}s are considered",
+          "{C:attention}Gold Cards{}",
+        }
+      },
+
+                  j_smsn_beebear = {
+        name = "Bee Bear",
+        text = {
+          "When a {C:attention}Gold Cards{} is activated",
+          "destory it and permamently gain",
+          "{C:mult}+#1#{} Mult",
+          "{C:inactive,s:0.8}(Currently {C:mult}+#2#{}{C:inactive,s:0.8} Mult)",
+        }
+      },
+
+                  j_smsn_lasthoneyjoker = {
+                name = "idk yet",
+                text = {
+                    "i dont know but i just want an even number",
+                },
+            },
+
+                  j_smsn_crystalized = {
+        name = "Crystalized Honey",
+        text = {
+          "{C:money}Gold Cards{} give {C:chips}+#1#{} Chips",
+          "per {C:money}$#2#{} you have",
+          "{C:inactive,s:0.8}(Currently {C:chips}+#3#{}{C:inactive,s:0.8} Chips)",
+        }
+      },
+
+            j_smsn_bearclaws = {
+        name = "Bear Claws",
+        text = {
+          ":3",
+        }
+      },
 
             j_smsn_honeycombtoffee = {
                 name = "Honeycomb Toffee",
@@ -1100,6 +1201,16 @@ return {
                 },
             },
 
+            j_smsn_tasteful = {
+            name = "Tasteful Joker",
+            text = {
+            "{C:attention}+#1#{} hand size if",
+            "a hand containing",
+            "a {C:attention}#2#{}",
+            "was played this round"
+            }
+            },
+
              j_smsn_grenade = {
                 name = "Flash Grenade",
                 text = {
@@ -1232,9 +1343,21 @@ return {
                 name = "Cassknows",
                 text = {
                     {
-                        "A random played card",
-                        "gains a random {C:attention}Glaze{}",
-                        "before scoring",
+                        "Glazed Cards",
+                        "have {C:attention}x#1#{} value",
+                        "but are destroyed when their",
+                        "edition is removed",
+                    },
+                },
+            },
+
+                    j_smsn_buttercream = {
+                name = "Buttercream Sundae",
+                text = {
+                    {
+                        "{C:attention}Glazed Cards{} gain",
+                        "a random glaze after use",
+                        "and cannot be {C:attention}debuffed{}",
                     },
                 },
             },
@@ -1330,15 +1453,14 @@ return {
                 },
             },
 
-            j_smsn_angel = {
+            j_smsn_ghost = {
                 name = {
-                    'Angel',
-                    '{s:0.75}The Toon Dragon',
+                    'Ghost',
                 },
                 text = {
                     {
-                        "does a {C:attention}silly{}",
-                        ":)",
+                        "squeak! :3",
+                        "(effect pending)",
                     },
                 },
             },
@@ -1364,6 +1486,11 @@ return {
                 },
             },
         },
+        Planet = {
+      c_smsn_honeyhive = {
+        name = "Honeyhive Galaxy"
+      }
+    },
 
         Spectral = {
             c_smsn_retinalbloom = {
@@ -1567,6 +1694,15 @@ return {
     },
 
     misc = {
+
+        poker_hands = {
+      smsn_honeypot = "Honeypot"
+    },
+    poker_hand_descriptions = {
+      smsn_honeypot = {
+        "5 Gold cards"
+      }
+    },
         v_dictionary = {
             a_art       = { "Art: #1#" },
             a_code      = { "Code: #1#" },

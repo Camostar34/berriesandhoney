@@ -5,7 +5,7 @@ SMODS.Joker { --ROA Samson
     atlas = "jokers",
     pos = { x = 1, y = 0 },
     pools = { oc = true, wip = true },
-    config = { extra = { miniboss = 4000, time_limit = 3, reward = 25,} },
+    config = { extra = { create = 2} },
     rarity = 3,
     cost = 3,
     blueprint_compat = false,
@@ -17,7 +17,7 @@ SMODS.Joker { --ROA Samson
     
 
     loc_vars = function(self, info_queue, card)
-        return { vars = {card.ability.extra.miniboss, card.ability.extra.time_limit,card.ability.extra.reward,} }
+        return { vars = {card.ability.extra.create, } }
     end,
 
     calculate = function(self, card, context)

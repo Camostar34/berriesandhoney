@@ -1,19 +1,18 @@
 SMODS.Joker {
-    key = "angel",
-    name = "Angel",
- pronouns = "he_him",
+    key = "honeyqueen",
+   pronouns = "she_they",
     atlas = "jokers",
-    pos = { x = 6, y = 0 },
-    pools = { guest = true, wip = true },
+    pos = { x = 0, y = 0 },
+    pools = { wip = true},
     config = { extra = { evil_xmult = 0, addxmult = 0.5, } },
-    rarity = 1,
-    cost = 3,
+    rarity = 4,
+    cost = 4,
     blueprint_compat = false,
        unlocked = true,
     discovered = true,
     eternal_compat = true,
     perishable_compat = true,
-    demicolon_compat = true,
+    demicolon_compat = false,
 
     loc_vars = function(self, info_queue, card)
         return { vars = {} }
@@ -23,7 +22,4 @@ SMODS.Joker {
        
 
     end,
-     credits = {
-		character = "FunnyToonDerg"              -- you can also leave out fields if you wish
-	}
 }

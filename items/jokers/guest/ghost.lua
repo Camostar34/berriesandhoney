@@ -1,10 +1,10 @@
-SMODS.Joker { 
-    key = "rivalsemmy",
-    name = "ROA Emmy",
-    pools = { oc = true, wip = true },
+SMODS.Joker {
+    key = "ghost",
+    name = "Ghost",
+ pronouns = "she_her",
     atlas = "jokers",
     pos = { x = 0, y = 0 },
-
+    pools = { guest = true, wip = true },
     config = { extra = { } },
     rarity = 1,
     cost = 3,
@@ -16,11 +16,14 @@ SMODS.Joker {
     demicolon_compat = true,
 
     loc_vars = function(self, info_queue, card)
-        return { vars = {card.ability.extra.miniboss, card.ability.extra.time_limit,} }
+        return { vars = {} }
     end,
 
     calculate = function(self, card, context)
        
 
     end,
+     credits = {
+		character = "GhostSalt"              -- you can also leave out fields if you wish
+	}
 }
