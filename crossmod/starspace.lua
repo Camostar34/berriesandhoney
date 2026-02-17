@@ -111,11 +111,12 @@ SMODS.Joker {
 SMODS.Joker {
   key = "tasteful",
   atlas = "jokers",
-  pos = { x = 0, y = 0 },
+  pos = { x = 5, y = 11 },
   config = { extra = {
-    handsize = 5,
+    handsize = 4,
     type = "smsn_honeypot",
-    triggered = false
+    triggered = false,
+    easter_egg = false,
   } },
   rarity = 2,
   cost = 6,
@@ -134,6 +135,14 @@ SMODS.Joker {
     return G.GAME.hands["smsn_honeypot"].played > 0
     end,
 
+    
+    set_sprites = function(self, card, front)
+       
+        if pseudorandom('smsn_easter_egg') < 0.1 then
+             
+            card.children.center:set_sprite_pos({x = 6, y = 11}) 
+        end
+    end,
 
   calculate = function(self, card, context)
     -- tasteful giveth

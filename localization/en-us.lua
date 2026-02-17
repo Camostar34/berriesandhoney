@@ -56,6 +56,14 @@ return {
                     "appear in the shop",
                 },
             },
+                b_smsn_evilegg = {
+                name = "Evil Egg Deck",
+                text = {
+                    "{C:attention}I{} laid this egg",
+                    "(Testing for jokers",
+                    "with easter egg art)",
+                },
+            },
             b_smsn_sticky = {
                 name = "Sticky Deck",
                 text = {
