@@ -1,32 +1,33 @@
-
 SMODS.Joker {
-    key = "cheese",
-    name = "Cheese and Jeremy",
- pronouns = "he_him",
-    atlas = "jokers",
-    pools = { guest = true, wip = true  },
-    pos = { x = 7, y = 4 },
+   key = "cheese",
+   name = "Cheese and Jeremy",
+   pronouns = "he_him",
+   atlas = "jokers",
+   pools = { guest = true },
+   pos = { x = 7, y = 4 },
 
-    config = { extra = { evil_xmult = 0, addxmult = 0.5, } },
-    rarity = 2,
-    cost = 3,
-    blueprint_compat = false,
-       unlocked = true,
-    discovered = true,
-    eternal_compat = true,
-    perishable_compat = true,
-    demicolon_compat = true,
+   rarity = 2,
+   cost = 3,
+   blueprint_compat = false,
+   unlocked = true,
+   discovered = true,
+   eternal_compat = true,
+   perishable_compat = true,
+   demicolon_compat = true,
 
-    loc_vars = function(self, info_queue, card)
-        return { vars = {} }
-    end,
+   calculate = function(self, card, context)
+      if context.before then
+         local levels = 0
+         for k, v in pairs(context.full_hand) do
+            if SMODS.has_enhancement(v, "m_gold") then
+               v.smsn_cheese_markedfordeath = true
+               levels = levels + 1
+            end
+         end
+         return { level_up = levels, message = localize('k_level_up_ex') }
+      end
 
-    calculate = function(self, card, context)
-       
-
-    end,
-     credits = {
-		character = "personthateatcheese"              
-	}
+      if context.destroy_card and context.destroy_card.smsn_cheese_markedfordeath and not context.blueprint then return { remove = true } end
+   end,
+   credits = { character = "personthateatcheese" }
 }
-
