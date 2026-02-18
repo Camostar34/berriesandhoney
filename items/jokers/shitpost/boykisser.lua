@@ -24,5 +24,8 @@ SMODS.Joker {
             context.other_card.ability.perma_mult = (context.other_card.ability.perma_mult or 0) + card.ability.extra.bonus
             return { message = localize('k_upgrade_ex'), colour = G.C.MULT }
         end
-    end
+    end,
+     credits = {
+		code = "GhostSalt"              -- you can also leave out fields if you wish
+	}
 }

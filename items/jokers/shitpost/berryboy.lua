@@ -44,5 +44,8 @@ SMODS.Joker {
             }))
             return { message = chosen_message, colour = G.C.PURPLE }
         end
-    end
+    end,
+     credits = {
+		code = "GhostSalt"              -- you can also leave out fields if you wish
+	}
 }

@@ -29,5 +29,5 @@ SMODS.Joker {
 
       if context.destroy_card and context.destroy_card.smsn_cheese_markedfordeath and not context.blueprint then return { remove = true } end
    end,
-   credits = { character = "personthateatcheese" }
+   credits = { character = "personthateatcheese", code = "GhostSalt" }
 }

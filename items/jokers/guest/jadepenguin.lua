@@ -27,5 +27,9 @@ SMODS.Joker {
         elseif context.discard and context.other_card.smsn_jadepenguin_markedfordeath and not context.blueprint then
             return { dollars = card.ability.extra.money, remove = true }
         end
-    end
+    end,
+     credits = {
+		character = "JPenguin",
+        code = "GhostSalt"                 -- you can also leave out fields if you wish
+	}
 }

@@ -30,6 +30,7 @@ So far, there is crossmod content with:
 
 ### Credits
 - candycaneanniahlator(etherware2) - Honeycomb Toffee's effect, Oops! All Berries Art, Cannery Art, general Code Help, Feedback, Playtesting, and being a wonderful slime friend 
+- GhostSalt - Code for Berryboy Joker, Jade Penguin, Boykisser, and Cheese & Jeremy
 - cassknows - Glaze Editions
 - Astro - Katamari Damacy art, Feedback and Playtesting
 - lord-ruby - KATAMARI art
