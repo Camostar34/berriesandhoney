@@ -1,0 +1,33 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = "functions/common_events.lua"
+pattern = "function draw_card(from, to, percent, dir, sort, card, delay, mute, stay_flipped, vol, discarded_only)"
+position = "after"
+match_indent = true
+payload = """
+  
+    if from == G.hand and to == G.discard and G.GAME and G.GAME.blind and G.GAME.blind.config and G.GAME.blind.config.blind and G.GAME.blind.config.blind.key == 'bl_smsn_preserves' and not G.GAME.blind.disabled then
+        to = G.deck
+        
+       
+        if not G.GAME.preserves_shuffle_queued then
+            G.GAME.preserves_shuffle_queued = true
+            G.E_MANAGER:add_event(Event({
+                trigger = 'after',
+                delay = 0.8,
+                func = function()
+                    if G.GAME.blind then G.GAME.blind:wiggle() end
+                    G.deck:shuffle('preserves_shuffle')
+                    play_sound('paper1')
+                    G.GAME.preserves_shuffle_queued = false
+                    return true
+                end
+            }))
+        end
+    end
+"""

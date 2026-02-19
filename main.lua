@@ -7,6 +7,7 @@ local files = {
      "items/berries",
      "items/seals",
      "items/boosters",
+     "items/blinds",
      "items/globals",
         "items/centers",
       "items/editions",

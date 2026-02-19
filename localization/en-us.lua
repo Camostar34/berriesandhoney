@@ -1,5 +1,33 @@
 return {
     descriptions = {
+
+        Blind = {
+            bl_smsn_mess = {
+                name = "The Mess",
+                text = {
+                    "Oopsie!!",
+                }
+            },
+
+            bl_smsn_grizzly = {
+                name = "The Grizzly",
+                text = {
+                    "Destroys all consumables",
+                    "upon entering the Blind"
+                }
+            },
+
+            bl_smsn_preserves = {
+                name = "The Preserves",
+                text = {
+                    "Discarded cards are",
+                    "returned to your deck"
+                }
+            },
+
+        },
+        
+
         Edition = {
             e_smsn_redglaze = {
                 name = "Strawberry Glazed",

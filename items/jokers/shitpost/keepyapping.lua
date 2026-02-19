@@ -22,25 +22,12 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
 
-       if context.joker_main then
-        return { mult = char_count * card.ability.extra.multper}
-       end
+      
 
     end,
 
 
     update = function(self, card, dt)
-    if G.GAME and G.GAME.blind and G.GAME.blind.config and G.GAME.blind.config.blind then
-        local center = G.GAME.blind.config.blind
 
-            local lines = localize{
-                type = "descriptions",
-                set  = center.set or "Blind",
-                key  = center.key,
-            } or {}
-
-            local desc = table.concat(lines, " ")
-            local char_count = #desc
-    end
     end
 }
