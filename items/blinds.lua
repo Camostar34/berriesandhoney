@@ -18,28 +18,37 @@ SMODS.Blind {
 local honey_transition = 0.0
 local transition_speed = 0.5 
 
+local honey_transition = 0.0
+local transition_speed = 0.5 
+
 SMODS.ScreenShader {
     key = "slime",
     path = "slime.fs",
     
     send_vars = function(self)
-        
-        
         local dt = love.timer.getDelta()
         
-       
+ 
         local is_active = false
-        if G.GAME and G.GAME.blind and G.GAME.blind.config and G.GAME.blind.config.blind then
-            if G.GAME.blind.config.blind.key == 'bl_smsn_mess' and not G.GAME.blind.disabled then
-                is_active = true
-            end
+        if G.GAME and G.GAME.blind and G.GAME.blind.name == 'The Mess' and not G.GAME.blind.disabled then
+            is_active = true
+        end
+
+       
+        if G.STATE == G.STATES.GAME_OVER then
+            is_active = false
         end
         
-       
+      
         if is_active then
             honey_transition = math.min(1.0, honey_transition + dt * transition_speed)
         else
             honey_transition = math.max(0.0, honey_transition - dt * transition_speed)
+        end
+
+  
+        if honey_transition > 0 and G.STATE ~= G.STATES.GAME_OVER then
+            G.PITCH_MOD = 1.0 - (honey_transition * 0.4)
         end
 
         return {
@@ -50,19 +59,18 @@ SMODS.ScreenShader {
     
     should_apply = function()
         local is_active = false
-        if G.GAME and G.GAME.blind and G.GAME.blind.config and G.GAME.blind.config.blind then
-            if G.GAME.blind.config.blind.key == 'bl_smsn_mess' and not G.GAME.blind.disabled then
-                is_active = true
-            end
+        if G.GAME and G.GAME.blind and G.GAME.blind.name == 'The Mess' and not G.GAME.blind.disabled then
+            is_active = true
         end
         
-        
+        -- NEW: Ensure the shader knows to pack up and leave on Game Over
+        if G.STATE == G.STATES.GAME_OVER then
+            is_active = false
+        end
+
         return is_active or honey_transition > 0.0
     end
 }
-
-
-
 
 
 SMODS.Blind {
@@ -70,7 +78,7 @@ SMODS.Blind {
     name = "The Grizzly",
     dollars = 8,
     mult = 2,
-    boss = { min = 1 },
+    boss = { min = 4 },
     boss_colour = HEX("c6926a"),
     atlas = "blinds",
     pos = { x = 0, y = 0 },
@@ -115,7 +123,7 @@ SMODS.Blind {
 SMODS.Blind {
     key = "preserves",
     name = "The Preserves",
-    dollars = 8,
+    dollars = 3,
     mult = 2,
     boss = { min = 1 },
     boss_colour = HEX("ad4826"),
