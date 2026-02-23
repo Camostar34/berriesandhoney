@@ -27,3 +27,34 @@ SMODS.Joker {
 
     end,
 }
+
+
+local funny_str = "!\"#$%&'()+-*,./\\:;<=>?[]^_~"
+local font_cache = {}
+
+SMODS.DynaTextEffect { 
+    key = "glitching",
+    func = function(dynatext, index, letter)
+       
+        if not letter.normal_letter then
+            letter.normal_letter = letter.letter
+        end
+        
+    
+        local st = pseudorandom('skip_'..index, 1, #funny_str)
+        local rnd = string.sub(funny_str, st, st) 
+        
+ 
+        local font_id = dynatext.font.key or dynatext.font.file
+        
+      
+        font_cache[font_id] = font_cache[font_id] or {}
+        
+        if not font_cache[font_id][rnd] then
+            font_cache[font_id][rnd] = love.graphics.newText(dynatext.font.FONT, rnd)
+        end
+        
+       
+        letter.letter = font_cache[font_id][rnd]
+  end
+}

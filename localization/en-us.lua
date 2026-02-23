@@ -84,7 +84,16 @@ return {
                     "appear in the shop",
                 },
             },
-                b_smsn_evilegg = {
+                b_smsn_rokuyo = {
+                name = "Rokuyo Deck",
+                text = {
+                    "{C:green}Listed proabilities{} are",
+                    "{C:attention}doubled{} or {C:red}halved{}",
+                    "depending on Ante",
+                    "and current {C:attention}Blind{}"
+                },
+            },
+             b_smsn_evilegg = {
                 name = "Evil Egg Deck",
                 text = {
                     "{C:attention}I{} laid this egg",
@@ -913,11 +922,20 @@ return {
             },
 
             j_smsn_memory = {
-                name = "Apprenticeship  Memory",
+                name = "Memory of Apprenticeship",
                 text = {
                     "Create a {C:dark_edition}Negative Berry Card{}",
                     "when {C:attention}#1#{} or more face",
                     "cards are discarded",
+                },
+            },
+            j_smsn_memory_active = {
+                name = "Memory of Apprenticeship",
+                text = {
+                    "Create a {C:dark_edition}Negative Berry Card{}",
+                    "when {C:attention}#1#{} or more face",
+                    "cards are discarded",
+                    "{C:inactive,E:smsn_shaking}Why don't you remember her face?!?!?{}",
                 },
             },
 
@@ -1154,7 +1172,7 @@ return {
                 name = "Manic Face",
                 text = {
                     "Played {C:attention}face{} cards give",
-                    "[misprint text] when scored",
+                    "{E:smsn_glitching,C:attention}someth{} when scored",
                 },
             },
 
@@ -1748,6 +1766,7 @@ return {
 
         dictionary = {
             k_smsn_Berry_cards   = "Berry Cards",
+            k_plus_berry         = "+1 Berry",
             k_smsn_berry         = "Berry Card",
             k_plus_commonrambley = "All Aboard!",
             k_littlelad          = "Upgrade!!",
