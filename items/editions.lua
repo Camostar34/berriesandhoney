@@ -6,6 +6,16 @@ local yellowglaze_aux_img = love.graphics.newImage("Mods/berriesandhoney/assets/
 local brownglaze_aux_img = love.graphics.newImage("Mods/berriesandhoney/assets/shaders/brownglaze2x.png");
 local orangeglaze_aux_img = love.graphics.newImage("Mods/berriesandhoney/assets/shaders/orangeglaze2x.png");
 
+
+
+
+SMODS.Atlas({
+    key = "glaze",
+    path = "glazet.png",
+    px = 71,
+    py = 95
+})
+
 SMODS.Shader({
     key = "redglaze",
     path = "glazed.fs",
