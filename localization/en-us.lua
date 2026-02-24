@@ -981,9 +981,9 @@ return {
             j_smsn_fruitsando = {
                 name = "Fruit Sando",
                 text = {
-                    "{C:dark_edition}Berry Cards{} held in your consumables",
-                    "give {X:chips,C:white}x#1#{} Chips",
-                    "{C:green}#2# in #3#{} be consumed when",
+                    "{C:dark_edition}Berry Cards{} held in your",
+                    "consumables give {X:chips,C:white}x#1#{} Chips",
+                    "{C:green}#2# in #3#{} chance to be {C:attention}eaten{} when",
                     "a berry is sold or activated"
                 },
             },
@@ -1031,9 +1031,9 @@ return {
             j_smsn_tamago = {
                 name = "Tamago Sando",
                 text = {
-                    "{C:money}$#1#{} per held",
-                    "{C:diamonds}Diamond{} at end of the round",
-                    "Eaten if hand is played",
+                    "{C:diamonds}Diamond{} suits held",
+                    "in hand give {C:money}$#1#{} each",
+                    "{C:attention}Eaten{} if hand is played",
                     "without holding any {C:diamonds}Diamond{} suits",
                 },
             },
@@ -1043,7 +1043,7 @@ return {
                 text = {
                     "{C:spades}Spade{} suits held",
                     "in hand give {C:red}+#1#{} Mult each",
-                    "Eaten if hand is played",
+                    "{C:attention}Eaten{} if hand is played",
                     "without holding any {C:spades}Spade{} suits",
                 },
             },
@@ -1053,7 +1053,7 @@ return {
                 text = {
                     "{C:clubs}Club{} suits held",
                     "in hand give {C:blue}+#1#{} Chips each",
-                    "Eaten if hand is played",
+                    "{C:attention}Eaten{} if hand is played",
                     "without holding any {C:clubs}Club{} suits",
                 },
             },
@@ -1063,7 +1063,7 @@ return {
                 text = {
                     "{C:hearts}Heart{} suits held",
                     "in hand give {X:mult,C:white}x#1#{} Mult each",
-                    "Eaten if hand is played",
+                    "{C:attention}Eaten{} if hand is played",
                     "without holding any {C:hearts}Heart{} suits",
                 },
             },

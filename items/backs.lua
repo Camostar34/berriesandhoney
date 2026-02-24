@@ -283,7 +283,7 @@ function Card:hover()
     and G.GAME.selected_back
     and G.GAME.selected_back.effect
     and G.GAME.selected_back.effect.center
-    if G.GAME.selected_back and G.GAME.selected_back.effect.center.key == 'b_smsn_rokuyo' then
+    and G.GAME.selected_back.effect.center.key == 'b_smsn_rokuyo' then
 
         self.config.h_popup = {
             n = G.UIT.C,
