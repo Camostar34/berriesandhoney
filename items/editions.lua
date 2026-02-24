@@ -1,20 +1,11 @@
 -- Special thanks to Cassknows for these shaders!
 
-local redglaze_aux_img = love.graphics.newImage("Mods/berriesandhoney/assets/shaders/redglaze2x.png");
-local blueglaze_aux_img = love.graphics.newImage("Mods/berriesandhoney/assets/shaders/blueglaze2x.png");
-local yellowglaze_aux_img = love.graphics.newImage("Mods/berriesandhoney/assets/shaders/yellowglaze2x.png");
-local brownglaze_aux_img = love.graphics.newImage("Mods/berriesandhoney/assets/shaders/brownglaze2x.png");
-local orangeglaze_aux_img = love.graphics.newImage("Mods/berriesandhoney/assets/shaders/orangeglaze2x.png");
+SMODS.Atlas({ key = "redglaze_tex", path = "redglaze2x.png", px = 71, py = 95 })
+SMODS.Atlas({ key = "blueglaze_tex", path = "blueglaze2x.png", px = 71, py = 95 })
+SMODS.Atlas({ key = "yellowglaze_tex", path = "yellowglaze2x.png", px = 71, py = 95 })
+SMODS.Atlas({ key = "brownglaze_tex", path = "brownglaze2x.png", px = 71, py = 95 })
+SMODS.Atlas({ key = "orangeglaze_tex", path = "orangeglaze2x.png", px = 71, py = 95 })
 
-
-
-
-SMODS.Atlas({
-    key = "glaze",
-    path = "glazet.png",
-    px = 71,
-    py = 95
-})
 
 SMODS.Shader({
     key = "redglaze",
@@ -25,7 +16,7 @@ SMODS.Shader({
         end
 
         return {
-            aux_img = redglaze_aux_img,
+            aux_img = G.ASSET_ATLAS["smsn_redglaze_tex"].image,
             aux_num = card.asdf,
         }
     end,
@@ -40,7 +31,7 @@ SMODS.Shader({
         end
 
         return {
-            aux_img = blueglaze_aux_img,
+            aux_img = G.ASSET_ATLAS["smsn_blueglaze_tex"].image,
             aux_num = card.asdf,
         }
     end,
@@ -56,7 +47,7 @@ SMODS.Shader({
         end
 
         return {
-            aux_img = yellowglaze_aux_img,
+            aux_img = G.ASSET_ATLAS["smsn_yellowglaze_tex"].image,
             aux_num = card.asdf,
         }
     end,
@@ -72,7 +63,7 @@ SMODS.Shader({
         end
 
         return {
-            aux_img = brownglaze_aux_img,
+            aux_img = G.ASSET_ATLAS["smsn_brownglaze_tex"].image,
             aux_num = card.asdf,
         }
     end,
@@ -87,7 +78,7 @@ SMODS.Shader({
         end
 
         return {
-            aux_img = orangeglaze_aux_img,
+            aux_img = G.ASSET_ATLAS["smsn_orangeglaze_tex"].image,
             aux_num = card.asdf,
         }
     end,
