@@ -567,8 +567,8 @@ return {
             j_smsn_donuts = {
                 name = "Box of Donuts",
                 text = {
-                    "{C:attention}Glazed{} cards will not lose their edition",
-                    "expires after #1# hands",
+                    "{C:attention}Glazed{} cards will not lose their editions",
+                    "Expires after {C:attention}#1#{} hands",
                 },
             },
 
