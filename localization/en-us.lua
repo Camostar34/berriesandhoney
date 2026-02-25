@@ -1747,7 +1747,7 @@ return {
         },
 
         Other = {
-            smsn_freshness = {
+            smsn_freshness_seal = {
                 name = "Freshness Seal",
                 text = {
                     "Creates a random {C:dark_edition}Berry{}",
@@ -1812,7 +1812,7 @@ return {
             smsn_orangeglaze = "Honey Glazed",
 
             -- Seals
-            smsn_freshness = "Freshness Seal",
+            smsn_freshness_seal = "Freshness Seal",
 
         },
     },

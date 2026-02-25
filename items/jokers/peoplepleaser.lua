@@ -7,9 +7,6 @@ SMODS.Joker {
         x = 0,
         y = 10,
      },
-    pools = {
-        wip = true,
-     },
     config = {
         extra = {},
      },
