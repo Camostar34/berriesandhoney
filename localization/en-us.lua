@@ -1136,25 +1136,11 @@ return {
             j_smsn_mouse = {
                 name = "Mouse Joker",
                 text = {
-                    "When you discard a",
-                    "single {C:attention}Gold Card{},",
-                    "remove its Enhancement and",
-                    "gain {C:attention}double{} its held",
+                    "When you {C:red}discard{} a",
+                    "single {C:attention}Gold{} card, remove",
+                    "its {C:attention}Enhancement{} and",
+                    "earn {C:attention}double{} its held",
                     "in hand value",
-
-
-                },
-            },
-
-            j_smsn_muffintray = {
-                name = "Muffin Tray",
-                text = {
-                    "Trigger all {C:attention}Bonus Cards{}",
-                    "and {C:attention}Mult Cards{}",
-                    "held in hand",
-
-
-
                 },
             },
 
