@@ -202,9 +202,9 @@ return {
             j_smsn_grouphug = {
                 name = "Group Hug!!",
                 text = {
-                    "{C:attention}OC{} and {C:attention}Guest Jokers{}",
-                    "from this mod",
-                    "each give {C:red}#1#{} Mult",
+                    "{C:attention}OC{} and {C:attention}Guest{} Jokers",
+                    "from {C:attention}Berries and Honey{}",
+                    "each give {C:red}+#1#{} Mult",
                 },
             },
 
