@@ -226,10 +226,10 @@ return {
             },
 
             j_smsn_goldenoreo = {
-                name = "Golden Oreo ",
+                name = "Golden Oreo",
                 text = {
-                    "Gain {C:money}$#1#{} when a",
-                    "{C:attention}Cookie Card{} is scored",
+                    "Earn {C:money}$#1#{} when a",
+                    "{C:attention}Cookie{} card is scored",
                 },
             },
 
@@ -246,9 +246,9 @@ return {
             j_smsn_goldenslime = {
                 name = "{C:edition}Golden Slime{}",
                 text = {
-                    "Gain {C:money}$#1#{} when a",
-                    "{C:attention}Consumable{} is used",
-                    "{C:green}#2# in #3#{} chance to disappear",
+                    "Earn {C:money}$#1#{} when a",
+                    "{C:attention}consumable{} is used",
+                    "{C:green}#2# in #3#{} chance to {C:red}disappear{}",
                     "at the end of the round",
                 },
             },
@@ -961,10 +961,9 @@ return {
             j_smsn_coughdrops = {
                 name = "Honey Cough Drops",
                 text = {
-                    "Retrigger held and",
-                    "scored {C:attention}Gold Cards{}",
-                    "Eaten if Hand is played",
-                    "with {C:money}$25{} or more",
+                    "When round begins, add a random",
+                    "{C:attention}Gold{} playing card to your hand",
+                    "Eaten if money exceeds {C:money}$#1#{}",
                 },
             },
 
@@ -1784,6 +1783,7 @@ return {
             k_littlelad          = "Upgrade!!",
             k_m_smsn_glazed_ex   = "Glazed!",
             k_smsn_kaboom_ex     = "Kaboom!",
+            k_smsn_disappeared_ex = "Disappeared!",
 
 
 
