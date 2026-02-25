@@ -23,7 +23,7 @@ function smsn_apply_random_glaze(card)
 
    
     local selected_key = pseudorandom_element(valid_glazes, pseudoseed('smsn_glaze'))
-    card:set_edition(selected_key, true)
+    card:set_edition(selected_key, true, true)
 end
 
 

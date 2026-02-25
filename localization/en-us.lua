@@ -1102,8 +1102,8 @@ return {
             j_smsn_peoplepleaser = {
                 name = "People Pleaser",
                 text = {
-                    "Face cards gain a",
-                    "random {C:attention}Glaze{} after scoring",
+                    "Face cards gain random",
+                    "{C:attention}Glazes{} after scoring",
                 },
             },
 
@@ -1782,6 +1782,7 @@ return {
             k_smsn_berry         = "Berry Card",
             k_plus_commonrambley = "All Aboard!",
             k_littlelad          = "Upgrade!!",
+            k_m_smsn_glazed_ex = "Glazed!",
 
 
 
