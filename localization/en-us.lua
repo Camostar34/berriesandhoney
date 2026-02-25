@@ -357,8 +357,8 @@ return {
             j_smsn_cherrybomb = {
                 name = "Cherry Bomb",
                 text = {
-                    "{X:mult,C:white}x#1#{} Mult",
-                    "{C:green}#1# in #2#{} chance to destroy",
+                    "{X:mult,C:white}X#1#{} Mult",
+                    "{C:green}#2# in #3#{} chance to destroy",
                     "played cards and {C:attention}self destruct{}",
                 },
             },
@@ -1782,7 +1782,8 @@ return {
             k_smsn_berry         = "Berry Card",
             k_plus_commonrambley = "All Aboard!",
             k_littlelad          = "Upgrade!!",
-            k_m_smsn_glazed_ex = "Glazed!",
+            k_m_smsn_glazed_ex   = "Glazed!",
+            k_smsn_kaboom_ex     = "Kaboom!",
 
 
 
