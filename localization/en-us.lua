@@ -480,8 +480,8 @@ return {
                 name = "Fortune Cookie",
                 text = {
                     "Earn {C:money}$#1#{} at the end of round",
-                    "Payout decreases by 2 when activated",
-                    "Gain {C:purple}The Devil{} when depleated",
+                    "Payout decreases by {C:red}$#2#{} when activated",
+                    "Gain {C:purple}The Devil{} when depleted",
                 },
             },
 
@@ -593,7 +593,7 @@ return {
                 text = {
                     "Add a {C:attention}Cookie Card{} to your hand",
                     "at the beginning of the round",
-                    "Depleated after {C:attention}#1#{} rounds",
+                    "Depleted after {C:attention}#1#{} rounds",
                 },
             },
 
