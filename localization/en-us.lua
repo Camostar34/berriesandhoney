@@ -1518,13 +1518,14 @@ return {
             },
 
             j_smsn_ghost = {
-                name = {
-                    'Ghost',
-                },
+                name = "Ghost",
                 text = {
                     {
-                        "squeak! :3",
-                        "(effect pending)",
+                        "If hand contains an",
+                        "{C:attention}unscoring{} card, {C:red}destroy{}",
+                        "one and create a {C:attention}Boo Berry{}",
+                        "or a {C:attention}Franken Berry{}",
+                        "{C:inactive}(Must have room){}"
                     },
                 },
             },
