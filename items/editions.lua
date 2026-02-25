@@ -247,7 +247,7 @@ SMODS.Edition{
 
   calculate = function(self, card, context)
 
-    if (context.after and context.cardarea == G.play) or context.discard then
+    if (context.after and context.cardarea == G.play) or (context.discard and context.other_card == card) then
 
          G.E_MANAGER:add_event(Event({
                             trigger = "immediate",
@@ -279,17 +279,16 @@ SMODS.Edition{
 
   loc_vars = function(self, info_queue, card)
     return {
-      vars = {
-        self.config.extra.areasize
-      }
     }
   end,
 
   calculate = function(self, card, context)
-
-    if (context.after and context.cardarea == G.play) or context.discard then
-
-         G.E_MANAGER:add_event(Event({
+        -- TRIGGER: After scoring (context.after), check if card is still in Play area
+        if context.after and context.cardarea == G.play then
+            
+           
+            
+           G.E_MANAGER:add_event(Event({
                             trigger = "immediate",
                             func = (function()
                             card:set_edition()
@@ -298,7 +297,7 @@ SMODS.Edition{
                         return true
                             end)
                         }))
-      
-    end
+        end
+    
   end,
 }

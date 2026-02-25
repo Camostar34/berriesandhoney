@@ -87,7 +87,7 @@ return {
                 b_smsn_rokuyo = {
                 name = "Rokuyo Deck",
                 text = {
-                    "{C:green}Listed proabilities{} are",
+                    "{C:green}Listed probabilities{} are",
                     "{C:attention}doubled{} or {C:red}halved{}",
                     "depending on Ante",
                     "and current {C:attention}Blind{}"

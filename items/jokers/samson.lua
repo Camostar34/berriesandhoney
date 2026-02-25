@@ -22,6 +22,6 @@ SMODS.Joker { --Samson
 
     calculate = function(self, card, context)
        
- -- Samson himself does nothing, the stupid idiot. A lovely patch is doing all the work. 
+
     end,
 }
