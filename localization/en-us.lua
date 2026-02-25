@@ -1080,6 +1080,17 @@ return {
                 },
             },
 
+            j_smsn_cookiemonster = {
+                name = "Cookie Monster",
+                text = {
+                    "{C:green}#3# in #4#{} chance to {C:red}destroy{}",
+                    "played {C:attention}Cookie{} cards",
+                    "Gains {C:white,X:chips}X#1#{} Chips when a",
+                    "{C:attention}Cookie{} card is {C:red}destroyed{}",
+                    "{C:inactive}(Currently {C:white,X:chips}X#2#{C:inactive} Chips){}"
+                },
+            },
+
             j_smsn_peanutbutter = {
                 name = "Peanut Butter",
                 text = {
@@ -1762,6 +1773,7 @@ return {
             a_code      = { "Code: #1#" },
             a_idea      = { "Idea: #1#" },
             a_character = { "Char: #1#" },
+            a_xchips = "X#1# Chips"
         },
 
         dictionary = {
