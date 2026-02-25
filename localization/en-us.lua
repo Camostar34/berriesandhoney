@@ -1385,8 +1385,9 @@ return {
                 name = "Pea Pod",
                 text = {
                     {
-                        "Steals a random {C:attention}Consumable{} at the end of round",
-                        "Gains {C:blue}+#1#{} Chips for every taken Consumable",
+                        "Steals a random {C:attention}Consumable{}",
+                        "at end of round, gains {C:blue}+#1#{} Chips",
+                        "for every stolen consumable",
                         "{C:inactive}(Currently{} {C:blue}+#2#{} {C:inactive}Chips){}",
                     },
                 },
@@ -1777,14 +1778,15 @@ return {
         },
 
         dictionary = {
-            k_smsn_Berry_cards   = "Berry Cards",
-            k_plus_berry         = "+1 Berry",
-            k_smsn_berry         = "Berry Card",
-            k_plus_commonrambley = "All Aboard!",
-            k_littlelad          = "Upgrade!!",
-            k_m_smsn_glazed_ex   = "Glazed!",
-            k_smsn_kaboom_ex     = "Kaboom!",
+            k_smsn_Berry_cards    = "Berry Cards",
+            k_plus_berry          = "+1 Berry",
+            k_smsn_berry          = "Berry Card",
+            k_plus_commonrambley  = "All Aboard!",
+            k_littlelad           = "Upgrade!!",
+            k_m_smsn_glazed_ex    = "Glazed!",
+            k_smsn_kaboom_ex      = "Kaboom!",
             k_smsn_disappeared_ex = "Disappeared!",
+            k_smsn_yoink_ex       = "Yoink!",
 
 
 
