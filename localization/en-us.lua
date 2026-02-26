@@ -295,9 +295,10 @@ return {
             j_smsn_rivalshercule = {
                 name = "ROA Hercule",
                 text = {
-                    "{C:attention}+#1#{} hand size",
-                    "when a hand is played",
-                    "resets on round end",
+                    "Gain {C:attention}+#1#{} hand size when",
+                    "a hand is played, {C:red}resets{}",
+                    "at the end of the round",
+                    "{C:inactive}(Currently {C:attention}+#2#{C:inactive} hand size){}"
                 },
             },
 

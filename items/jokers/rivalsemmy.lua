@@ -1,26 +1,26 @@
-SMODS.Joker { 
+SMODS.Joker {
     key = "rivalsemmy",
     name = "ROA Emmy",
-    pools = { oc = true, wip = true },
+    pools = {
+        oc = true,
+        wip = true,
+     },
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
+    pos = {
+        x = 0,
+        y = 0,
+     },
 
-    config = { extra = { } },
-    rarity = 1,
-    cost = 3,
+    rarity = 3,
+    cost = 9,
     blueprint_compat = false,
-       unlocked = true,
+    unlocked = true,
     discovered = true,
     eternal_compat = true,
     perishable_compat = true,
     demicolon_compat = true,
 
-    loc_vars = function(self, info_queue, card)
-        return { vars = {card.ability.extra.miniboss, card.ability.extra.time_limit,} }
-    end,
-
     calculate = function(self, card, context)
-       
-
+        
     end,
 }
