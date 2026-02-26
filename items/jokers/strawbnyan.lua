@@ -55,6 +55,10 @@ SMODS.Joker {
             }))
         end
     end,
+
+    credits = {
+		code = "GhostSalt"             
+	}
 }
 
 -- Thanks, Yeah! Mostly Artists from Cold Beans!
