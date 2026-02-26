@@ -653,9 +653,10 @@ return {
             j_smsn_paddington = {
                 name = "Paddington Bear",
                 text = {
-                    "idk what he does yet i just like",
-                    "paddington and thought he fit the vibe",
-                    "of the mod",
+                    "{C:white,X:mult}X#1#{} Mult, gains {C:white,X:mult}X#2#{} Mult",
+                    "when hand is played for",
+                    "each card with {C:diamonds}Diamonds{}",
+                    "suit held in hand"
                 },
             },
 
