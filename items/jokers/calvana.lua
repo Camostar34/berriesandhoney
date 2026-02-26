@@ -8,7 +8,7 @@ SMODS.Joker {
         y = 0,
      },
     pools = {
-        oc = true,
+        oc = true, wip = true
      },
     rarity = 2,
     cost = 6,
@@ -21,7 +21,7 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
         if context.repetition and context.cardarea == G.play then
-            
+
         end
     end,
 
