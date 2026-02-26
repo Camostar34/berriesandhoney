@@ -234,7 +234,7 @@ return {
             },
 
             j_smsn_honeyslime = {
-                name = "Honey Slime ",
+                name = "Honey Slime",
                 text = {
                     "{C:green}#1# in #2#{} chance to add",
                     "a {C:money}Gold Seal{} to first",
@@ -470,7 +470,7 @@ return {
             j_smsn_honeybutterchips = {
                 name = "Honey Butter Chips",
                 text = {
-                    "The first {C:attention}Gold Card{} scored ",
+                    "The first {C:attention}Gold Card{} scored",
                     "gives {X:blue,C:white}X#1#{} Chips",
                     "loses {X:blue,C:white}X#2#{} Chips when activated",
                 },
