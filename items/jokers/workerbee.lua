@@ -4,7 +4,7 @@ SMODS.Joker {
     atlas = "jokers",
     pos = { x = 0, y = 0 },
     pools = { wip = true},
-    config = { extra = { evil_xmult = 0, addxmult = 0.5, } },
+    config = { extra = {  } },
     rarity = 1,
     cost = 4,
     blueprint_compat = false,
@@ -19,6 +19,16 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
+
+        if context.check_enhancement then
+
+            if context.other_card:get_id() == 6 then
+                return {
+	        m_gold = true
+                }
+            end
+
+        end
        
 
     end,

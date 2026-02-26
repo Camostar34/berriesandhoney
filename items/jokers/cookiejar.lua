@@ -82,7 +82,7 @@ pools = { Food = true},
             end
         end
     end
-end
+end,
 
     credits = {
         code = "GhostSalt" -- Crediting GhostSalt as this code is just repurposed Cough Drops code
