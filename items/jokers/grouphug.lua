@@ -35,4 +35,7 @@ SMODS.Joker {
              }
         end
     end,
+    credits = {
+		code = "GhostSalt"             
+	}
 }

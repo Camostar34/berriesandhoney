@@ -74,4 +74,7 @@ SMODS.Joker {
             return nil, true
         end
     end,
+    credits = {
+		code = "GhostSalt"             
+	}
 }

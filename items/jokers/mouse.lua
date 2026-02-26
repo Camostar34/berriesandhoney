@@ -63,4 +63,7 @@ SMODS.Joker {
         end
     end,
     enhancement_gate = "m_gold",
+     credits = {
+		code = "GhostSalt"             
+	}
 }

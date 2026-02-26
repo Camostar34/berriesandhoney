@@ -6,7 +6,7 @@ SMODS.Joker {
        pronouns = "it_its",
     atlas = "jokers",
     pos = { x = 0, y = 0 },
-    pools = { wip = true},
+    pools = { },
     config = { extra = {} },
     rarity = 3,
     cost = 3,
@@ -23,6 +23,32 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
 
+        -- OUGGHHHH IM HOOKING IT!!! I CANT STOP HOOKING IT! NNGHHHHHH FUCK ITS EVERYWHERE
 
     end,
 }
+
+local emplace_ref = CardArea.emplace
+
+function CardArea:emplace(card, location, stay_flipped)
+   
+    emplace_ref(self, card, location, stay_flipped)
+
+    
+    if self == G.consumeables then
+        
+        
+        if card.ability.set == 'Berry' then
+            
+           
+            if next(SMODS.find_card('j_smsn_twistedgarden')) then
+                
+               
+                if not card.edition or not card.edition.negative then
+                    card:set_edition({negative = true}, true)
+                    card:juice_up(0.5, 0.5) 
+                end
+            end
+        end
+    end
+end

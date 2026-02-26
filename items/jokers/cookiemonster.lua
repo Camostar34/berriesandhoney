@@ -40,5 +40,9 @@ SMODS.Joker {
         and SMODS.pseudorandom_probability(card, "cookiemonster", 1, card.ability.extra.odds)
         and not context.blueprint then return { remove = true } end
     end,
-    enhancement_gate = "m_smsn_cookie"
+    enhancement_gate = "m_smsn_cookie",
+
+     credits = {
+		code = "GhostSalt"             
+	}
 }

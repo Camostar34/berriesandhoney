@@ -5,7 +5,7 @@ SMODS.Joker {
     pronouns = "she_her",
     atlas = "jokers",
     pos = { x = 2, y = 8 },
-    pools = { wip = true},
+    pools = { },
     config = { extra = { } },
     rarity = 2,
     unlocked = true,
@@ -22,6 +22,11 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
        
- -- Samson himself does nothing, the stupid idiot. A lovely patch is doing all the work. 
+        if context.debuff_card and (SMODS.has_enhancement(context.debuff_card, 'm_gold')) then
+            return {
+                prevent_debuff = true
+            }
+            end
+
     end,
 }

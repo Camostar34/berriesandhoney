@@ -31,4 +31,7 @@ SMODS.Joker {
         if context.individual and context.cardarea == G.play and
             SMODS.has_enhancement(context.other_card, "m_smsn_cookie") then return { dollars = card.ability.extra.money } end
     end,
+    credits = {
+		code = "GhostSalt"             
+	}
 }

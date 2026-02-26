@@ -67,5 +67,6 @@ SMODS.Joker {
     end,
     credits = {
         character = "Maridaka",
+        code = "GhostSalt"
      },
 }

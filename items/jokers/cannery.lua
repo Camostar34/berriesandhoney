@@ -55,5 +55,6 @@ SMODS.Joker {
     end,
     credits = {
         art = "Candycanearter07",
+        code = "GhostSalt"
      },
 }

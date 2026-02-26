@@ -70,5 +70,6 @@ SMODS.Joker {
     end,
     credits = {
         character = "GhostSalt",
+        code = "GhostSalt"
      },
 }

@@ -59,4 +59,7 @@ SMODS.Joker {
         card.ability.extra.money = card.ability.extra.money - card.ability.extra.decrease
         return bonus
     end,
+     credits = {
+		code = "GhostSalt"             
+	}
 }

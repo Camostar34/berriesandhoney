@@ -5,12 +5,12 @@ SMODS.Joker {
     pronouns = "she_her",
     atlas = "jokers",
     pos = { x = 5, y = 8 },
-    pools = { bugsnax = true, wip = true },
+    pools = { bugsnax = true,},
     config = { extra = { } },
-    rarity = 2,
+    rarity = 3,
     unlocked = true,
     discovered = true,
-    cost = 3,
+    cost = 7,
     blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,
@@ -21,7 +21,47 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
+
+        if context.selling_card then
+            if context.card.ability.set == 'Joker' then
+                G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
+                G.E_MANAGER:add_event(Event({
+                    func = (function()
+                        SMODS.add_card {
+                            set = 'Berry',
+                            edition = "e_negative"
+                        }
+                        G.GAME.consumeable_buffer = 0
+                        return true
+                    end)
+                }))
+                return {
+                    message = "Razzby!",
+                    colour = G.C.PURPLE
+                }
+            end
+        end
+
        
- -- Samson himself does nothing, the stupid idiot. A lovely patch is doing all the work. 
+        if context.joker_type_destroyed then
+            
+            if context.card.ability.set == 'Joker' then
+                G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
+                G.E_MANAGER:add_event(Event({
+                    func = (function()
+                        SMODS.add_card {
+                            set = 'Berry',
+                            edition = "e_negative"
+                        }
+                        G.GAME.consumeable_buffer = 0
+                        return true
+                    end)
+                }))
+                return {
+                    message = "Razzby!",
+                    colour = G.C.PURPLE
+                }
+            end
+        end
     end,
 }

@@ -39,4 +39,7 @@ SMODS.Joker {
     calc_dollar_bonus = function(self, card)
         return card.ability.extra.money * card.ability.extra.no_of_cards
     end,
+    credits = {
+		code = "GhostSalt"             
+	}
 }
