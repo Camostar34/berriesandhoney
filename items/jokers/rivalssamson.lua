@@ -51,55 +51,59 @@ SMODS.Joker { -- ROA Samson
                 conv_cards[#conv_cards + 1] = pseudorandom_element(eligables, pseudoseed("rivalssamson"))
             end
 
-            G.E_MANAGER:add_event(Event({
-                func = function()
-                    play_sound("tarot1")
-                    card:juice_up()
-                    card_eval_status_text(card, "extra", nil, nil, nil, {
-                        message = localize("k_gold"),
-                        colour = G.C.MONEY,
-                        card = card,
-                    })
-                    return true
-                end,
-            }))
+            if #conv_cards > 0 then
 
-            for i = 1, #conv_cards do
-                local percent = 1.15 - (i - 0.999) / (#conv_cards - 0.998) * 0.3
                 G.E_MANAGER:add_event(Event({
-                    trigger = "after",
-                    delay = 0.15,
                     func = function()
-                        conv_cards[i]:flip();
-                        play_sound("card1", percent);
-                        conv_cards[i]:juice_up(0.3, 0.3);
+                        play_sound("tarot1")
+                        card:juice_up()
+                        card_eval_status_text(card, "extra", nil, nil, nil, {
+                            message = localize("k_gold"),
+                            colour = G.C.MONEY,
+                            card = card,
+                        })
                         return true
                     end,
                 }))
-            end
-            delay(0.2)
-            for i = 1, #conv_cards do
-                G.E_MANAGER:add_event(Event({
-                    trigger = "after",
-                    delay = 0.1,
-                    func = function()
-                        conv_cards[i]:set_ability("m_gold")
-                        return true
-                    end,
-                }))
-            end
-            for i = 1, #conv_cards do
-                local percent = 0.85 + (i - 0.999) / (#conv_cards - 0.998) * 0.3
-                G.E_MANAGER:add_event(Event({
-                    trigger = "after",
-                    delay = 0.15,
-                    func = function()
-                        conv_cards[i]:flip();
-                        play_sound("tarot2", percent, 0.6);
-                        conv_cards[i]:juice_up(0.3, 0.3);
-                        return true
-                    end,
-                }))
+
+                for i = 1, #conv_cards do
+                    local percent = 1.15 - (i - 0.999) / (#conv_cards - 0.998) * 0.3
+                    G.E_MANAGER:add_event(Event({
+                        trigger = "after",
+                        delay = 0.15,
+                        func = function()
+                            conv_cards[i]:flip();
+                            play_sound("card1", percent);
+                            conv_cards[i]:juice_up(0.3, 0.3);
+                            return true
+                        end,
+                    }))
+                end
+                delay(0.2)
+                for i = 1, #conv_cards do
+                    G.E_MANAGER:add_event(Event({
+                        trigger = "after",
+                        delay = 0.1,
+                        func = function()
+                            conv_cards[i]:set_ability("m_gold")
+                            return true
+                        end,
+                    }))
+                end
+                for i = 1, #conv_cards do
+                    local percent = 0.85 + (i - 0.999) / (#conv_cards - 0.998) * 0.3
+                    G.E_MANAGER:add_event(Event({
+                        trigger = "after",
+                        delay = 0.15,
+                        func = function()
+                            conv_cards[i]:flip();
+                            play_sound("tarot2", percent, 0.6);
+                            conv_cards[i]:juice_up(0.3, 0.3);
+                            return true
+                        end,
+                    }))
+                end
+
             end
 
             return {
