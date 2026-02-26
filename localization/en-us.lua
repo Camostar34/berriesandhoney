@@ -1407,9 +1407,9 @@ return {
                 name = "Buttercream Sundae",
                 text = {
                     {
-                        "{C:attention}Glazed Cards{} gain",
-                        "a random glaze after use",
-                        "and cannot be {C:attention}debuffed{}",
+                        "{C:attention}Glazed Cards{} change",
+                        "{C:attention}flavours{} instead of losing",
+                        "their {C:attention}Glazes{} when used",
                     },
                 },
             },

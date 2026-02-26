@@ -9,11 +9,7 @@ function SMODS.current_mod.calculate(self, context)
            
 end
 
-
-
-function smsn_apply_random_glaze(card)
-
-    local valid_glazes = {
+local smsn_valid_glazes = {
         "e_smsn_redglaze",
         "e_smsn_blueglaze",
         "e_smsn_yellowglaze",
@@ -21,8 +17,20 @@ function smsn_apply_random_glaze(card)
         "e_smsn_orangeglaze"
     }
 
-   
-    local selected_key = pseudorandom_element(valid_glazes, pseudoseed('smsn_glaze'))
+function smsn_apply_random_glaze(card)
+    local selected_key = pseudorandom_element(smsn_valid_glazes, pseudoseed('smsn_glaze'))
+    card:set_edition(selected_key, true, true)
+end
+
+function smsn_apply_different_glaze(card)
+    if not (card.edition and G.P_CENTERS[card.edition.key] and G.P_CENTERS[card.edition.key].pools and G.P_CENTERS[card.edition.key].pools.Glaze) then return smsn_apply_random_glaze(card) end
+
+    local valid_glazes_temp = {}
+    for _, v in ipairs(smsn_valid_glazes) do
+        if v ~= card.edition.key then valid_glazes_temp[#valid_glazes_temp + 1] = v end
+    end
+
+    local selected_key = pseudorandom_element(valid_glazes_temp, pseudoseed('smsn_glaze'))
     card:set_edition(selected_key, true, true)
 end
 

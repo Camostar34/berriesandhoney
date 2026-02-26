@@ -1,24 +1,20 @@
 SMODS.Joker {
     key = "buttercream",
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
-    pools = { wip = true},
-    config = { extra = { evil_xmult = 0, addxmult = 0.5, } },
-    rarity = 1,
-    cost = 4,
+    pos = {
+        x = 0,
+        y = 0,
+     },
+    rarity = 4,
+    cost = 20,
     blueprint_compat = false,
-       unlocked = true,
+    unlocked = true,
     discovered = true,
     eternal_compat = true,
     perishable_compat = true,
     demicolon_compat = false,
 
-    loc_vars = function(self, info_queue, card)
-        return { vars = {} }
-    end,
-
-    calculate = function(self, card, context)
-       
-
-    end,
+    credits = {
+        code = "GhostSalt",
+     },
 }

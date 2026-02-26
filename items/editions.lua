@@ -96,7 +96,7 @@ SMODS.Shader({
 })
 
 smsn_remove_glazed = function(card)
-    if card and not next(SMODS.find_card("j_smsn_donuts")) then
+    if card and not next(SMODS.find_card("j_smsn_donuts")) and not next(SMODS.find_card("j_smsn_buttercream")) then
         G.E_MANAGER:add_event(Event({
             trigger = "after",
             delay = 0.15,
@@ -112,6 +112,39 @@ smsn_remove_glazed = function(card)
             trigger = "immediate",
             func = (function()
                 card:set_edition(nil, nil, true)
+                return true
+            end),
+        }))
+        G.E_MANAGER:add_event(Event({
+            trigger = "after",
+            delay = 0.15,
+            func = function()
+                card:flip()
+                play_sound("tarot2", 1, 0.6)
+                card:juice_up(0.3, 0.3)
+                return true
+            end,
+        }))
+    end
+end
+
+smsn_change_glaze = function(card)
+    if card and card.edition and G.P_CENTERS[card.edition.key] and G.P_CENTERS[card.edition.key].pools and G.P_CENTERS[card.edition.key].pools.Glaze and next(SMODS.find_card("j_smsn_buttercream")) then
+        G.E_MANAGER:add_event(Event({
+            trigger = "after",
+            delay = 0.15,
+            func = function()
+                card:flip()
+                play_sound("card1")
+                card:juice_up(0.3, 0.3)
+                return true
+            end,
+        }))
+        delay(0.2)
+        G.E_MANAGER:add_event(Event({
+            trigger = "immediate",
+            func = (function()
+                smsn_apply_different_glaze(card)
                 return true
             end),
         }))
@@ -162,7 +195,7 @@ SMODS.Edition {
             }
         end
 
-        if context.final_scoring_step and context.cardarea == G.play and card then smsn_remove_glazed(card) end
+        if context.final_scoring_step and context.cardarea == G.play and card then smsn_remove_glazed(card); smsn_change_glaze(card); end
     end,
 }
 
@@ -200,7 +233,7 @@ SMODS.Edition {
             }
         end
 
-        if context.final_scoring_step and context.cardarea == G.play and card then smsn_remove_glazed(card) end
+        if context.final_scoring_step and context.cardarea == G.play and card then smsn_remove_glazed(card); smsn_change_glaze(card); end
     end,
 }
 
@@ -238,7 +271,7 @@ SMODS.Edition {
             }
         end
 
-        if context.final_scoring_step and context.cardarea == G.play and card then smsn_remove_glazed(card) end
+        if context.final_scoring_step and context.cardarea == G.play and card then smsn_remove_glazed(card); smsn_change_glaze(card); end
     end,
 }
 
@@ -273,7 +306,7 @@ SMODS.Edition {
 
         if (context.final_scoring_step and context.cardarea == G.play) or
             (context.discard and context.other_card == card) then
-              smsn_remove_glazed(card)
+              smsn_remove_glazed(card); smsn_change_glaze(card);
         end
     end,
 }
@@ -302,6 +335,6 @@ SMODS.Edition {
     loc_vars = function(self, info_queue, card) return {} end,
 
     calculate = function(self, card, context)
-        if context.final_scoring_step and context.cardarea == G.play and card then smsn_remove_glazed(card) end
+        if context.final_scoring_step and context.cardarea == G.play and card then smsn_remove_glazed(card); smsn_change_glaze(card); end
     end,
 }

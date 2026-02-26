@@ -39,7 +39,7 @@ SMODS.Joker {
              }
         end
 
-        if context.individual and context.cardarea == G.hand and context.other_card:is_suit("Diamonds") then
+        if context.individual and context.cardarea == G.hand and context.other_card:is_suit("Diamonds") and not context.blueprint then
             card.ability.extra.current_xmult = card.ability.extra.current_xmult + card.ability.extra.added_xmult
             return { message = localize { type = 'variable', key = 'a_xmult', vars = { card.ability.extra.current_xmult } }, message_card = card }
         end
