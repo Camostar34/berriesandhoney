@@ -64,49 +64,46 @@ G.FUNCS.draw_from_play_to_discard = function(e)
 end
 
 function smsn_add_gold_cards(cards, juice_card)
+    local _cards = {}
+    for i = 1, cards do
+        _cards[i] = SMODS.create_card {
+            set = "Base",
+            area = G.discard,
+         }
+        G.playing_card = (G.playing_card and G.playing_card + 1) or 1
+        _cards[i].playing_card = G.playing_card
+        table.insert(G.playing_cards, _cards[i])
+
+        G.E_MANAGER:add_event(Event({
+            trigger = "before",
+            delay = 0.3,
+            func = function()
+                juice_card:juice_up()
+                G.GAME.blind:debuff_card(_cards[i])
+                _cards[i]:set_ability("m_gold")
+                _cards[i]:start_materialize({ G.C.SECONDARY_SET.Enhanced })
+                G.play:emplace(_cards[i])
+                return true
+            end,
+        }))
+    end
     for i = 1, cards do
         G.E_MANAGER:add_event(Event({
             trigger = "before",
             delay = 0.3,
             func = function()
-                local _card = SMODS.create_card {
-                    set = "Base",
-                    area = G.discard,
-                 }
-                G.playing_card = (G.playing_card and G.playing_card + 1) or 1
-                _card.playing_card = G.playing_card
-                table.insert(G.playing_cards, _card)
-
+                draw_card(G.play, G.deck, 90, "up", nil, _cards[i])
                 G.E_MANAGER:add_event(Event({
-                    trigger = "before",
-                    delay = "0.6",
                     func = function()
-                        _card:set_ability("m_gold")
-                        _card:start_materialize({ G.C.SECONDARY_SET.Enhanced })
-                        G.play:emplace(_card)
+                        G.deck.config.card_limit = G.deck.config.card_limit + 1
                         return true
                     end,
                 }))
-
-                G.E_MANAGER:add_event(Event({
-                    func = function()
-                        juice_card:juice_up()
-                        draw_card(G.play, G.deck, 90, "up")
-                        G.GAME.blind:debuff_card(_card)
-                        G.E_MANAGER:add_event(Event({
-                            func = function()
-                                G.deck.config.card_limit = G.deck.config.card_limit + 1
-                                return true
-                            end,
-                        }))
-                        SMODS.calculate_context({
-                            playing_card_added = true,
-                            cards = { _card },
-                         })
-                        save_run()
-                        return true
-                    end,
-                }))
+                SMODS.calculate_context({
+                    playing_card_added = true,
+                    cards = { _cards[i] },
+                 })
+                save_run()
                 return true
             end,
         }))

@@ -22,6 +22,7 @@ SMODS.Joker {
     demicolon_compat = true,
 
     loc_vars = function(self, info_queue, card)
+        info_queue[#info_queue + 1] = G.P_CENTERS.m_gold
         local num, denom = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, "goldentooth")
         return {
             vars = { num, denom },
