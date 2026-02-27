@@ -3,8 +3,8 @@ SMODS.Joker {
    pronouns = "she_they",
     atlas = "jokers",
     pos = { x = 0, y = 0 },
-    pools = { wip = true},
-    config = { extra = { evil_xmult = 0, addxmult = 0.5, } },
+    pools = { },
+    config = { extra = { } },
     rarity = 1,
     cost = 4,
     blueprint_compat = false,
@@ -21,5 +21,13 @@ SMODS.Joker {
     calculate = function(self, card, context)
        
 
+    end,
+
+    add_to_deck = function(self, card, from_debuff)
+        G.GAME.interest_amount = G.GAME.interest_amount - 1
+    end,
+
+    remove_from_deck = function(self, card, from_debuff)
+        G.GAME.interest_amount = G.GAME.interest_amount + 1
     end,
 }

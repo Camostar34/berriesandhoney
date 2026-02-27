@@ -4,7 +4,7 @@ SMODS.Joker {
 
     atlas = "jokers",
     pos = { x = 7, y = 9 },
-    pools = { wip = true},
+    pools = { },
     config = { extra = {} },
     rarity = 1,
     cost = 3,
@@ -21,7 +21,17 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
 
-      
+      if context.debuff_card and (SMODS.has_enhancement(context.debuff_card, 'm_smsn_gingham')) then
+            return {
+                prevent_debuff = true
+            }
+    end
+
+                  if context.check_enhancement and (SMODS.has_enhancement(context.other_card, 'm_smsn_gingham')) then
+    return {
+        m_wild = true,
+    }
+    end
 
     end,
 }

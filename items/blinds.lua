@@ -63,7 +63,7 @@ SMODS.ScreenShader {
             is_active = true
         end
         
-        -- NEW: Ensure the shader knows to pack up and leave on Game Over
+       
         if G.STATE == G.STATES.GAME_OVER then
             is_active = false
         end
@@ -84,20 +84,18 @@ SMODS.Blind {
     pos = { x = 0, y = 0 },
 
     set_blind = function(self)
-   
         G.E_MANAGER:add_event(Event({
             trigger = 'after',
             blocking = false, 
             delay = 0.8,      
             func = function()
                 
-
                 if G.GAME.blind and not G.GAME.blind.disabled then
                     
+                 
                     if G.consumeables and #G.consumeables.cards > 0 then
                         G.GAME.blind:wiggle()
                         
-                     
                         G.E_MANAGER:add_event(Event({
                             trigger = 'after',
                             delay = 0.1,
@@ -106,16 +104,40 @@ SMODS.Blind {
                                     local card = G.consumeables.cards[i]
                                     card:start_dissolve() 
                                 end
-                                blind.triggered = true
+                                G.GAME.blind.triggered = true 
                                 return true
                             end
                         }))
+                        
+                   
+                    else 
+                        G.GAME.blind:wiggle()
+                        play_sound('timpani')
+
+                
+                        G.GAME.blind.chips = math.floor(G.GAME.blind.chips * 1.5)
+                        G.GAME.blind.chip_text = number_format(G.GAME.blind.chips)
+                        
+                        G.GAME.blind.grizzly_punished = true
+                        
+                        G.GAME.blind.triggered = true
                     end
                 end
                 
                 return true
             end
         }))
+    end,
+
+    disable = function(self)
+   
+        if G.GAME.blind and G.GAME.blind.grizzly_punished then
+            
+            G.GAME.blind.chips = math.ceil(G.GAME.blind.chips / 1.5)
+            G.GAME.blind.chip_text = number_format(G.GAME.blind.chips)
+            
+            G.GAME.blind.grizzly_punished = false
+        end
     end
 }
 

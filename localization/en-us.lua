@@ -13,7 +13,10 @@ return {
                 name = "The Grizzly",
                 text = {
                     "Destroys all consumables",
-                    "upon entering the Blind"
+                    "upon entering the Blind",
+                    "3x Base Size instead",
+                    "if no consumables owned",
+                    
                 }
             },
 
@@ -269,7 +272,7 @@ return {
                 },
                 text = {
                     "Retrigger all cards if",
-                    "hand contains a {C:attention}[rank]{} of {C:hearts}Hearts{}",
+                    "hand contains a {C:attention}#1#{} of {C:hearts}Hearts{}",
                     "{C:inactive}(Rank changes every round){}",
                 },
             },
@@ -322,8 +325,8 @@ return {
             j_smsn_hercule = {
                 name = "Hercule",
                 text = {
-                    "Always draws {C:attention}#1#{} extra",
-                    "cards when you {C:blue}Play{} or {C:red}Discard{}",
+                    "Draw {C:attention}1 to 5{} cards",
+                    "upon entering the Blind",
                 },
             },
 
@@ -453,9 +456,9 @@ return {
                 name = "Gold Digger",
                 text = {
                     "Earn {C:money}$#1#{} when",
-                    "a [rank] of [suit]",
+                    "a {C:attention}#2#{} of {C:diamonds}#3#{}",
                     "is scored",
-                    "{C:inactive}(Card changes every round){}",
+                    "{C:inactive}(Rank changes every round){}",
                 },
             },
 
@@ -1225,7 +1228,7 @@ return {
             j_smsn_pipingbag = {
                 name = "Piping Bag",
                 text = {
-                    "[Suit] are shuffled",
+                    "{V:1}#1#s{} are shuffled",
                     "to the {C:attention}top{} of your deck",
                     "{C:inactive}(Suit changes at the end of round){}",
                 },

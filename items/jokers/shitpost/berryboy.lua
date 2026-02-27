@@ -46,6 +46,6 @@ SMODS.Joker {
         end
     end,
      credits = {
-		code = "GhostSalt"              -- you can also leave out fields if you wish
+		code = "GhostSalt"             
 	}
 }

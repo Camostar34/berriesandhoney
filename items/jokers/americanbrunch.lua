@@ -65,4 +65,7 @@ SMODS.Joker {
         end
     end,
     
+    credits = {
+		art = "Gud"        
+	}
 }
