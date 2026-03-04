@@ -15,6 +15,7 @@ local files = {
         "items/centers",
       "items/editions",
       "items/pokerhands",
+      "items/sounds"
 
 }
 
@@ -230,6 +231,64 @@ SMODS.current_mod.config_tab = function()
             }
         }
     }
+end
+
+
+
+SMODS.Shader {
+    key = "honey_swirl",
+    path = "honey_swirl.fs"
+}
+
+
+SMSN_Colors = {
+    honey_live = HEX('ffc800'),
+    honey_base = HEX('ff7b00') 
+}
+
+local honey_palette = {
+    HEX('ffc800'), 
+    HEX('ffe666'), 
+    HEX('ffaa00'), 
+    HEX('ffd000'), 
+    HEX('ffb300')  
+}
+
+
+local ref_update = Game.update
+function Game:update(dt)
+    ref_update(self, dt)
+    if G.TIMERS and G.TIMERS.REAL then
+        local time = G.TIMERS.REAL / 2.5 
+        local total_colors = #honey_palette
+        local index = math.floor(time) % total_colors + 1
+        local next_index = (index % total_colors) + 1
+        local mix = time - math.floor(time)
+        for i = 1, 4 do
+            SMSN_Colors.honey_live[i] = honey_palette[index][i] * (1 - mix) + honey_palette[next_index][i] * mix
+        end
+    end
+end
+
+
+local oldfunc = Game.main_menu
+Game.main_menu = function(change_context)
+    local ret = oldfunc(change_context)
+    
+    G.SPLASH_BACK:define_draw_steps({
+        {
+         
+            shader = "smsn_honey_swirl", 
+            send = {
+                { name = "time", ref_table = G.TIMERS, ref_value = "REAL_SHADER" },
+                { name = "vort_speed", val = 0.5 }, 
+                { name = "colour_1", ref_table = SMSN_Colors, ref_value = "honey_live" },
+                { name = "colour_2", ref_table = SMSN_Colors, ref_value = "honey_base" },
+            },
+        },
+    })
+    
+    return ret
 end
 
 
