@@ -214,9 +214,10 @@ return {
             j_smsn_frostingknife = {
                 name = "Frosting Knife",
                 text = {
-                    "Played {C:attention}glazed{} cards",
-                    "have a {C:green}#1# in #2#{} chance",
-                    "to give an adjacent card the same Glaze",
+                    "Played {C:attention}Glazed{} cards have",
+                    "a {C:green}#1# in #2#{} chance to give",
+                    "an {C:attention}adjacent{} card the",
+                    "same {C:attention}Glaze{} when scored",
                 },
             },
 

@@ -17,7 +17,7 @@ SMODS.Joker {
          },
     },
     rarity = 2,
-    cost = 3,
+    cost = 5,
     blueprint_compat = false,
     unlocked = true,
     discovered = true,
