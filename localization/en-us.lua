@@ -623,8 +623,8 @@ return {
                 name = "Retro Rambley",
                 text = {
                     "Creates a {C:dark_edition}Rambleberry{}",
-                    "when a {C:attention}booster pack{}",
-                    "is opened",
+                    "when any {C:attention}Booster{}",
+                    "{C:attention}Pack{} is opened",
                     "{C:inactive}(Must have room)",
                 },
             },
@@ -1118,15 +1118,6 @@ return {
                     "Cards drawn during a round",
                     "have a {C:green}#1# in #2#{} chance",
                     "to gain a random {C:attention}Glaze{}"
-                },
-            },
-
-
-            j_smsn_commonrambley = {
-                name = "Rambley Railroad",
-                text = {
-                    "Create a {C:dark_edition}Rambleberry{} if hand contains",
-                    "a {C:attention}face card{} and a {C:attention}Straight{}",
                 },
             },
 
@@ -1774,6 +1765,7 @@ return {
             k_plus_berry          = "+1 Berry",
             k_smsn_berry          = "Berry Card",
             k_plus_commonrambley  = "All Aboard!",
+            k_plus_rarerambley    = "Bleep Bloop",
             k_littlelad           = "Upgrade!!",
             k_m_smsn_glazed_ex    = "Glazed!",
             k_smsn_kaboom_ex      = "Kaboom!",
