@@ -115,7 +115,12 @@ SMODS.Shader({
 })
 
 smsn_remove_glazed = function(card)
-    if card and not next(SMODS.find_card("j_smsn_donuts")) and not next(SMODS.find_card("j_smsn_buttercream")) then
+    if not card then return end
+    if card.smsn_preserve_glaze then
+        card.smsn_preserve_glaze = false
+        return
+    elseif not next(SMODS.find_card("j_smsn_donuts")) and not next(SMODS.find_card("j_smsn_buttercream")) then
+
         G.E_MANAGER:add_event(Event({
             trigger = "after",
             delay = 0.15,
@@ -148,7 +153,8 @@ smsn_remove_glazed = function(card)
 end
 
 smsn_change_glaze = function(card)
-    if card and card.edition and G.P_CENTERS[card.edition.key] and G.P_CENTERS[card.edition.key].pools and G.P_CENTERS[card.edition.key].pools.Glaze and next(SMODS.find_card("j_smsn_buttercream")) then
+    if card and card.edition and G.P_CENTERS[card.edition.key] and G.P_CENTERS[card.edition.key].pools and
+        G.P_CENTERS[card.edition.key].pools.Glaze and next(SMODS.find_card("j_smsn_buttercream")) then
         G.E_MANAGER:add_event(Event({
             trigger = "after",
             delay = 0.15,
@@ -214,7 +220,10 @@ SMODS.Edition {
             }
         end
 
-        if context.final_scoring_step and context.cardarea == G.play and card then smsn_remove_glazed(card); smsn_change_glaze(card); end
+        if context.final_scoring_step and context.cardarea == G.play then
+            smsn_remove_glazed(card);
+            smsn_change_glaze(card);
+        end
     end,
 }
 
@@ -290,7 +299,10 @@ SMODS.Edition {
             }
         end
 
-        if context.final_scoring_step and context.cardarea == G.play and card then smsn_remove_glazed(card); smsn_change_glaze(card); end
+        if context.final_scoring_step and context.cardarea == G.play and card then
+            smsn_remove_glazed(card);
+            smsn_change_glaze(card);
+        end
     end,
 }
 
@@ -328,7 +340,10 @@ SMODS.Edition {
             }
         end
 
-        if context.final_scoring_step and context.cardarea == G.play and card then smsn_remove_glazed(card); smsn_change_glaze(card); end
+        if context.final_scoring_step and context.cardarea == G.play and card then
+            smsn_remove_glazed(card);
+            smsn_change_glaze(card);
+        end
     end,
 }
 
@@ -363,7 +378,8 @@ SMODS.Edition {
 
         if (context.final_scoring_step and context.cardarea == G.play) or
             (context.discard and context.other_card == card) then
-              smsn_remove_glazed(card); smsn_change_glaze(card);
+            smsn_remove_glazed(card);
+            smsn_change_glaze(card);
         end
     end,
 }
@@ -389,7 +405,10 @@ SMODS.Edition {
     loc_vars = function(self, info_queue, card) return {} end,
 
     calculate = function(self, card, context)
-        if context.final_scoring_step and context.cardarea == G.play and card then smsn_remove_glazed(card); smsn_change_glaze(card); end
+        if context.final_scoring_step and context.cardarea == G.play and card then
+            smsn_remove_glazed(card);
+            smsn_change_glaze(card);
+        end
     end,
 }
 
