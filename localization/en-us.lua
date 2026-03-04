@@ -1119,8 +1119,8 @@ return {
                 name = { "Ruby", "{s:0.75}Lord of Hope" },
                 text = {
                     {
-                        "Create a {C:spectral}Spectral{} card", "on your {C:attention}final hand{}",
-                        "with {C:attention}0{} discards remaining",
+                        "Create a {C:spectral}Spectral{} card", "on {C:attention}final hand{} of round",
+                        "with {C:red}#1#{} discards remaining",
                     },
                 },
             },
