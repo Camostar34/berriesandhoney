@@ -733,7 +733,7 @@ return {
 
             j_smsn_calvana = {
                 name = "Calvana Family",
-                text = { "Retrigger a {C:attention}Three of a Kind{}", "if the hand contains one" },
+                text = { "Retrigger all {C:attention}Three of a{}", "{C:attention}Kinds{} in played hand" },
             },
 
             j_smsn_coughdrops = {

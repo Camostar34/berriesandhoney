@@ -10,7 +10,6 @@ SMODS.Joker {
      },
     pools = {
         bitsandbops = true,
-        wip = true,
      },
     config = {
         extra = {
