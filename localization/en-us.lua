@@ -782,8 +782,10 @@ return {
             j_smsn_negativeflowworm = {
                 name = "Flow Worm (Backlight)",
                 text = {
-                    "Every {C:attention}seventh{} card", "discarded becomes {C:dark_edition}Negative{}",
-                    "{C:attention}Reverts{} at end of round",
+                    "Every {C:attention}#1#th{} {C:inactive}[#2#]{} {C:red}discarded{} card",
+                    "gains {C:dark_edition}Negative{} edition,",
+                    "becomes {C:attention}Flow Worm{} at",
+                    "the end of the round"
                 },
             },
 
