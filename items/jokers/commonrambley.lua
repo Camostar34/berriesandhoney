@@ -16,6 +16,7 @@ SMODS.Joker {
     demicolon_compat = true,
 
     loc_vars = function(self, info_queue, card)
+        if not card.fake_card then info_queue[#info_queue + 1] = G.P_CENTERS.c_smsn_rambleberry end
         return { vars = {} }
     end,
 

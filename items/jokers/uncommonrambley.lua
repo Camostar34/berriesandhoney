@@ -26,7 +26,7 @@ SMODS.Joker {
     demicolon_compat = true,
 
     loc_vars = function(self, info_queue, card)
-        info_queue[#info_queue + 1] = G.P_CENTERS.c_smsn_rambleberry
+        if not card.fake_card then info_queue[#info_queue + 1] = G.P_CENTERS.c_smsn_rambleberry end
         return {
             vars = {
                 card.ability.extra.money,
@@ -55,7 +55,7 @@ SMODS.Joker {
             }))
             return {
                 message = localize("k_plus_uncommonrambley"),
-                colour = G.C.PURPLE,
+                colour = G.C.SECONDARY_SET.Tarot,
              }
         end
 
@@ -70,12 +70,13 @@ SMODS.Joker {
     end,
     credits = {
         character = "UniqueGeese / JakeNeutron",
+        code = "GhostSalt"
      },
 }
 
 local sell_use_ref = G.UIDEF.use_and_sell_buttons
 function G.UIDEF.use_and_sell_buttons(card)
-    if not card or not card.config or not card.config.center or card.config.center.key ~= "j_smsn_uncommonrambley" then
+    if not card or not card.config or not card.config.center or (card.config.center.key ~= "j_smsn_uncommonrambley" and card.config.center.key ~= "j_smsn_legendaryrambley") then
         return sell_use_ref(card)
     end
 

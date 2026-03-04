@@ -24,7 +24,7 @@ SMODS.Joker {
     demicolon_compat = true,
 
     loc_vars = function(self, info_queue, card)
-        info_queue[#info_queue + 1] = G.P_CENTERS.c_smsn_rambleberry
+        if not card.fake_card then info_queue[#info_queue + 1] = G.P_CENTERS.c_smsn_rambleberry end
         return {
             vars = {},
          }
@@ -40,18 +40,19 @@ SMODS.Joker {
                     SMODS.add_card {
                         key = "c_smsn_rambleberry",
                         key_append = "rarerambley",
-                    }
+                     }
                     G.GAME.consumeable_buffer = 0
                     return true
                 end),
             }))
             return {
                 message = localize("k_plus_rarerambley"),
-                colour = G.C.PURPLE,
+                colour = G.C.SECONDARY_SET.Tarot,
              }
         end
     end,
     credits = {
         character = "UniqueGeese / JakeNeutron",
-    },
+        code = "GhostSalt"
+     },
 }

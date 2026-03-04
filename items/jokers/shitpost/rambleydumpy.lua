@@ -60,7 +60,7 @@ SMODS.Joker {
             }))
             return {
                 message = localize("k_plus_dumpyrambley"),
-                colour = G.C.PURPLE,
+                colour = G.C.SECONDARY_SET.Tarot,
              }
 
         end
@@ -87,5 +87,6 @@ SMODS.Joker {
     end,
     credits = {
         character = "UniqueGeese / JakeNeutron",
+        code = "GhostSalt"
      },
 }
