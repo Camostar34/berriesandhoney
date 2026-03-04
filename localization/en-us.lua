@@ -255,7 +255,7 @@ return {
 
             j_smsn_hercule = {
                 name = "Hercule",
-                text = { "Draw {C:attention}1 to 5{} cards", "upon entering the Blind" },
+                text = { "Draw {C:attention}#1# to #2#{}", "extra cards when", "entering any {C:attention}Blind{}" },
             },
 
             j_smsn_bountifuljoker = {
