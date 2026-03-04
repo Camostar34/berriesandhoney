@@ -772,8 +772,10 @@ return {
             j_smsn_flowworm = {
                 name = "Flow Worm",
                 text = {
-                    "Retrigger every {C:attention}seventh{} scored card", "{C:green}#1# in #2#{} chance to upgrade",
-                    "at end of round",
+                    "Retrigger a played card",
+                    "every {C:attention}#1#{} {C:inactive}[#2#]{} cards scored,",
+                    "{C:green}#3# in #4#{} chance to {C:attention}upgrade{}",
+                    "at the end of the round",
                 },
             },
 
