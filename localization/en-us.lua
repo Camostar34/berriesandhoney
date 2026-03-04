@@ -920,9 +920,9 @@ return {
                 name = "Weight Loss Shake",
                 text = {
                     "{C:green}+#1#{} to all",
-                    "listed proabilities",
-                    "{C:red}-1{} when a {C:attention}consumable{}",
-                    "is used",
+                    "listed probabilities,",
+                    "{C:red}-1{} when using",
+                    "a {C:attention}consumable{}",
                 },
             },
 
