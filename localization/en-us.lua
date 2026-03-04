@@ -427,7 +427,6 @@ return {
                     "chance to destroy a random {C:attention}Joker{}",
                     "{C:red,E:2}self-destructs{} if no {C:attention}Jokers{} avaliable",
                     "{C:inactive}(Currently {X:mult,C:white}X#4#{C:inactive} Mult)",
-
                 },
             },
 
@@ -441,7 +440,7 @@ return {
 
             j_smsn_honeyqueen = {
                 name = "Honey Queen",
-                text = { "Retrigger all {C:attention}Queens{}", "per {C:attention}Gold Cards{}", "held in hand" },
+                text = { "Retrigger all {C:attention}Queens{}", "for each {C:attention}Gold Card{}", "held in hand" },
             },
 
             j_smsn_donuts = {
