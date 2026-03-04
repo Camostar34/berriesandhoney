@@ -1162,7 +1162,7 @@ return {
                 name = "Sappy",
                 text = {
                     {
-                        "Draw an extra card per", "{C:diamonds}Diamonds{} or {C:money}Gold Seals{}",
+                        "Draw an extra card per", "{C:diamonds}Diamond{} or {C:money}Gold Seal{}",
                         "scored the previous hand",
                     },
                 },
