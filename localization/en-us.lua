@@ -527,7 +527,7 @@ return {
                 text = {
                     "Sell this card to create",
                     "2 Negative {C:dark_edition}Berry Cards{}.",
-                    "{C:inactive,s:0.8}(Must have room)",
+                    "{C:inactive}(Must have room)",
                 },
             },
 
@@ -542,11 +542,11 @@ return {
             j_smsn_strabby = {
                 name = "Strabby",
                 text = {
-                    "Gains {X:mult,C:white}x#1#{} Mult when using",
-                    "a {C:dark_edition}Berry Card{}, then has a",
-                    "{C:green}#2# in #3#{} chance to destroy a random Joker",
-                    "{C:red}self-destructs{} if no Jokers avaliable",
-                    "{C:inactive,s:0.8}(Currently {X:mult,C:white}x#2#{}{C:inactive,s:0.8} Mult)",
+                    "Gains {X:mult,C:white}X#1#{} Mult when using a",
+                    "{C:dark_edition}Berry Card{}, then has a {C:green}#2# in #3#{}",
+                    "chance to destroy a random {C:attention}Joker{}",
+                    "{C:red,E:2}self-destructs{} if no {C:attention}Jokers{} avaliable",
+                    "{C:inactive}(Currently {X:mult,C:white}X#4#{C:inactive} Mult)",
 
                 },
             },
@@ -625,7 +625,7 @@ return {
                     "Creates a {C:dark_edition}Rambleberry{}",
                     "when a {C:attention}booster pack{}",
                     "is opened",
-                    "{C:inactive,s:0.8}(Must have room)",
+                    "{C:inactive}(Must have room)",
                 },
             },
 
