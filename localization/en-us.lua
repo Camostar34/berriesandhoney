@@ -1201,7 +1201,7 @@ return {
             c_smsn_cranberries = {
                 name = "Cranberries",
                 text = {
-                    "{C:red}+#1#{} Mult when you score", "your next hand", "always {C:attention}scores first{}",
+                    "{C:red}+#1#{} Mult when you score", "your next hand", "Always {C:attention}scores first{}",
                     "{C:inactive,s:0.8}(Currently #2#)",
                 },
             },
@@ -1209,7 +1209,7 @@ return {
             c_smsn_blueberries = {
                 name = "Blueberries",
                 text = {
-                    "{C:blue}+#1#{} Chips when you score", "your next hand", "always {C:attention}scores first{}",
+                    "{C:blue}+#1#{} Chips when you score", "your next hand", "Always {C:attention}scores first{}",
                     "{C:inactive,s:0.8}(Currently #2#)",
                 },
             },
@@ -1218,7 +1218,7 @@ return {
                 name = "Boysenberries",
                 text = {
                     "{C:blue}+#1#{} Chips and {C:red}+#2#{} Mult", "when you score your next hand",
-                    "always {C:attention}scores first{}", "{C:inactive,s:0.8}(Currently #3#)",
+                    "Always {C:attention}scores first{}", "{C:inactive,s:0.8}(Currently #3#)",
                 },
             },
 
@@ -1226,7 +1226,7 @@ return {
                 name = "Rambleberry",
                 text = {
                     "{C:blue}+#1#{} Chips and {C:red}+#2#{} Mult", "when you score your next hand",
-                    "always {C:attention}scores first{}", "{C:inactive,s:0.8}(Currently #3#)",
+                    "Always {C:attention}scores first{}", "{C:inactive,s:0.8}(Currently #3#)",
                 },
             },
 
@@ -1242,7 +1242,7 @@ return {
                 name = "Raspberry",
                 text = {
                     "{X:mult,C:white}x#1#{} Mult when you score", "your next hand",
-                    "always {C:attention}scores first{}", "{C:inactive,s:0.8}(Currently #2#)",
+                    "Always {C:attention}scores first{}", "{C:inactive,s:0.8}(Currently #2#)",
                 },
             },
 
@@ -1250,7 +1250,7 @@ return {
                 name = "Strawberry",
                 text = {
                     "{C:red}+#1#{} and {X:mult,C:white}x#2#{} Mult", "when you score your next hand",
-                    "always {C:attention}scores first{}", "{C:inactive,s:0.8}(Currently #3#)",
+                    "Always {C:attention}scores first{}", "{C:inactive,s:0.8}(Currently #3#)",
                 },
             },
 
@@ -1267,6 +1267,24 @@ return {
             c_smsn_crepes = {
                 name = "Crepes",
                 text = { "One {C:attention}free{} reroll", "Activates when entering shop" },
+            },
+
+            c_smsn_booberry = {
+                name = "Boo Berry",
+                text = {
+                    "{C:chips}+#1#{} Chips, {C:green}#2# in #3#{} chance to",
+                    "create a random {C:spectral}Spectral{} card",
+                    "Always {C:attention}scores first{}", "{C:inactive,s:0.8}(Currently #3#)",
+                },
+            },
+
+            c_smsn_frankenberry = {
+                name = "Franken Berry",
+                text = {
+                    "{C:mult}+#1#{} Mult, {C:green}#2# in #3#{} chance to",
+                    "create a random {C:spectral}Spectral{} card",
+                    "Always {C:attention}scores first{}", "{C:inactive,s:0.8}(Currently #3#)",
+                },
             },
 
             c_smsn_fruitsalad = {
@@ -1307,7 +1325,7 @@ return {
                 name = "Jelly Donut",
                 text = {
                     "Adds Chips and Mult equal to", "{C:attention}#1#x{} the planet card values", "of played hand",
-                    "always {C:attention}scores first{}", "{C:inactive,s:0.8}(Currently #3#)",
+                    "Always {C:attention}scores first{}", "{C:inactive,s:0.8}(Currently #3#)",
                 },
             },
 
