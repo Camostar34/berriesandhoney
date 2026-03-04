@@ -30,7 +30,6 @@ return {
             },
             e_smsn_blueglaze = {
                 name = "Blueberry Glazed",
-<<<<<<< HEAD
                 text = {
                     "{C:attention}+#1# Chips",
                     "{C:attention}Removes{} edition",
@@ -45,9 +44,6 @@ return {
                     "{C:attention}Removes{} edition",
                     "after scoring",
                 }
-=======
-                text = { "{X:chips,C:white}X#1#{} Chips", "{C:attention}Removes{} edition", "after scoring" },
->>>>>>> df1b3b7373bcc95729d276ef5ba3a37a2ecbee55
             },
             e_smsn_brownglaze = {
                 name = "Maple Glazed",
@@ -322,30 +318,21 @@ return {
 
             j_smsn_koban = {
                 name = "Koban",
-<<<<<<< HEAD
                 text = {
                     "{C:green}+#2#{} to probabilites",
                     "per {C:attention}#1#{} Gold Cards",
                     "in hand",
                     "{C:inactive}(Currently {C:green}+#3#{C:inactive})"
                 },
-=======
-                text = { "{C:green}+1{} to probabilites", "per {C:attention}#1#{} Gold Cards", "in hand" },
->>>>>>> df1b3b7373bcc95729d276ef5ba3a37a2ecbee55
             },
 
             j_smsn_goldenparachute = {
                 name = "Golden Parachute",
                 text = {
-<<<<<<< HEAD
                     "{C:attention}Prevents Death{} if there",
                     "is at least one {C:attention}Gold Card{}",
                     "in hand, then destroys self and all",
                     "{C:attention}Gold Cards{} in your full deck",
-=======
-                    "{C:attention}Prevents Death{} if there", "is at least one {C:attention}Gold Card{}",
-                    "in hand, then destroys all", "{C:attention}Gold Cards{} in your full deck",
->>>>>>> df1b3b7373bcc95729d276ef5ba3a37a2ecbee55
                 },
             },
 
