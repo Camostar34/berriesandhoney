@@ -2,8 +2,12 @@ SMODS.Joker {
     key = "buttercream",
     atlas = "jokers",
     pos = {
-        x = 0,
-        y = 0,
+        x = 4,
+        y = 12,
+     },
+     soul_pos = {
+        x = 5,
+        y = 12,
      },
     rarity = 4,
     cost = 20,

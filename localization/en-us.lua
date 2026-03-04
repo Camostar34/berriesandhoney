@@ -43,6 +43,15 @@ return {
             e_smsn_blueglaze = {
                 name = "Blueberry Glazed",
                 text = {
+                    "{C:attention}+#1# Chips",
+                    "{C:attention}Removes{} edition",
+                    "after scoring",
+                }
+            },
+
+             e_smsn_candyglaze = {
+                name = "Sour Glazed",
+                text = {
                     "{X:chips,C:white}X#1#{} Chips",
                     "{C:attention}Removes{} edition",
                     "after scoring",
@@ -417,9 +426,10 @@ return {
             j_smsn_koban = {
                 name = "Koban",
                 text = {
-                    "{C:green}+1{} to probabilites",
+                    "{C:green}+#2#{} to probabilites",
                     "per {C:attention}#1#{} Gold Cards",
                     "in hand",
+                    "{C:inactive}(Currently {C:green}+#3#{C:inactive})"
                 },
             },
 
@@ -429,7 +439,7 @@ return {
                 text = {
                     "{C:attention}Prevents Death{} if there",
                     "is at least one {C:attention}Gold Card{}",
-                    "in hand, then destroys all",
+                    "in hand, then destroys self and all",
                     "{C:attention}Gold Cards{} in your full deck",
                 },
             },
@@ -1805,6 +1815,7 @@ return {
             smsn_yellowglaze = "Lemon Poppy Glazed",
             smsn_brownglaze = "Maple Glazed",
             smsn_orangeglaze = "Honey Glazed",
+            smsn_candyglaze = "Sour Glazed",
 
             -- Seals
             smsn_freshness_seal = "Freshness Seal",

@@ -5,7 +5,7 @@ SMODS.Joker {
     atlas = "jokers",
     pos = { x = 2, y = 4 },
     pools = { guest = true, wip = true  },
-    config = { extra = { evil_xmult = 0, addxmult = 0.5, } },
+    config = { extra = {draw_bonus = 0 } },
     rarity = 2,
     cost = 3,
     blueprint_compat = false,
@@ -19,8 +19,11 @@ SMODS.Joker {
         return { vars = {} }
     end,
 
-    calculate = function(self, card, context)
-       
+   calculate = function(self, card, context)
+        
+        
+      
+    
 
     end,
     credits = {

@@ -29,6 +29,12 @@ SMODS.Atlas({
     px = 71,
     py = 95,
  })
+ SMODS.Atlas({
+    key = "candyglaze_tex",
+    path = "candyglaze2x.png",
+    px = 71,
+    py = 95,
+ })
 
 SMODS.Shader({
     key = "redglaze",
@@ -90,6 +96,19 @@ SMODS.Shader({
 
         return {
             aux_img = G.ASSET_ATLAS["smsn_orangeglaze_tex"].image,
+            aux_num = card.asdf,
+         }
+    end,
+})
+
+SMODS.Shader({
+    key = "candyglaze",
+    path = "glazed.fs",
+    send_vars = function(sprite, card)
+        if not card.asdf then card.asdf = math.random() end
+
+        return {
+            aux_img = G.ASSET_ATLAS["smsn_candyglaze_tex"].image,
             aux_num = card.asdf,
          }
     end,
@@ -215,6 +234,44 @@ SMODS.Edition {
 
     config = {
         extra = {
+            chipbonus = 150,
+         },
+    },
+
+    loc_vars = function(self, info_queue, card)
+        return {
+            vars = { self.config.extra.chipbonus },
+         }
+    end,
+
+    calculate = function(self, card, context)
+        if (context.post_joker or context.main_scoring) and context.cardarea == G.play then
+            return {
+                chips = (card and card.edition and card.edition.extra and card.edition.extra.chipbonus) or
+                    self.config.extra.chipbonus,
+            }
+        end
+
+        if context.final_scoring_step and context.cardarea == G.play and card then smsn_remove_glazed(card); smsn_change_glaze(card); end
+    end,
+}
+
+SMODS.Edition {
+    key = "candyglaze",
+    shader = "candyglaze",
+    pools = {
+        Glaze = true,
+     },
+    in_shop = false,
+    weight = 0,
+    sound = {
+        sound = "polychrome1",
+        per = 1.2,
+        vol = 0.7,
+     },
+
+    config = {
+        extra = {
             chipbonus = 2,
          },
     },
@@ -326,10 +383,7 @@ SMODS.Edition {
      },
 
     config = {
-        card_limit = 1,
-        extra = {
-            areasize = 1,
-         },
+        
     },
 
     loc_vars = function(self, info_queue, card) return {} end,
@@ -338,3 +392,4 @@ SMODS.Edition {
         if context.final_scoring_step and context.cardarea == G.play and card then smsn_remove_glazed(card); smsn_change_glaze(card); end
     end,
 }
+

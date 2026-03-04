@@ -9,8 +9,9 @@ extern MY_HIGHP_OR_MEDIUMP vec2 blueglaze;
 extern MY_HIGHP_OR_MEDIUMP vec2 brownglaze;
 extern MY_HIGHP_OR_MEDIUMP vec2 yellowglaze;
 extern MY_HIGHP_OR_MEDIUMP vec2 orangeglaze;
+extern MY_HIGHP_OR_MEDIUMP vec2 candyglaze;
 
-#define glazed (redglaze + blueglaze + brownglaze + yellowglaze + orangeglaze)
+#define glazed (redglaze + blueglaze + brownglaze + yellowglaze + orangeglaze + candyglaze)
 
 extern MY_HIGHP_OR_MEDIUMP number dissolve;
 extern MY_HIGHP_OR_MEDIUMP number time;

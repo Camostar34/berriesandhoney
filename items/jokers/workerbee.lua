@@ -2,7 +2,7 @@ SMODS.Joker {
     key = "workerbee",
    pronouns = "she_they",
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
+    pos = { x = 2, y = 12 },
     pools = { wip = true},
     config = { extra = {  } },
     rarity = 1,
