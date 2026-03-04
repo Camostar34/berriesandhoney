@@ -1328,6 +1328,7 @@ return {
             k_plus_commonrambley = "All Aboard!",
             k_plus_uncommonrambley = "YMMY BRRY",
             k_plus_rarerambley = "Bleep Bloop",
+            k_plus_dumpyrambley = "butt",
             k_rambleactive = "active",
             k_rambleinactive = "inactive",
             k_littlelad = "Upgrade!!",
