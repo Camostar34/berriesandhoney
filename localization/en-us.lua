@@ -30,20 +30,12 @@ return {
             },
             e_smsn_blueglaze = {
                 name = "Blueberry Glazed",
-                text = {
-                    "{C:attention}+#1# Chips",
-                    "{C:attention}Removes{} edition",
-                    "after scoring",
-                }
+                text = { "{C:attention}+#1# Chips", "{C:attention}Removes{} edition", "after scoring" },
             },
 
-             e_smsn_candyglaze = {
+            e_smsn_candyglaze = {
                 name = "Sour Glazed",
-                text = {
-                    "{X:chips,C:white}X#1#{} Chips",
-                    "{C:attention}Removes{} edition",
-                    "after scoring",
-                }
+                text = { "{X:chips,C:white}X#1#{} Chips", "{C:attention}Removes{} edition", "after scoring" },
             },
             e_smsn_brownglaze = {
                 name = "Maple Glazed",
@@ -319,20 +311,16 @@ return {
             j_smsn_koban = {
                 name = "Koban",
                 text = {
-                    "{C:green}+#2#{} to probabilites",
-                    "per {C:attention}#1#{} Gold Cards",
-                    "in hand",
-                    "{C:inactive}(Currently {C:green}+#3#{C:inactive})"
+                    "{C:green}+#2#{} to probabilites", "per {C:attention}#1#{} Gold Cards", "in hand",
+                    "{C:inactive}(Currently {C:green}+#3#{C:inactive})",
                 },
             },
 
             j_smsn_goldenparachute = {
                 name = "Golden Parachute",
                 text = {
-                    "{C:attention}Prevents Death{} if there",
-                    "is at least one {C:attention}Gold Card{}",
-                    "in hand, then destroys self and all",
-                    "{C:attention}Gold Cards{} in your full deck",
+                    "{C:attention}Prevents Death{} if there", "is at least one {C:attention}Gold Card{}",
+                    "in hand, then destroys self and all", "{C:attention}Gold Cards{} in your full deck",
                 },
             },
 
@@ -577,8 +565,9 @@ return {
             j_smsn_beebear = {
                 name = "Bee Bear",
                 text = {
-                    "When a {C:attention}Gold Cards{} is activated", "destory it and permamently gain",
-                    "{C:mult}+#1#{} Mult", "{C:inactive,s:0.8}(Currently {C:mult}+#2#{}{C:inactive,s:0.8} Mult)",
+                    "{C:red}Destroys{} all {C:attention}Gold{} cards", "held in hand at end",
+                    "of round and gains {C:mult}+#1#{} Mult", "for each card {C:red}destroyed{}",
+                    "{C:inactive,s:0.8}(Currently {C:mult}+#2#{}{C:inactive,s:0.8} Mult)",
                 },
             },
 
@@ -772,10 +761,8 @@ return {
             j_smsn_flowworm = {
                 name = "Flow Worm",
                 text = {
-                    "Retrigger a played card",
-                    "every {C:attention}#1#{} {C:inactive}[#2#]{} cards scored,",
-                    "{C:green}#3# in #4#{} chance to {C:attention}upgrade{}",
-                    "at the end of the round",
+                    "Retrigger a played card", "every {C:attention}#1#{} {C:inactive}[#2#]{} cards scored,",
+                    "{C:green}#3# in #4#{} chance to {C:attention}upgrade{}", "at the end of the round",
                 },
             },
 
@@ -783,9 +770,8 @@ return {
                 name = "Flow Worm (Backlight)",
                 text = {
                     "Every {C:attention}#1#th{} {C:inactive}[#2#]{} {C:red}discarded{} card",
-                    "gains {C:dark_edition}Negative{} edition,",
-                    "becomes {C:attention}Flow Worm{} at",
-                    "the end of the round"
+                    "gains {C:dark_edition}Negative{} edition,", "becomes {C:attention}Flow Worm{} at",
+                    "the end of the round",
                 },
             },
 
@@ -1273,8 +1259,8 @@ return {
                 name = "Boo Berry",
                 text = {
                     "{C:chips}+#1#{} Chips, {C:green}#2# in #3#{} chance to",
-                    "create a random {C:spectral}Spectral{} card",
-                    "Always {C:attention}scores first{}", "{C:inactive,s:0.8}(Currently #3#)",
+                    "create a random {C:spectral}Spectral{} card", "Always {C:attention}scores first{}",
+                    "{C:inactive,s:0.8}(Currently #3#)",
                 },
             },
 
@@ -1282,8 +1268,8 @@ return {
                 name = "Franken Berry",
                 text = {
                     "{C:mult}+#1#{} Mult, {C:green}#2# in #3#{} chance to",
-                    "create a random {C:spectral}Spectral{} card",
-                    "Always {C:attention}scores first{}", "{C:inactive,s:0.8}(Currently #3#)",
+                    "create a random {C:spectral}Spectral{} card", "Always {C:attention}scores first{}",
+                    "{C:inactive,s:0.8}(Currently #3#)",
                 },
             },
 
