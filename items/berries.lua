@@ -326,6 +326,7 @@ SMODS.Consumable {
     config = {
         extra = {
             berry_chips = 75,
+            num = 1,
             odds = 2,
             activity = "inactive",
             in_use = false,
@@ -333,7 +334,7 @@ SMODS.Consumable {
     },
 
     loc_vars = function(self, info_queue, card)
-        local num, denom = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, "zeroii")
+        local num, denom = SMODS.get_probability_vars(card, card.ability.extra.num, card.ability.extra.odds, "booberry")
         return {
             vars = { card.ability.extra.berry_chips, num, denom, card.ability.extra.activity },
          }
@@ -387,6 +388,7 @@ SMODS.Consumable {
     config = {
         extra = {
             berry_mult = 10,
+            num = 1,
             odds = 2,
             activity = "inactive",
             in_use = false,
@@ -394,7 +396,7 @@ SMODS.Consumable {
     },
 
     loc_vars = function(self, info_queue, card)
-        local num, denom = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, "zeroii")
+        local num, denom = SMODS.get_probability_vars(card, card.ability.extra.num, card.ability.extra.odds, "frankenberry")
         return {
             vars = { card.ability.extra.berry_mult, num, denom, card.ability.extra.activity },
          }

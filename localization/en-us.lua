@@ -234,7 +234,7 @@ return {
 
             j_smsn_rivalsemmy = {
                 name = "ROA Emmy",
-                text = { "{C:dark_edition}Berry Card{} effects", "are {C:attention}doubled{}" },
+                text = { "{C:dark_edition}Berry{} card abilities", "have {C:attention}doubled{} values" },
             },
 
             j_smsn_rivalssamson = {
@@ -1260,7 +1260,7 @@ return {
                 text = {
                     "{C:chips}+#1#{} Chips, {C:green}#2# in #3#{} chance to",
                     "create a random {C:spectral}Spectral{} card", "Always {C:attention}scores first{}",
-                    "{C:inactive,s:0.8}(Currently #3#)",
+                    "{C:inactive,s:0.8}(Currently #4#)",
                 },
             },
 
