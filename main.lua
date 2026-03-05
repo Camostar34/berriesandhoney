@@ -197,6 +197,14 @@ local crossmodfiles = {
 
 }
 
+
+SMODS.current_mod.menu_cards = function()
+    return {
+        key = "j_smsn_samson",
+        no_edition = true,
+    }
+end
+
 for i, v in pairs(files) do
     assert(SMODS.load_file(v..".lua"))()
 end
@@ -247,11 +255,11 @@ SMSN_Colors = {
 }
 
 local honey_palette = {
-    HEX('ffc800'), 
-    HEX('ffe666'), 
-    HEX('ffaa00'), 
-    HEX('ffd000'), 
-    HEX('ffb300')  
+    HEX('ffc800'), -- #ffc800
+    HEX('f7b212'), -- #f7b212
+    HEX('ffaa00'), -- #ffaa00
+    HEX('ffd000'), -- #ffd000
+    HEX('ffb300')   -- #ffb300
 }
 
 

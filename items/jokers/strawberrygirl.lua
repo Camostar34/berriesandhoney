@@ -4,7 +4,7 @@ SMODS.Joker {
     name = "Strawberry Girl",
     pronouns = "she_her",
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
+    pos = { x = 1, y = 13 },
     pools = { },
     config = { extra = { } },
     rarity = 2,
@@ -66,4 +66,7 @@ SMODS.Joker {
             end
         end
     end,
+    credits = {
+        art = "Maridaka",
+     },
 }

@@ -58,3 +58,11 @@ SMODS.Atlas({
 	px = 71,
 	py = 95
 })
+
+SMODS.Atlas {
+  key = 'balatro', -- The key MUST be balatro, unsure if case-sensitive
+  path = 'smsn_logo.png', -- Starts in ...\assets\1x and ...\assets\2x
+  px = 333,
+  py = 216,
+  prefix_config = { key = false } -- I forget if this is still needed, but doesn't hurt to keep?
+}

@@ -2,7 +2,7 @@ SMODS.Joker {
     key = "meadbarrel",
    pronouns = "she_they",
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
+    pos = { x = 7, y = 12 },
     pools = { },
     config = { extra = { } },
     rarity = 1,
