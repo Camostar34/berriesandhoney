@@ -1098,8 +1098,8 @@ return {
 
             j_smsn_cozy = {
                 name = "Cozy Fluffer Snugglepaws",
-                text = { { "" } },
-             },
+                text = { "{C:attention}+#1#{} hand size,", "{C:attention}-#2#{} card selection limit" },
+            },
 
             j_smsn_ruby = {
                 name = { "Ruby", "{s:0.75}Lord of Hope" },
@@ -1115,10 +1115,8 @@ return {
                 name = "Astro",
                 text = {
                     {
-                        "Adjacent Jokers that give {C:red}+Mult{} also give",
-                        "{C:chips}#1#x{} that amount in Chips; those that give",
-                        "{X:mult,C:white}XMult{} also multiply Chips by", "{X:chips,C:white}X#2#{} of that value.",
-                        "{C:inactive,s:0.8}(xMult must be greater than 1)",
+                        "Effects that give", "{C:red}+Mult{} instead give", "{C:attention}#1#{} times that",
+                        "amount in {C:chips}+Chips{}",
                     },
                 },
             },
