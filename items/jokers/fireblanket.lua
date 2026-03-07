@@ -1,27 +1,26 @@
 SMODS.Joker {
     key = "fireblanket",
     name = "Fire Blanket",
-    
     atlas = "jokers",
     pos = { x = 0, y = 0 },
-    pools = { wip = true},
-    config = { extra = {} },
+    config = { extra = { odds = 4, x_mult_per = 1 } },
     rarity = 1,
     cost = 3,
     blueprint_compat = false,
-       unlocked = true,
+    unlocked = true,
     discovered = true,
     eternal_compat = true,
     perishable_compat = true,
     demicolon_compat = true,
 
     loc_vars = function(self, info_queue, card)
-        return { vars = {card.ability.extra.bonus} }
-    end,
+        if info_queue then
+            info_queue[#info_queue + 1] = G.P_CENTERS.m_smsn_gingham
+        end
+        
 
-    calculate = function(self, card, context)
-
-      
-
+        local num, denom = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, "smsn_fireblanket")
+        
+        return { vars = { num, denom, card.ability.extra.x_mult_per } }
     end,
 }

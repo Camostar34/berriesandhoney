@@ -29,7 +29,6 @@ SMODS.Enhancement {
     end,
 }
 
--- Gingham
 SMODS.Enhancement {
     key = 'gingham',
     atlas = 'centers',
@@ -40,27 +39,29 @@ SMODS.Enhancement {
     end,
 
     calculate = function(self, card, context)
-        -- Only when THIS card is individually scoring in play
-
         if context.main_scoring and context.cardarea == G.play then
-            local hand = context.full_hand or G.play.cards
-            if not hand then return end
-
-            local suits = {}
-            for i = 1, #hand do
-                suits[hand[i].base.suit] = true
+            local suit_count = 0
+            for k, _ in pairs(SMODS.Suits) do
+                for i = 1, #context.full_hand do
+                    if context.full_hand[i]:is_suit(k) then
+                        suit_count = suit_count + 1
+                        break
+                    end
+                end
             end
 
-            local unique = 0
-            for _ in pairs(suits) do unique = unique + 1 end
-            if unique == 0 then return end
-
-            local multper = (card.ability and card.ability.extra and card.ability.extra.multper) or 0
-            if multper == 0 then return end
-
-        return {
-            mult = multper * unique,
-        }
-    end
+            if suit_count > 0 then
+               
+                if next(SMODS.find_card('j_smsn_fireblanket')) and SMODS.pseudorandom_probability(card, "smsn_fireblanket", 1, 4) then
+                    return {
+                        x_mult = 1 * suit_count,
+                    }
+                elseif card.ability.extra.multper > 0 then
+                    return {
+                        mult = card.ability.extra.multper * suit_count,
+                    }
+                end
+            end
+        end
     end,
 }

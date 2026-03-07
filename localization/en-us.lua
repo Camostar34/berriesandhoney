@@ -613,8 +613,8 @@ return {
             j_smsn_americanbrunch = {
                 name = { "American Brunch", "{s:0.75}By The Buttertones" },
                 text = {
-                    "If first hand of a round", "contains an {C:attention}unscored{} card",
-                    "destroy it and gain {C:attention}#1#{}", "{C:dark_edition}Berry Cards{}",
+                    "Create {C:attention}#1#{} {C:dark_edition}Berry Cards{}", "if scoring hand contains",
+                    "{C:attention}4{} or more suits",
                     "{C:inactive,s:0.8}(Must have room)",
                 },
             },
