@@ -10,7 +10,7 @@ function SMODS.current_mod.calculate(self, context)
 end
 
 local smsn_valid_glazes = {
-    "e_smsn_redglaze", "e_smsn_blueglaze", "e_smsn_yellowglaze", "e_smsn_brownglaze", "e_smsn_orangeglaze",
+    "e_smsn_redglaze", "e_smsn_blueglaze", "e_smsn_yellowglaze", "e_smsn_brownglaze", "e_smsn_orangeglaze", "e_smsn_candyglaze"
 }
 
 function smsn_apply_random_glaze(card)

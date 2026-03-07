@@ -115,9 +115,9 @@ joker_order = {
     "bearclaws",
     ----
     "meadbarrel",
+    "sparklingmead",
     "apiary",
     "crystalized",
-    "lasthoneyjoker",
     "honeyqueen", 
     ---- Legendary / Retro Jokers
     "littlelad",
@@ -136,7 +136,7 @@ joker_order = {
     "flowworm",
     "negativeflowworm",
     "hamtaro",
-    "stilton",
+    "ricepudding",
     ---- These are the Other OC jokers. Too much on the first page will  make people think this is a self insert mod. 
 	"denali",
     "luzia",
@@ -171,6 +171,7 @@ joker_order = {
     "guest/ruby",
     "guest/shadow",
     "guest/peapod",
+    "guest/meta",
 
 }
 

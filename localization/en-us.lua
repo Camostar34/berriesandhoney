@@ -197,6 +197,7 @@ return {
                     "{C:attention}Resets{} every Ante",
                 },
             },
+            
 
             j_smsn_sytoroonson = {
                 name = { "Sytoroonson", "{s:0.75}Comfort Dreamon" },
@@ -419,10 +420,11 @@ return {
             },
 
             j_smsn_honeyjar = {
-                name = "Honey Jar",
+                name = "Honey Dipper",
                 text = {
-                    "{C:green}#1# in #2#{} chance to turn all scoring", "cards into {C:attention}Gold Cards{}",
-                    "Denominator {C:attention}increases{} with every hand",
+                    "When a card is played and scored:",
+                    "{C:green}#1# in #2#{} chance to gain {C:attention}Honey Glaze{}",
+                    "{C:green}#1# in #3#{} chance to become a {C:attention}Gold Card{}",
                 },
             },
 
@@ -549,6 +551,12 @@ return {
                 text = { "{C:attention}Gold Card{} values are doubled", "Earn no {C:attention}Interest{}" },
             },
 
+                j_smsn_sparklingmead = {
+                name = "Sparkling Mead",
+                text = { "Lose {C:red}$#1#{} and gain","a random {C:attention}Tag{} per {C:attention}Gold Card{}", "in hand at the end of round" },
+            },
+
+
             j_smsn_apiary = {
                 name = "Apiary",
                 text = {
@@ -571,8 +579,8 @@ return {
                 },
             },
 
-            j_smsn_lasthoneyjoker = {
-                name = "idk yet",
+            j_smsn_ricepudding = {
+                name = "Ambriosa Rice Pudding",
                 text = { "i dont know but i just want an even number" },
              },
 
@@ -586,7 +594,12 @@ return {
 
             j_smsn_bearclaws = {
                 name = "Bear Claws",
-                text = { ":3" },
+                text = { "When a {C:attention}Glazed Card{}",
+                "is played, remove its Glaze",
+                "and permamently gain {C:money}$#1#{}",
+                "in sell value"
+            
+            },
              },
 
             j_smsn_honeycombtoffee = {
@@ -844,6 +857,14 @@ return {
                 },
             },
 
+            j_smsn_crazyglazer = {
+                name = "Crazy Glazer",
+                text = {
+                    "Cards drawn during a round", "have a {C:green}#1# in #2#{} chance",
+                    "to gain a random {C:attention}Glaze{}",
+                },
+            },
+
             j_smsn_fireblanket = {
                 name = "Fire Blanket",
                 text = {
@@ -1047,7 +1068,7 @@ return {
             },
 
             j_smsn_buttercream = {
-                name = "Buttercream Sundae",
+                name = "Buttercream Sunday",
                 text = {
                     {
                         "{C:attention}Glazed Cards{} change", "{C:attention}flavours{} instead of losing",
@@ -1119,6 +1140,18 @@ return {
                         "{C:chips}#1#x{} that amount in Chips; those that give",
                         "{X:mult,C:white}XMult{} also multiply Chips by", "{X:chips,C:white}X#2#{} of that value.",
                         "{C:inactive,s:0.8}(xMult must be greater than 1)",
+                    },
+                },
+            },
+
+            j_smsn_meta = {
+                name = "Meta",
+                text = {
+                    {
+                        "Create the {C:planet}Planet Card{} of",
+                        "your {C:attention}most played hand{}",
+                        "when a {C:attention}Cookie Card{}",
+                        "is destroyed",
                     },
                 },
             },
@@ -1371,7 +1404,6 @@ return {
             k_bitsandbops = "Bits & Bops",
             k_sesamestreet = "Sesame Street",
             k_hamtaro = "Hamtaro",
-            k_schoolastic = "Scholastic",
             k_rambley = "Indigo Park",
             k_starburst = "Starburst",
             k_warioware = "Warioware",

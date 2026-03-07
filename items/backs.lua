@@ -46,6 +46,38 @@ config = { consumable_slot = 2, joker_slot = -1  },
     
 })
 
+--[[SMODS.Back({
+    key = "frosted",
+    name = "Frosted Deck",
+    config = { hands = -1, discards = -1 },
+    atlas = "backs",
+    pos = { x = 5, y = 0 },
+
+    loc_vars = function(self, info_queue, back)
+
+        return { vars = {  math.abs(self.config.hands), math.abs(self.config.discards) } }
+    end,
+
+    apply = function(self)
+        G.E_MANAGER:add_event(Event({
+            func = function()
+                for i = 1, 13 do
+                    G.playing_cards[i]:set_ability(G.P_CENTERS.m_smsn_cookie)
+                    smsn_apply_random_glaze(G.playing_cards[i])
+                end
+
+
+                --local card = create_card('Joker', G.jokers, nil, 0, nil, nil, 'j_smsn_donuts', nil)
+                --card:add_to_deck()
+                --G.jokers:emplace(card)
+
+                return true
+            end
+        }))
+    end
+})
+]]
+
 SMODS.Back({
     key = "defunct",
     name = "Defunct Deck",

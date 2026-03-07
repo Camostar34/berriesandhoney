@@ -18,35 +18,19 @@ SMODS.PokerHand {
     },
 
     evaluate = function(parts, hand)
-
         local valid_cards = {}
         
-        for i, card in ipairs(hand) do
-            local is_valid = false
-
-            if card.config.center.key == 'm_gold' then
-                is_valid = true
-            end
-
-            if next(SMODS.find_card('j_smsn_meltingpot')) then
-               
-                if card.seal == 'Gold' then 
-                    is_valid = true 
-                end
+        for _, card in ipairs(hand) do
+            -- Condensed into a single check to avoid unnecessary local variables
+            if card.config.center.key == 'm_gold' or 
+               (next(SMODS.find_card('j_smsn_meltingpot')) and (card.seal == 'Gold' or (card.edition and card.edition.key == 'e_smsn_orangeglaze'))) then
                 
-                if card.edition and card.edition.key == 'e_smsn_orangeglaze' then 
-                    is_valid = true 
-                end
-            end
-
-
-            if is_valid then
                 table.insert(valid_cards, card)
             end
         end
 
-
-        if #valid_cards >= 5 then
+        -- THE FIX: Check for Four Fingers. If found, require 4. Otherwise, 5.
+        if #valid_cards >= (next(SMODS.find_card('j_four_fingers')) and 4 or 5) then
             return { valid_cards }
         else
             return {}
@@ -73,3 +57,14 @@ SMODS.Consumable {
 
 	generate_ui = 0
 }
+
+
+
+SMODS.current_mod.process_loc_text = function()
+     G.localization.descriptions.Joker.j_four_fingers.text[#G.localization.descriptions.Joker.j_four_fingers.text + 1] = ""
+
+    G.localization.descriptions.Joker.j_four_fingers.text[#G.localization.descriptions.Joker.j_four_fingers.text + 1] = "Allows {C:attention}Honeypots{} to be"
+    
+   
+    G.localization.descriptions.Joker.j_four_fingers.text[#G.localization.descriptions.Joker.j_four_fingers.text + 1] = "made with {C:attention}4{} Gold cards"
+end
