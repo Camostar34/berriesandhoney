@@ -5,7 +5,7 @@ SMODS.Joker {
     pos = { x = 0, y = 0 },
     pools = { },
     config = { extra = { loss = 6 } },
-    rarity = 1,
+    rarity = 2,
     cost = 4,
     blueprint_compat = false,
        unlocked = true,
@@ -46,5 +46,8 @@ loc_vars = function(self, info_queue, card)
                 }
             end
         end
-    end
+    end,
+     credits = {
+        idea = "Candycanearter07",
+     },
 }
