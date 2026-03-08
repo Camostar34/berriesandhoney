@@ -19,12 +19,12 @@ SMODS.Joker {
 
     config = { extra = { reroll_need = 15, slots_toadd = 0, counter = 0, safe = true } },
     rarity = 3,
-    cost = 3,
+    cost = 8,
     blueprint_compat = false,
     eternal_compat = true,
        unlocked = true,
     discovered = true,
-    perishable_compat = true,
+    perishable_compat = false,
     demicolon_compat = false,
 
     loc_vars = function(self, info_queue, card)

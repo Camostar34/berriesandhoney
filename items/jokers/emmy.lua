@@ -10,8 +10,8 @@ SMODS.Joker {
     chip_gain = 14,
     counter = 0 } },
     rarity = 2,
-    cost = 3,
-    blueprint_compat = false,
+    cost = 6,
+    blueprint_compat = true,
        unlocked = true,
     discovered = true,
     eternal_compat = true,
@@ -23,7 +23,7 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-       if context.berry_activate then
+       if context.berry_activate and not context.blueprint then
         card.ability.extra.counter = card.ability.extra.counter + 1
         return {
             message = "Upgrade!"

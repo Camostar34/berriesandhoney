@@ -2,6 +2,7 @@ SMODS.Joker {
 
     key = "chamoille",
     name = "Honey Chamoille Tea",
+     enhancement_gate = 'm_gold',
     pronouns = "she_her",
     atlas = "jokers",
     pos = { x = 2, y = 8 },
@@ -10,7 +11,7 @@ SMODS.Joker {
     rarity = 2,
     unlocked = true,
     discovered = true,
-    cost = 3,
+    cost = 6,
     blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,

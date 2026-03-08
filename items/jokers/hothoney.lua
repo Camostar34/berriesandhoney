@@ -7,11 +7,12 @@ SMODS.Joker {
     pools = { },
     config = { extra = { xmultbonus = 0.25, penalty = 1, } },
     rarity = 2,
-    cost = 3,
+    cost = 7,
     blueprint_compat = false,
        unlocked = true,
     discovered = true,
     eternal_compat = true,
+     enhancement_gate = 'm_gold',
     perishable_compat = false,
     demicolon_compat = true,
 

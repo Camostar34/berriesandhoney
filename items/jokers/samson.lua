@@ -10,7 +10,7 @@ SMODS.Joker { --Samson
     rarity = 2,
     unlocked = true,
     discovered = true,
-    cost = 3,
+    cost = 7,
     blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,

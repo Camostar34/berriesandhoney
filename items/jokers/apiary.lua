@@ -6,7 +6,7 @@ SMODS.Joker {
     pools = { },
     config = { extra = { } },
     rarity = 1,
-    cost = 4,
+    cost = 5,
     blueprint_compat = false,
        unlocked = true,
     discovered = true,
@@ -42,14 +42,14 @@ calculate = function(self, card, context)
                         play_sound('coin1')
                         
                         return true
-                    end -- 1. Closes the function()
+                    end 
                 }))
 
-            end -- 2. Closes the Gold Card check
-        end -- 3. Closes the Drawn Card check
+            end 
+        end 
         
-    end, -- 4. Closes the calculate function
-} -- 5. Closes the SMODS.Joker table
+    end, 
+} 
 
 
 
@@ -57,41 +57,39 @@ calculate = function(self, card, context)
 local eval_card_ref = eval_card
 
 function eval_card(card, context)
-    -- 1. Check if this is a Gold Card in hand at the end of the round
+
     local is_gold_end = context.end_of_round and context.cardarea == G.hand and SMODS.has_enhancement(card, "m_gold")
     
-    local stored_dollars = 3 -- Fallback
+    local stored_dollars = 3 
     
-    -- 2. THE PRE-HIJACK
+    
     if is_gold_end then
         stored_dollars = card.ability.h_dollars or 3
         
         if next(SMODS.find_card('j_smsn_apiary')) then
-            -- Tell the engine the card is worth $0
+           
             card.ability.h_dollars = 0 
         elseif next(SMODS.find_card('j_smsn_meadbarrel')) then
-            -- Tell the engine the card is naturally worth DOUBLE
+            
             card.ability.h_dollars = stored_dollars * 2
         end
     end
 
-    -- 3. THE CALCULATION
-    -- We pack the results into a table to safely capture EVERY return value Steamodded generates
+    
     local ret = {eval_card_ref(card, context)}
 
-    -- 4. THE CLEANUP
+    
     if is_gold_end then
-        -- Restore the card's true value
+       
         card.ability.h_dollars = stored_dollars
         
-        -- If Apiary zeroed it out, we scrub the return table so you don't get a blank "+$0" popup
+        
         if next(SMODS.find_card('j_smsn_apiary')) and type(ret[1]) == 'table' then
             ret[1].h_dollars = nil
             ret[1].message = nil
         end
     end
 
-    -- 5. RETURN
-    -- unpack safely hands all the unmodified Steamodded tables back to the game engine
+
     return unpack(ret) 
 end

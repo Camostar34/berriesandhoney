@@ -1,40 +1,76 @@
 SMODS.Joker {
     key = "pepperjelly",
     name = "Ghost Pepper Jelly",
-       pronouns = "she_it",
+    pronouns = "she_it",
     atlas = "jokers",
     pos = { x = 0, y = 4 },
-    pools = { wip = true},
-    config = { extra = { } },
+    pools = { },
+
+    config = { extra = { x_mult = 1.5, odds = 2 } },
     rarity = 2,
-    cost = 3,
-    blueprint_compat = false,
-       unlocked = true,
+    cost = 6,
+    blueprint_compat = true, 
+    unlocked = true,
     discovered = true,
     eternal_compat = true,
     perishable_compat = true,
-    demicolon_compat = true,
+    demicolon_compat = false,
 
     loc_vars = function(self, info_queue, card)
-        return { vars = {} }
+        local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'smsn_pepperjelly')
+        return { vars = { card.ability.extra.x_mult, numerator, denominator } }
     end,
 
     calculate = function(self, card, context)
-        if context.selling_self and #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
+       
+        if context.joker_main and G.consumeables and #G.consumeables.cards > 0 then
+            
+          
+            local total_xmult = 1
+            
+            for i = 1, #G.consumeables.cards do
+                if G.consumeables.cards[i].ability.set == 'Berry' then
+                    total_xmult = total_xmult * card.ability.extra.x_mult
+                    
+                    
+                    local target_berry = G.consumeables.cards[i]
+                    
+                 
+                    if not context.blueprint then
+                        if SMODS.pseudorandom_probability(card, 'smsn_pepperjelly', 1, card.ability.extra.odds) then
+                            G.E_MANAGER:add_event(Event({
+                                func = function()
+                                    target_berry:start_dissolve()
+                                    return true
+                                end
+                            }))
+                        else
+                            G.E_MANAGER:add_event(Event({
+                                func = function()
+                                    target_berry:juice_up(0.3, 0.4)
+                                    return true
+                                end
+                            }))
+                        end
+                    else
+                       
+                        G.E_MANAGER:add_event(Event({
+                            func = function()
+                                target_berry:juice_up(0.3, 0.4)
+                                return true
+                            end
+                        }))
+                    end
+                end
+            end
 
-            G.E_MANAGER:add_event(Event({
-        trigger = 'before',
-        delay = 0.0,
-        func = (function()
-          SMODS.add_card({set = "Berry", edition='e_negative', area = G.consumeables})
-          SMODS.add_card({key = "c_smsn_retinalbloom", area = G.consumeables})
-          return true
+         
+            if total_xmult > 1 then
+                return {
+                    message = localize{type='variable',key='a_xmult',vars={total_xmult}},
+                    Xmult_mod = total_xmult
+                }
+            end
         end
-        )
-      }))
-           
-            return nil, true -- This is for Joker retrigger purposes
-        end
-
     end,
 }

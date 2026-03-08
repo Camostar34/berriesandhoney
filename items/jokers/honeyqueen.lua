@@ -12,6 +12,7 @@ SMODS.Joker {
     unlocked = true,
     discovered = true,
     eternal_compat = true,
+     enhancement_gate = 'm_gold',
     perishable_compat = true,
     demicolon_compat = false,
 

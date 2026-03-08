@@ -30,7 +30,7 @@ return {
             },
             e_smsn_blueglaze = {
                 name = "Blueberry Glazed",
-                text = { "{C:attention}+#1# Chips", "{C:attention}Removes{} edition", "after scoring" },
+                text = { "{C:blue}+#1#{} Chips", "{C:attention}Removes{} edition", "after scoring" },
             },
 
             e_smsn_candyglaze = {
@@ -144,7 +144,9 @@ return {
 
             j_smsn_joylon = {
                 name = "Joylon Amurr",
-                text = { "{C:attention}Gold Cards{} in hand", "and scored give {C:blue}#1#{} Chips" },
+                text = { "Scored {C:attention}Face cards{} have",
+                            "a {C:green}#2# in #3#{} chance to",
+                            "permanently gain {C:money}+$1{}" },
             },
 
             j_smsn_grouphug = {
@@ -265,7 +267,7 @@ return {
 
             j_smsn_berrypicking = {
                 name = "Berry Picking",
-                text = { "{C:attention}Picnic Packs{} show 1 extra card", "and let you choose 1 extra card" },
+                text = { "{C:attention}Picnic Packs{} show {C:attention}#1#{} extra card", "and let you choose {C:attention}#1#{} extra card" },
             },
 
             j_smsn_cherrybomb = {
@@ -392,11 +394,11 @@ return {
                 },
             },
 
-            j_smsn_spooky = {
-                name = "Ghost Pepper Jelly",
+            j_smsn_uncrustable = {
+                name = "Uncrustable",
                 text = {
-                    "Sell this card to create", "2 Negative {C:dark_edition}Berry Cards{}.",
-                    "{C:inactive}(Must have room)",
+                    "{C:red}+#1#{} Mult and {C:blue}+#2#{} Chips", "{C:red}-#3#{} Mult and {C:blue}-#4#{} Chips per hand",
+                    "Gain a {C:dark_edition}Negative Berry Card{}", "when depleted"
                 },
             },
 
@@ -581,7 +583,7 @@ return {
 
             j_smsn_ricepudding = {
                 name = "Ambriosa Rice Pudding",
-                text = { "i dont know but i just want an even number" },
+                text = { "Convert {C:attention}#1#{} cards into {C:attention}Gold Cards{}","at the end of the round","{C:red}-#2#{} affected card every round" },
              },
 
             j_smsn_crystalized = {
@@ -789,7 +791,7 @@ return {
             },
 
             j_smsn_keepyapping = {
-                name = "Keep Yapping Your Mouth Buddy",
+                name = { "Keep Yapping", 'Your Mouth Buddy' },
                 text = { "{C:red}+#1#{} Mult per", "{C:attention}character{} in Boss Blind", "description" },
             },
 
@@ -939,6 +941,50 @@ return {
                 },
             },
 
+            --CARDBOX JOKERS because we cannot have nice things.
+
+            j_smsn_gudetama = {
+                name = "Gudetama",
+                text = {
+                    "Gain {C:money}$#1#{} of {C:attention}sell value{}",
+                    "When a blind is {C:attention}skipped{}",
+                },
+            },
+
+            j_smsn_hatsukemo = {
+                name = "{C:money}Hatsu{}{C:green}kemo{}-Kun",
+                text = {
+                    "{C:blue}+#1#{} hand and {C:red}+#2#{} discard",
+                    "when {C:attention}Small Blind{} is selected",
+                },
+            },
+
+            j_smsn_cappuchino = {
+                name = "Cappuchino", --HELLO!!!! IM CAPPUCHINO!!!!!!!!!!!!!!!!!!!!!!!!!
+                text = {
+                    "{X:mult,C:white}x#1#{} Mult",
+                    "Lose {C:red}$#2#{} per hand played",
+                },
+            },
+
+            j_smsn_cinnamoroll = {
+                name = "Cinnamoroll",
+                text = {
+                    "Create a {C:attention}Polychrome Tag{}",
+                    "after {C:attention}#1#{} rerolls",
+                },
+            },
+
+            j_smsn_monokuma = {
+                name = { "Mono{C:red}kuma{}", "{s:0.75}Ultimate Despair" },
+                text = {
+                    "Gains {C:red}+#1#{} Mult when a",
+                    "{C:attention}#3#{} Suit is converted to a {C:attention}#4#{} Suit",
+                    "{C:inactive,s:0.8}(Swaps every ante){}",
+                    "{C:inactive,s:0.8}(Currently {C:mult}+#2#{}{C:inactive,s:0.8} Mult)",
+                },
+            },
+
             -- CROSSMOD JOKERS
 
             j_smsn_microplastics = {
@@ -1061,7 +1107,7 @@ return {
                 name = "Cassknows",
                 text = {
                     {
-                        "Glazed Cards", "have {C:attention}x#1#{} value", "but are destroyed when their",
+                        "Glazed Editions have {C:attention}x#1#{} value", "but are {C:red}destroyed{} when their",
                         "edition is removed",
                     },
                 },
@@ -1079,7 +1125,7 @@ return {
 
             j_smsn_shadow = {
                 name = "Shadow Wizard",
-                text = { { "" } },
+                text = { { "Create a unique", "{C:tarot}Tarot{} or {C:spectral}Spectral{} Card", "when a {C:attention}Three of a Kind{}", "is played" } },
              },
 
             j_smsn_rose = {
@@ -1112,9 +1158,12 @@ return {
                 },
             },
 
-            j_smsn_pedro = {
-                name = { "Pedro Pavé", "{s:0.75}The Pipedream Painter" },
-                text = { { "" } },
+            j_smsn_gud = {
+                name =  "Chester",
+                text = { { "Played face cards give","{X:chips,C:white}X#1#{} Chips when scored",
+                "but are {C:red}destroyed{} after",
+            
+            } },
              },
 
             j_smsn_cozy = {
@@ -1352,6 +1401,63 @@ return {
              },
         },
 
+        Tarot = {
+
+        c_smsn_shark = {
+        name = "Shark",
+        text = {
+            "Destroy {C:attention}1{} selected card to",
+            "duplicate a random card in hand",
+            "with its base and bonus values {C:attention}doubled{}"
+        }
+        },
+
+            c_smsn_luckycoin = {
+            name = "Chance",
+            text = {
+                "{C:green}#1# in #2#{} chance",
+                "to gain {C:money}$#3#{}"
+            }
+        },
+        c_smsn_feather = {
+            name = "Feather",
+            text = {
+                "All {C:green}probabilities{} are",
+                "{C:attention}tripled{} for this round"
+            }
+        },
+        c_smsn_book = {
+            name = "Book",
+            text = {
+                "{C:red}+1{} Discard",
+                "for the round"
+            }
+        }
+       
+        },
+
+        Spectral = {
+            c_smsn_yharon = {
+        name = "Yharon",
+        text = {
+            "Doubles {C:chips}Chips{} and {C:chips}Bonus Chip{} values,",
+            "of all cards in hand",
+            "{C:red}-2{} hand size"
+        }
+        },
+
+     c_smsn_megalodon = {
+        name = "Megalodon",
+        text = {
+            "Convert all cards in hand",
+            "to a random {C:attention}Face Card{}",
+            "Permanently lose {C:red}-1{} discard"
+        }
+        },
+
+       
+        },
+
         Other = {
             smsn_freshness_seal = {
                 name = "Freshness Seal",
@@ -1364,6 +1470,15 @@ return {
     },
 
     misc = {
+        quips = {
+        capu_hello1 = { "Hello! :3" },
+        capu_hello2 = { "I'm Cappuchino!!!" },
+        capu_hello3 = { "Hello! I'm Cappuchino!" },
+        capu_hello4 = { "boku wa cappuchino deeesu~ :3" },
+        capu_capu = { "Cappuchino!!" },
+        capu_ya = { "ya!!" }
+    },
+        
 
         poker_hands = {
             smsn_honeypot = "Honeypot",
@@ -1395,6 +1510,7 @@ return {
             k_smsn_kaboom_ex = "Kaboom!",
             k_smsn_disappeared_ex = "Disappeared!",
             k_smsn_yoink_ex = "Yoink!",
+            k_smsn_tag = "+1 Tag!",
 
             k_oc = "Original Character",
             k_guest = "Guest Joker",
@@ -1408,6 +1524,8 @@ return {
             k_slimerancher = "Slime Rancher",
             k_ykw = "Yokai Watch",
             k_bugsnax = "Bugsnax",
+            k_yuru = "Yuru-chara / Mascot",
+            k_dr = "Danganronpa",
             k_wip = "NOT CODED",
 
         },
@@ -1425,4 +1543,5 @@ return {
 
         },
     },
+    
 }

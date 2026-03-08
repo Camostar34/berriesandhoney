@@ -7,7 +7,7 @@ SMODS.Joker {
 
     config = { extra = { addxmult = 0.1, } },
     rarity = 3,
-    cost = 3,
+    cost = 10,
     blueprint_compat = false,
        unlocked = true,
     discovered = true,

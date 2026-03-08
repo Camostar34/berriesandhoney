@@ -6,6 +6,7 @@ local files = {
       "lib/atlas",
       "lib/pool",
       "items/item",
+      "items/shadowconsumables",
 	  "items/backs",
      "items/berries",
      "items/seals",
@@ -55,7 +56,7 @@ joker_order = {
     "frostingknife",
     ---- berry themed jokers --
     "gardener",
-    "spooky",
+    "uncrustable",
     "berrypicking",
     "secondhelping",
     "memory",
@@ -137,6 +138,12 @@ joker_order = {
     "negativeflowworm",
     "hamtaro",
     "ricepudding",
+    ----
+    "cappuchino",
+    "cinnamoroll",
+    "gudetama",
+    "hatsukemo",
+    "monokuma",
     ---- These are the Other OC jokers. Too much on the first page will  make people think this is a self insert mod. 
 	"denali",
     "luzia",
@@ -162,16 +169,15 @@ joker_order = {
     "guest/astro",
     "guest/cheese",
     "guest/jadepenguin",
-    "guest/pedro",
     "guest/cozy",
-    
+    "guest/meta",
    
     ----
     "guest/rose",
     "guest/ruby",
     "guest/shadow",
     "guest/peapod",
-    "guest/meta",
+    "guest/gud",
 
 }
 
@@ -194,7 +200,6 @@ end
 local crossmodfiles = {
    "nflame",
    "starspace",
-   "busterb",
 
 }
 

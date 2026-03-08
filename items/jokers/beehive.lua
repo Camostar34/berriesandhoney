@@ -6,8 +6,8 @@ SMODS.Joker {
     pos = { x = 2, y = 2 },
     soul_pos = { x = 3, y = 2 },
     config = { extra = { bonus = 1, } },
-    rarity = 3,
-    cost = 3,
+    rarity = 2,
+    cost = 7,
     
     blueprint_compat = false,
        unlocked = true,

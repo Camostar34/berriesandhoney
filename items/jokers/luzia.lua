@@ -7,7 +7,7 @@ SMODS.Joker {
     pools = { oc = true },
     config = { extra = { lights = 26, darks = 26, mult_to_add = 0,  bonus = 3,} },
     rarity = 1,
-    cost = 3,
+    cost = 4,
     blueprint_compat = false,
     eternal_compat = true,
        unlocked = true,

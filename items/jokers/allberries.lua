@@ -6,7 +6,7 @@ SMODS.Joker {
     pos = { x = 3, y = 4 },
    pools = {},
     config = { extra = { } },
-    rarity = 2,
+    rarity = 1,
     cost = 4,
     blueprint_compat = false,
        unlocked = true,

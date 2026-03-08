@@ -7,7 +7,7 @@ SMODS.Joker {
     pools = { food = true},
     config = {extra = {bonus = 12, suit = 'Spades'}},
     rarity = 2,
-    cost = 4,
+    cost = 6,
     blueprint_compat = true,
        unlocked = true,
     discovered = true,

@@ -10,7 +10,7 @@ SMODS.Joker {
         odds = 2, 
     debuffed = true} },
     rarity = 1,
-    cost = 3,
+    cost = 4,
     blueprint_compat = true,
        unlocked = true,
     discovered = true,

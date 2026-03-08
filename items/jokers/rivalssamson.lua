@@ -1,5 +1,6 @@
 SMODS.Joker { -- ROA Samson
     key = "rivalssamson",
+    enhancement_gate = 'm_gold',
     name = "ROA Samson",
     pronouns = "he_him",
     atlas = "jokers",

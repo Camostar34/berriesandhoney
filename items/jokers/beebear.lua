@@ -1,6 +1,7 @@
 SMODS.Joker {
     key = "beebear",
     pronouns = "he_him",
+     enhancement_gate = 'm_gold',
     atlas = "jokers",
     pos = {
         x = 0,
@@ -13,7 +14,7 @@ SMODS.Joker {
          },
     },
     rarity = 1,
-    cost = 5,
+    cost = 6,
     blueprint_compat = true,
     unlocked = true,
     discovered = true,

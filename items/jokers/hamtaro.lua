@@ -9,7 +9,6 @@ SMODS.Joker {
      },
     pools = {
         hamtaro = true,
-        wip = true,
      },
     config = {
         extra = {

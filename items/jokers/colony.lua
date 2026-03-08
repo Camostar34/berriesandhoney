@@ -5,7 +5,7 @@ SMODS.Joker {
     pools = { },
     config = { extra = { bonus = 4} },
     rarity = 3,
-    cost = 4,
+    cost = 8,
     blueprint_compat = false,
        unlocked = true,
     discovered = true,

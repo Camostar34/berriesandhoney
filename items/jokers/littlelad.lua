@@ -9,7 +9,7 @@ SMODS.Joker {
     pools = { starburst = true },
     config = { extra = { bonus_chips = 0, bonus_mult = 0, bonus_xmult = 1,} },
     rarity = 4,
-    cost = 3,
+    cost = 20,
     blueprint_compat = false,
        unlocked = true,
     discovered = true,
