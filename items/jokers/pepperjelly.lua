@@ -67,8 +67,7 @@ SMODS.Joker {
          
             if total_xmult > 1 then
                 return {
-                    message = localize{type='variable',key='a_xmult',vars={total_xmult}},
-                    Xmult_mod = total_xmult
+                    xmult = total_xmult
                 }
             end
         end
