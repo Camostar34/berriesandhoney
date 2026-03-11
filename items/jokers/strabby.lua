@@ -8,7 +8,7 @@ SMODS.Joker {
         y = 8,
      },
     pools = {
-        bugsnax = true,
+        bugsnax = true, smsn_berry_themed = true,
      },
     config = {
         extra = {
