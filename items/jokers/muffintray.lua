@@ -24,7 +24,6 @@ SMODS.Joker {
             if not context.end_of_round and context.individual and context.cardarea == G.hand then 
 
             if context.other_card.config.center == G.P_CENTERS.m_bonus then
-                print(context.other_card.ability)
             return {
 				card = other_card,
                 chips = context.other_card.ability.bonus
