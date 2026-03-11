@@ -1657,7 +1657,6 @@ return {
             capu_hello2 = { "I'm Cappuchino!!!" },
             capu_hello3 = { "Hello! I'm Cappuchino!" },
         capu_hello4 = { "{f:smsn_madou}ぼくはカプチーノですぅぅぅ~ :3" },
-            capu_hello4 = { "boku wa cappuchino deeesu~ :3" },
             capu_capu = { "Cappuchino!!" },
             capu_ya = { "ya!!" },
         

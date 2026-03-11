@@ -48,6 +48,7 @@ These effects are hardcoded, so if you know a joker you think would fit, then le
 
 ### Credits
 - GhostSalt - Helped coded almost half the jokers in the mod lol, check out the collection to see all the things she's done! I can't thank her enough!
+- MillieAmp - Picnic Pack Music! 
 - candycaneanniahlator(etherware2) - Honeycomb Toffee's effect, Oops! All Berries Art, Cannery Art, general Code Help, Feedback, Playtesting, and being a wonderful slime friend 
 - cassknows - Glaze Editions
 - Astro - Katamari Damacy art, Feedback and Playtesting
