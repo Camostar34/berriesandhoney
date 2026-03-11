@@ -40,11 +40,11 @@ SMODS.Shader({
     key = "redglaze",
     path = "glazed.fs",
     send_vars = function(sprite, card)
-        if not card.asdf then card.asdf = math.random() end
+        if card and not card.asdf then card.asdf = math.random() end
 
         return {
             aux_img = G.ASSET_ATLAS["smsn_redglaze_tex"].image,
-            aux_num = card.asdf,
+            aux_num = card and card.asdf or 0,
          }
     end,
 })
@@ -53,11 +53,11 @@ SMODS.Shader({
     key = "blueglaze",
     path = "glazed.fs",
     send_vars = function(sprite, card)
-        if not card.asdf then card.asdf = math.random() end
+        if card and not card.asdf then card.asdf = math.random() end
 
         return {
             aux_img = G.ASSET_ATLAS["smsn_blueglaze_tex"].image,
-            aux_num = card.asdf,
+            aux_num = card and card.asdf or 0,
          }
     end,
 })
@@ -66,11 +66,11 @@ SMODS.Shader({
     key = "yellowglaze",
     path = "glazed.fs",
     send_vars = function(sprite, card)
-        if not card.asdf then card.asdf = math.random() end
+        if card and not card.asdf then card.asdf = math.random() end
 
         return {
             aux_img = G.ASSET_ATLAS["smsn_yellowglaze_tex"].image,
-            aux_num = card.asdf,
+            aux_num = card and card.asdf or 0,
          }
     end,
 })
@@ -79,11 +79,11 @@ SMODS.Shader({
     key = "brownglaze",
     path = "glazed.fs",
     send_vars = function(sprite, card)
-        if not card.asdf then card.asdf = math.random() end
+        if card and not card.asdf then card.asdf = math.random() end
 
         return {
             aux_img = G.ASSET_ATLAS["smsn_brownglaze_tex"].image,
-            aux_num = card.asdf,
+            aux_num = card and card.asdf or 0,
          }
     end,
 })
@@ -92,11 +92,11 @@ SMODS.Shader({
     key = "orangeglaze",
     path = "glazed.fs",
     send_vars = function(sprite, card)
-        if not card.asdf then card.asdf = math.random() end
+        if card and not card.asdf then card.asdf = math.random() end
 
         return {
             aux_img = G.ASSET_ATLAS["smsn_orangeglaze_tex"].image,
-            aux_num = card.asdf,
+            aux_num = card and card.asdf or 0,
          }
     end,
 })
@@ -105,11 +105,11 @@ SMODS.Shader({
     key = "candyglaze",
     path = "glazed.fs",
     send_vars = function(sprite, card)
-        if not card.asdf then card.asdf = math.random() end
+        if card and not card.asdf then card.asdf = math.random() end
 
         return {
             aux_img = G.ASSET_ATLAS["smsn_candyglaze_tex"].image,
-            aux_num = card.asdf,
+            aux_num = card and card.asdf or 0,
          }
     end,
 })
