@@ -6,6 +6,7 @@ SMODS.Joker {
      pools = {smsn_sticky = true, },
     config = { extra = { chips_per_dollar = 2 } },
     rarity = 2,
+     enhancement_gate = 'm_gold',
     cost = 7,
     blueprint_compat = false,
        unlocked = true,

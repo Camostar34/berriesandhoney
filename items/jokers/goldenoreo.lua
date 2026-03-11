@@ -14,6 +14,7 @@ SMODS.Joker {
          },
     },
     rarity = 1,
+     enhancement_gate = 'm_smsn_cookie',
     unlocked = true,
     discovered = true,
     cost = 4,
