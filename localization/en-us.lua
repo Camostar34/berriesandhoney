@@ -67,7 +67,7 @@ return {
                 name = "Bountiful Deck",
                 text = {
                     "{C:attention}+#1#{} Consumable slots",
-                    "{C:red}#2#{} Joker slot",
+                    "{C:red}-#2#{} Joker slot",
                     "{C:attention}Picnic Packs{} and {C:attention}Berry{}",
                     "themed Jokers are {C:attention}3X{}",
                     "more likely to appear",
@@ -1659,8 +1659,8 @@ return {
         capu_hello4 = { "{f:smsn_madou}ぼくはカプチーノですぅぅぅ~ :3" },
             capu_hello4 = { "boku wa cappuchino deeesu~ :3" },
             capu_capu = { "Cappuchino!!" },
-            capu_ya = { "ya!!" }
-        },
+            capu_ya = { "ya!!" },
+        
 
             -- Samson Quips
         smsn_samson_loss_1 = { "Oof, a sticky situation?" },
