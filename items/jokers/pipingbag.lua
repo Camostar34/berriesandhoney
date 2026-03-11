@@ -46,7 +46,7 @@ SMODS.Joker {
         
         return { 
             vars = { 
-                localize(target_suit, 'suits_singular'), 
+                localize(target_suit, 'suits_plural'), 
                 colours = { G.C.SUITS[target_suit] or G.C.UI.TEXT_LIGHT } 
             } 
         }
