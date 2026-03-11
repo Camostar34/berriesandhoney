@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "cannery",
     name = "Cannery",
-
+    pools = {smsn_berry_themed = true,},
     atlas = "jokers",
     pos = {
         x = 1,

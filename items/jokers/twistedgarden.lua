@@ -38,7 +38,7 @@ function CardArea:emplace(card, location, stay_flipped)
     if self == G.consumeables then
         
         
-        if card.ability.set == 'Berry' then
+        if card.ability.set == 'berry' then
             
            
             if next(SMODS.find_card('j_smsn_twistedgarden')) then

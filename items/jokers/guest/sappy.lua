@@ -9,6 +9,7 @@ SMODS.Joker {
      },
     pools = {
         guest = true,
+        smsn_sticky = true,
      },
     config = {
         extra = {

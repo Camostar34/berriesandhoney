@@ -4,7 +4,7 @@ SMODS.Joker {
    pronouns = "it_its",
     atlas = "jokers",
     pos = { x = 0, y = 7 },
-pools = { },
+pools = { smsn_berry_themed = true,},
     config = { extra = { payout = 2, current = 0, gain = 3, } },
     rarity = 1,
     cost = 5,
@@ -23,7 +23,7 @@ pools = { },
   
         if context.selling_card and not context.blueprint then
 
-            if context.card.ability.set == 'Berry' then
+            if context.card.ability.set == 'berry' then
                 
                 card.ability.extra.current = card.ability.extra.current + 1
 

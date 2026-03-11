@@ -4,10 +4,10 @@ SMODS.Joker {
        pronouns = "it_its",
     atlas = "jokers",
     pos = { x = 5, y = 2 },
-
+    pools = {smsn_berry_themed = true,},
     config = { extra = {amount = 2, } },
     rarity = 1,
-    cost = 3,
+    cost = 5,
     blueprint_compat = false,
        unlocked = true,
     discovered = true,
@@ -21,16 +21,24 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
        if context.setting_blind and G.GAME.blind:get_type() == 'Small' then
-        G.E_MANAGER:add_event(Event({
-                    trigger = "immediate",
-                    func = (function()
-                        if #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
-                            SMODS.add_card({set = 'Berry'})
-                            play_sound('polychrome1', 1.2 + math.random() * 0.1, 0.8)
-                            card:juice_up(0.3, 0.4)
+         G.E_MANAGER:add_event(Event({
+                    func = function()
+                        
+                        for i = 1, card.ability.extra.amount do
+                           
+                            if #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
+                                G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
+                                
+                                
+                                local berry = create_card('berry', G.consumeables, nil, nil, nil, nil, nil, 'smsn_airfreshener')
+                                berry:add_to_deck()
+                                G.consumeables:emplace(berry)
+                                
+                                G.GAME.consumeable_buffer = 0
+                            end
                         end
                         return true
-                    end)
+                    end
                 }))
         
        end

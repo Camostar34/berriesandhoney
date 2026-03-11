@@ -3,7 +3,7 @@ SMODS.Joker {
    name = "Cheese and Jeremy",
    pronouns = "he_him",
    atlas = "jokers",
-   pools = { guest = true },
+   pools = { guest = true, smsn_sticky = true },
    pos = { x = 7, y = 4 },
 
    rarity = 2,

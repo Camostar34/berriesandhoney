@@ -32,7 +32,7 @@ function smsn_multiply_all_berry_values(mult)
         G.consumeables.cards[i].ability.extra = smsn_multiply_berry_values(G.consumeables.cards[i].ability.extra, mult)
     end
     for _, v in pairs(G.P_CENTERS) do
-        if v.set == "Berry" then v.config.extra = smsn_multiply_berry_values(v.config.extra, mult) end
+        if v.set == 'berry' then v.config.extra = smsn_multiply_berry_values(v.config.extra, mult) end
     end
 end
 

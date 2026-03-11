@@ -4,7 +4,7 @@ SMODS.Joker {
       pronouns = "he_they",
     atlas = "jokers",
     pos = { x = 1, y = 1 },
-    pools = { },
+     pools = {smsn_sticky = true, },
     config = { extra = { xmultbonus = 0.25, penalty = 1, } },
     rarity = 2,
     cost = 7,

@@ -77,5 +77,23 @@ SMODS.Joker {
                 }
             end
         end
-    end
+    end,
+    in_pool = function(self, args)
+        if not G.playing_cards then return false end
+        
+        for _, v in ipairs(G.playing_cards) do
+            if v.edition then
+                for k, is_active in pairs(v.edition) do
+                    if type(k) == 'string' and is_active then
+                       
+                        local center = G.P_CENTERS["e_" .. k] or G.P_CENTERS[k]
+                        if center and center.pools and center.pools.Glaze then
+                            return true
+                        end
+                    end
+                end
+            end
+        end
+        return false
+    end,
 }

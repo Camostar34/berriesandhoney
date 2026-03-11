@@ -8,7 +8,7 @@ SMODS.Joker {
         y = 6,
      },
     pools = {
-        Food = true,
+        Food = true, smsn_sticky = true,
      },
     config = {
         extra = {

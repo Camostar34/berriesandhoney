@@ -5,7 +5,7 @@ SMODS.Joker {
     pronouns = "she_her",
     atlas = "jokers",
     pos = { x = 6, y = 6 },
-    pools = { Food = true},
+    pools = { Food = true, smsn_sticky = true,},
      enhancement_gate = 'm_gold',
     config = { extra = { bonus = 2, decay = 0.1} },
     rarity = 2,

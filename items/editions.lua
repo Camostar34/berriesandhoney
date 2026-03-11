@@ -196,7 +196,7 @@ SMODS.Edition {
 
     config = {
         extra = {
-            multbonus = 3,
+            multbonus = 2,
          },
     },
 
@@ -240,7 +240,7 @@ SMODS.Edition {
 
     config = {
         extra = {
-            chipbonus = 150,
+            chipbonus = 125,
          },
     },
 
@@ -284,7 +284,7 @@ SMODS.Edition {
 
     config = {
         extra = {
-            chipbonus = 2,
+            chipbonus = 1.5,
          },
     },
 
@@ -329,7 +329,7 @@ SMODS.Edition {
 
     config = {
         extra = {
-            dollarbonus = 5,
+            dollarbonus = 4,
          },
     },
 

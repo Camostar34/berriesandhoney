@@ -6,7 +6,7 @@ SMODS.Joker {
     pronouns = "she_her",
     atlas = "jokers",
     pos = { x = 2, y = 8 },
-    pools = { },
+    pools = {smsn_sticky = true, },
     config = { extra = { } },
     rarity = 2,
     unlocked = true,

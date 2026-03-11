@@ -4,7 +4,7 @@ SMODS.Joker {
     pronouns = "she_it",
     atlas = "jokers",
     pos = { x = 0, y = 4 },
-    pools = { },
+    pools = {smsn_berry_themed = true, },
 
     config = { extra = { x_mult = 1.5, odds = 2 } },
     rarity = 2,
@@ -29,7 +29,7 @@ SMODS.Joker {
             local total_xmult = 1
             
             for i = 1, #G.consumeables.cards do
-                if G.consumeables.cards[i].ability.set == 'Berry' then
+                if G.consumeables.cards[i].ability.set == 'berry' then
                     total_xmult = total_xmult * card.ability.extra.x_mult
                     
                     

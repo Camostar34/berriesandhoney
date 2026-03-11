@@ -10,6 +10,7 @@ SMODS.Joker { -- ROA Samson
      },
     pools = {
         oc = true,
+        smsn_sticky = true,
      },
     config = {
         extra = {

@@ -2,7 +2,7 @@ SMODS.Joker {
     key = "colony",
     atlas = "jokers",
     pos = { x = 4, y = 11 },
-    pools = { },
+     pools = {smsn_sticky = true, },
     config = { extra = { bonus = 4} },
     rarity = 3,
     cost = 8,

@@ -3,7 +3,7 @@ SMODS.Joker {
     name = "Rambley The Raccoon",
     pronouns = "he_him",
     pools = {
-        rambley = true,
+        rambley = true, smsn_berry_themed = true,
      },
     atlas = "jokers",
     pos = {

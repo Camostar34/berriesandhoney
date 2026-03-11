@@ -9,7 +9,7 @@ SMODS.Joker {
     rarity = 3,
     unlocked = true,
     discovered = true,
-    pools = {  },
+     pools = {smsn_sticky = true, },
     cost = 9,
     blueprint_compat = false,
     eternal_compat = true,

@@ -27,7 +27,14 @@ SMODS.Consumable {
            
             card_eval_status_text(card, 'extra', nil, nil, nil, {message = localize('k_nope_ex'), colour = G.C.TAROT})
         end
-    end
+    end,
+     in_pool = function(self, args)
+        return false
+    end,
+    credits = {
+		art = "octaandfnaf",     
+        idea = "octaandfnaf",             
+	}
 }
 
 -- BOOK
@@ -37,7 +44,14 @@ SMODS.Consumable {
     can_use = function(self, card) return true end,
     use = function(self, card, area, copier)
         ease_discard(1)
-    end
+    end,
+     in_pool = function(self, args)
+        return false
+    end,
+       credits = {
+		art = "octaandfnaf",     
+        idea = "octaandfnaf",             
+	}
 }
 
 SMODS.Consumable {
@@ -94,7 +108,14 @@ SMODS.Consumable {
         
        
         G.hand:emplace(copy)
-    end
+    end,
+     in_pool = function(self, args)
+        return false
+    end,
+       credits = {
+		art = "octaandfnaf",     
+        idea = "octaandfnaf",        
+	}
 }
 
 
@@ -107,7 +128,14 @@ SMODS.Consumable {
         G.GAME.feather_active = (G.GAME.feather_active or 0) + 1
         G.GAME.probabilities.normal = G.GAME.probabilities.normal * 3
         card_eval_status_text(card, 'extra', nil, nil, nil, {message = "Tripled!", colour = G.C.GREEN})
-    end
+    end,
+     in_pool = function(self, args)
+        return false
+    end,
+           credits = {
+		art = "octaandfnaf",     
+        idea = "octaandfnaf",        
+	}
 }
 
 
@@ -132,6 +160,10 @@ SMODS.Consumable {
     pos = {x=5, y=0}, atlas = 'shadowitems', cost = 4, in_pool = false,
     
     can_use = function(self, card) return G.hand and #G.hand.cards > 0 end,
+
+     in_pool = function(self, args)
+        return false
+    end,
     
     use = function(self, card, area, copier)
         
@@ -195,7 +227,11 @@ SMODS.Consumable {
             end
         }))
         delay(0.5)
-    end
+    end,
+           credits = {
+		art = "octaandfnaf",     
+        idea = "octaandfnaf",        
+	}
 }
 
 -- YHARON
@@ -281,5 +317,13 @@ SMODS.Consumable {
             end
         }))
         delay(0.5)
-    end
+    end,
+
+     in_pool = function(self, args)
+        return false
+    end,
+           credits = {
+		art = "octaandfnaf",     
+        idea = "octaandfnaf",        
+	}
 }

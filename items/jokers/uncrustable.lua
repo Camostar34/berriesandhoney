@@ -13,6 +13,7 @@ SMODS.Joker {
     eternal_compat = false,  
     perishable_compat = true,
     demicolon_compat = true,
+    pools = {smsn_berry_themed = true,},
 
    loc_vars = function(self, info_queue, card)
         info_queue[#info_queue+1] = G.P_CENTERS.e_negative
@@ -48,7 +49,7 @@ SMODS.Joker {
                     
                     G.E_MANAGER:add_event(Event({
                         func = function()
-                            local new_berry = create_card('Berry', G.consumeables, nil, nil, nil, nil, nil, 'smuckers_berry')
+                            local new_berry = create_card('berry', G.consumeables, nil, nil, nil, nil, nil, 'smuckers_berry')
                             new_berry:set_edition({negative = true}, true, true)
                             new_berry:add_to_deck()
                             G.consumeables:emplace(new_berry)

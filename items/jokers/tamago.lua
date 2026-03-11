@@ -4,7 +4,7 @@ SMODS.Joker {
 
     atlas = "jokers",
     pos = { x = 5, y = 7 },
- pools = { food = true},
+ pools = { Food = true, smsn_sticky = true},
     config = { extra = {bonus = 2, suit = "Diamonds"} },
     rarity = 2,
     cost = 6,

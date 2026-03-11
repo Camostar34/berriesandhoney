@@ -28,7 +28,7 @@ SMODS.Joker {
                 
                 local berry_count = 0
                 for k, v in ipairs(G.consumeables.cards) do
-                    if v.ability.set == 'Berry' then
+                    if v.ability.set == 'berry' then
                         berry_count = berry_count + 1
                     end
                 end

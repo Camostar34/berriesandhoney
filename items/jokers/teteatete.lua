@@ -33,7 +33,7 @@ SMODS.Joker {
             if #faces >= 2 then
                 table.sort(faces, function(a, b) return a.base.id > b.base.id end)
                 
-                -- 2. BUILD THE PIECES
+               
                 local face_pairs = {}
                 if #faces >= 2 then table.insert(face_pairs, {faces[1], faces[2]}) end
                 if #faces >= 4 then table.insert(face_pairs, {faces[3], faces[4]}) end 

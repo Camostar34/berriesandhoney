@@ -7,7 +7,6 @@ local files = {
       "lib/pool",
       "items/item",
       "items/shadowconsumables",
-	  "items/backs",
      "items/berries",
      "items/seals",
      "items/boosters",
@@ -17,8 +16,22 @@ local files = {
       "items/editions",
       "items/pokerhands",
       "items/sounds"
+      
 
 }
+
+
+local my_decks = {
+    "organic",     
+    "sticky",     
+    "frosted",    
+    "picnic",
+    "defunct",
+    "rokuyo",
+    "cuddly",     
+}
+
+
 
 
 --used because there is no custom order SMODS function yet, please can someone add one
@@ -186,6 +199,10 @@ for i = 1, #joker_order do
 	assert(SMODS.load_file("items/jokers/" .. joker_order[i] .. ".lua"))()
 end
 
+for _, file_name in ipairs(my_decks) do
+    SMODS.load_file("items/backs/" .. file_name .. ".lua")()
+end
+
 
 SMODS.current_mod.optional_features = function()
     return { quantum_enhancements = true,
@@ -202,6 +219,7 @@ local crossmodfiles = {
    "starspace",
 
 }
+
 
 
 SMODS.current_mod.menu_cards = function()
@@ -305,6 +323,108 @@ Game.main_menu = function(change_context)
     return ret
 end
 
+
+G.SMSN_GAMEOVER_CHARS = {
+    {
+        id = "samson",
+        get_center = function() return G.P_CENTERS.j_smsn_samson end,
+        triggers = { "j_smsn_samson", "j_smsn_honeyjar", "j_smsn_secretsamson", "j_smsn_rivalssamson" },
+        quips = { loss = 2, win = 3, endless = 2 }
+    },
+    {
+        id = "emmy",
+        get_center = function() return G.P_CENTERS.j_smsn_emmy end,
+        triggers = { "j_smsn_emmy", "j_smsn_memory", "j_smsn_twistedgarden", "j_smsn_rivalsemmy", "j_smsn_secondhelping", },
+        quips = { loss = 2, win = 2, endless = 1 }
+    },
+    {
+        id = "rambley",
+        get_center = function() return G.P_CENTERS.j_smsn_legendaryrambley end,
+        triggers = { "j_smsn_commonrambley", "j_smsn_uncommonrambley", "j_smsn_rarerambley", "j_smsn_rambleydumpy", "j_smsn_legendaryrambley", },
+        quips = { loss = 4, win = 3, endless = 3 }
+    },
+    {
+        id = "hercule",
+        get_center = function() return G.P_CENTERS.j_smsn_hercule end,
+        triggers = { "j_smsn_hercule", "j_smsn_rivalshercule", },
+        quips = { loss = 4, win = 3, endless = 3 }
+    },
+    {
+        id = "mycom",
+        get_center = function() return G.P_CENTERS.j_smsn_mycom end,
+        triggers = { "j_smsn_mycom", },
+        quips = { loss = 1, win = 1, endless = 2 }
+    },
+}
+
+function SMSN_get_gameover_char_data()
+    if not (G.SMSN_GAMEOVER_CHARS and G.jokers and G.jokers.cards) then
+        return nil
+    end
+
+    for _, char_data in ipairs(G.SMSN_GAMEOVER_CHARS) do
+        for _, card in ipairs(G.jokers.cards) do
+            if card.config and card.config.center then
+                for _, trigger in ipairs(char_data.triggers) do
+                    if card.config.center.key == trigger then
+                        return char_data
+                    end
+                end
+            end
+        end
+    end
+
+    return nil
+end
+
+function SMSN_roll_gameover_quip(char_data, state)
+    local max_quips = char_data.quips[state]
+    if not max_quips or max_quips < 1 then
+        return 1
+    end
+
+    local quip_num = math.random(1, max_quips)
+
+    if G.GAME
+    and max_quips > 1
+    and G.GAME.smsn_last_gameover_char == char_data.id
+    and G.GAME.smsn_last_gameover_state == state
+    and G.GAME.smsn_last_gameover_quip == quip_num then
+        quip_num = (quip_num % max_quips) + 1
+    end
+
+    if G.GAME then
+        G.GAME.smsn_last_gameover_char = char_data.id
+        G.GAME.smsn_last_gameover_state = state
+        G.GAME.smsn_last_gameover_quip = quip_num
+    end
+
+    return quip_num
+end
+
+function SMSN_build_gameover_data(is_win)
+    local char_data = SMSN_get_gameover_char_data()
+    if not char_data then
+        return nil
+    end
+
+    local state = "loss"
+    if is_win then
+        state = "win"
+        if G.GAME.round_resets.ante > G.GAME.win_ante then
+            state = "endless"
+        end
+    end
+
+    local quip_num = SMSN_roll_gameover_quip(char_data, state)
+    local speech_key = "smsn_" .. char_data.id .. "_" .. state .. "_" .. quip_num
+
+    return {
+        char_data = char_data,
+        state = state,
+        speech_key = speech_key
+    }
+end
 
 CreditLib = {}
 

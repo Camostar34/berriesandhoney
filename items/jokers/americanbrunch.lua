@@ -4,7 +4,7 @@ SMODS.Joker {
     pronouns = "she_her",
     atlas = "jokers",
     pos = { x = 3, y = 12 },
-    pools = {  },
+    pools = { smsn_berry_themed = true, },
     config = { extra = { berrybonus = 2 } },
     rarity = 2,
     cost = 6,
@@ -36,7 +36,7 @@ SMODS.Joker {
             end
 
            
-            if suit_count >= 4 then
+            if suit_count >= 3 then
                 G.E_MANAGER:add_event(Event({
                     func = function()
                         
@@ -46,7 +46,7 @@ SMODS.Joker {
                                 G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
                                 
                                 
-                                local berry = create_card('Berry', G.consumeables, nil, nil, nil, nil, nil, 'americanbrunch')
+                                local berry = create_card('berry', G.consumeables, nil, nil, nil, nil, nil, 'americanbrunch')
                                 berry:add_to_deck()
                                 G.consumeables:emplace(berry)
                                 

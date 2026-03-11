@@ -8,7 +8,7 @@ SMODS.Joker {
         y = 9,
      }, -- 69 HAHAHAHAHHAHAHAHAAHA!!!!!!!!!!!!!!!!!!!! -- hehe very funny :3 - ghostsalt
     pools = {
-        ykw = true,
+        ykw = true, smsn_berry_themed = true,
      },
     config = {
         extra = {
@@ -31,8 +31,7 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-        if context.using_consumeable and context.consumeable and context.consumeable.config.center and
-            context.consumeable.config.center.set == "Berry" then
+        if context.berry_activate then
             G.E_MANAGER:add_event(Event({
                 before = 0.1,
                 blocking = true,

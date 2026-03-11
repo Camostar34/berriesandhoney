@@ -32,7 +32,7 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-        if context.retrigger_joker_check and context.other_card.config.center.set == "Berry" and
+        if context.retrigger_joker_check and context.other_card.config.center.set == 'berry' and
             SMODS.pseudorandom_probability(card, "secondhelping", 1, card.ability.extra.odds) then
             return {
                 repetitions = 1,

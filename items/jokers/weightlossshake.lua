@@ -24,6 +24,7 @@ SMODS.Joker {
     eternal_compat = false,
     perishable_compat = true,
     demicolon_compat = true,
+    
 
     loc_vars = function(self, info_queue, card)
         return {

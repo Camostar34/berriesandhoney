@@ -12,6 +12,30 @@ SMODS.Atlas({
 	py = 95
 })
 
+SMODS.Atlas({
+	key = "tarots",
+	path = "camostar_tarots-Sheet.png",
+	px = 69,
+	py = 95,
+})
+
+SMODS.Atlas({
+	key = "spectrals",
+	path = "camostar_spectrals.png",
+	px = 65,
+	py = 95,
+})
+
+
+SMODS.Atlas({
+	key = "smsnsleeve",
+	path = "sleeves.png",
+	px = 73,
+	py = 95,
+})
+
+
+
 
 SMODS.Atlas({
 	key = "item",
@@ -22,7 +46,7 @@ SMODS.Atlas({
 
 SMODS.Atlas({
 	key = "berries",
-	path = "berries.png",
+	path = "camostar_berries-Sheet.png",
 	px = 71,
 	py = 95
 })
@@ -46,7 +70,7 @@ SMODS.Atlas({
 
 SMODS.Atlas({
     key = "backs",
-    path = 'backs.png',
+    path = 'camostar_backs-Sheet.png',
     px = 71,
     py = 95
 })
@@ -65,4 +89,15 @@ SMODS.Atlas {
   px = 333,
   py = 216,
   prefix_config = { key = false } -- I forget if this is still needed, but doesn't hurt to keep?
+}
+
+ SMODS.Font {
+	key = "madou",
+	path = "MadouFutoMaruGothic-d9Xo7.ttf",
+	render_scale = 200,
+	TEXT_HEIGHT_SCALE = 0.9,
+	TEXT_OFFSET = { x = 12, y = -24 },
+	FONTSCALE = 0.06,
+	squish = 1,
+	DESCSCALE = 1.25
 }

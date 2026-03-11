@@ -16,6 +16,7 @@ SMODS.Joker {
     unlocked = true,
     discovered = true,
     cost = 5,
+     pools = {smsn_sticky = true, },
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,

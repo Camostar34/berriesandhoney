@@ -109,3 +109,25 @@ function smsn_add_gold_cards(cards, juice_card)
         }))
     end
 end
+
+
+-- food joker stuff, credit to Paperback
+
+if not SMODS.ObjectTypes.Food then
+    SMODS.ObjectType {
+        key = 'Food',
+        default = 'j_egg',
+        cards = {},
+        inject = function(self)
+            SMODS.ObjectType.inject(self)
+            
+            for k, _ in pairs({
+                j_gros_michel = true, j_egg = true, j_ice_cream = true, 
+                j_cavendish = true, j_turtle_bean = true, j_diet_cola = true, 
+                j_popcorn = true, j_ramen = true, j_selzer = true
+            }) do
+                self:inject_card(G.P_CENTERS[k])
+            end
+        end
+    }
+end

@@ -9,6 +9,7 @@ SMODS.Joker {
      },
     pools = {
         guest = true,
+        smsn_berry_themed = true,
      },
     rarity = 2,
     cost = 7,

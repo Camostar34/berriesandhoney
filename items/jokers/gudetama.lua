@@ -5,7 +5,7 @@ SMODS.Joker {
     pronouns = "he_him",
     atlas = "jokers",
     pos = { x = 4, y = 13 },
-    pools = { yuru = true, },
+    pools = { yuru = true, smsn_sticky = true, },
     config = { extra = { dollars = 6 } },
     rarity = 1,
     unlocked = true,

@@ -27,9 +27,9 @@ SMODS.Joker {
                 
                 G.E_MANAGER:add_event(Event({
                     func = function()
-                        -- 75% chance for a Tarot, 25% for a Spectral
+                       
                         local card_key = ''
-                        if pseudorandom('shadow_wizard') < 0.75 then
+                        if pseudorandom('shadow_wizard') < 0.85 then
                             card_key = pseudorandom_element({'c_smsn_shark', 'c_smsn_luckycoin', 'c_smsn_feather', 'c_smsn_book'}, pseudoseed('sw_tarot'))
                         else
                             card_key = pseudorandom_element({'c_smsn_yharon', 'c_smsn_megalodon'}, pseudoseed('sw_spec'))

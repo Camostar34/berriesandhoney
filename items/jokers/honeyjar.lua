@@ -4,7 +4,7 @@ SMODS.Joker {
     pronouns = "she_it",
     atlas = "jokers",
     pos = { x = 6, y = 3 },
-    pools = { wip = true },
+     pools = {smsn_sticky = true, },
     config = { extra = { glaze_odds = 3, gold_odds = 6 } },
     rarity = 2,
     cost = 8,

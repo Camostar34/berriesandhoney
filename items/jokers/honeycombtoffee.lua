@@ -5,7 +5,7 @@ SMODS.Joker {
      enhancement_gate = 'm_gold',
     atlas = "jokers",
     pos = { x = 4, y = 2 },
-    pools = { },
+    pools = { Food = true, smsn_sticky = true },
     config = { extra = { } },
     rarity = 2,
     cost = 6,

@@ -2,7 +2,7 @@ SMODS.Joker {
     key = "bumbling",
     atlas = "jokers",
     pos = { x = 2, y = 11 },
-    pools = { },
+     pools = {smsn_sticky = true, },
     config = { extra = { bonus = 15 } },
     rarity = 1,
     cost = 4,

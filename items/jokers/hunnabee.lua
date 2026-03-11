@@ -9,6 +9,7 @@ SMODS.Joker {
      },
     pools = {
         bugsnax = true,
+        smsn_sticky = true,
      },
     config = {
         extra = {

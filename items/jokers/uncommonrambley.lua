@@ -8,7 +8,7 @@ SMODS.Joker {
         y = 0,
      },
     pools = {
-        rambley = true,
+        rambley = true,smsn_berry_themed = true,
      },
     config = {
         extra = {

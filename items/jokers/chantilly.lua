@@ -4,7 +4,7 @@ SMODS.Joker {
    pronouns = "she_her",
     atlas = "jokers",
     pos = { x = 2, y = 6 },
-    pools = { },
+    pools = {smsn_berry_themed = true,},
     config = { extra = {  } },
     rarity = 2,
     cost = 8,

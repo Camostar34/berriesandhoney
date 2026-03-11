@@ -40,7 +40,7 @@ SMODS.Joker {
              }
         end
 
-        if context.using_consumeable and context.consumeable.config.center.set == "Berry" and not context.blueprint then
+        if context.berry_activate and not context.blueprint then
             card.ability.extra.current_xmult = card.ability.extra.current_xmult + card.ability.extra.added_xmult
 
             if SMODS.pseudorandom_probability(card, "strabby", 1, card.ability.extra.odds) then

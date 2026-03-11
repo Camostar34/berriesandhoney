@@ -1,0 +1,19 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = "functions/common_events.lua"
+pattern = "if add and not G.GAME.banned_keys[v.key] then "
+position = "after"
+match_indent = true
+payload = '''
+    if G.GAME.modifiers.smsn_gold_boost and v.pools and v.pools.smsn_sticky then
+        for i = 1, 2 do
+            _pool[#_pool + 1] = v.key
+            _pool_size = _pool_size + 1
+        end
+    end
+'''

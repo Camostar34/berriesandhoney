@@ -22,7 +22,7 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-        if context.selling_card and context.card.config.center.set == "Berry" and #G.consumeables.cards + G.GAME.consumeable_buffer <= G.consumeables.config.card_limit then
+        if context.selling_card and context.card.config.center.set == 'berry' and #G.consumeables.cards + G.GAME.consumeable_buffer <= G.consumeables.config.card_limit then
             G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
 
             local chosen_message = '+1 Death'

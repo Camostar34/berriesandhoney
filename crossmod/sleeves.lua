@@ -1,181 +1,285 @@
---atlas
-SMODS.Atlas {
-    key = "smsnsleeve",
-    path = "sleeves.png",
-    px = 73,
-    py = 95
-}
+--BOUNTIFUL
+CardSleeves.Sleeve({ 
+    name = "Bountiful Sleeve",
+    key  = "organicsleeve",
+    pos  = { x = 5, y = 0 }, 
+    atlas = "smsnsleeve",
+    unlocked = true,
+    
+    config = {
+        consumable_slot = 2,
+        joker_slot = -1,
+    },
+
+    loc_vars = function(self)
+        if self.get_current_deck_key() == "b_smsn_organic" then
+            chosen_key = self.key .. "_alt"
+            chosen_vars = {}
+        else
+            chosen_key = self.key
+            chosen_vars = { self.config.consumable_slot, math.abs(self.config.joker_slot) }
+        end
+        return { key = chosen_key, vars = chosen_vars }
+    end,
+
+    apply = function(self)
+        if self.get_current_deck_key() ~= "b_smsn_organic" then
+            if G and G.GAME and G.GAME.starting_params then
+                G.GAME.starting_params.consumable_slots = (G.GAME.starting_params.consumable_slots or 0) + (self.config.consumable_slot or 0)
+                G.GAME.starting_params.joker_slots = (G.GAME.starting_params.joker_slots or 0) + (self.config.joker_slot or 0)
+            end
+            
+            if G and G.GAME and G.GAME.modifiers then
+                G.GAME.modifiers.smsn_berry_boost = true
+            end
+        else
+           
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    SMODS.add_card{
+                        set              = 'Joker',
+                        area             = G.jokers,
+                        skip_materialize = true,
+                        key              = "j_smsn_berrypicking", 
+                        no_edition       = true,
+                    }
+                    SMODS.add_card{
+                        set              = 'Spectral',
+                        area             = G.consumeables,
+                        skip_materialize = true,
+                        key              = "c_smsn_retinalbloom",
+                        no_edition       = true,
+                    }
+                    return true
+                end
+            }))
+        end
+    end
+})
+
 
 CardSleeves.Sleeve({
-  name = "Sticky Sleeve",
-  key  = "stickysleeve",
-  pos  = { x = 0, y = 0 },
-  atlas = "smsnsleeve",
-  unlocked = true,
+    name = "Sticky Sleeve",
+    key = "stickysleeve",
+    pos = { x = 0, y = 0 }, -- Adjust to match your atlas!
+    atlas = "smsnsleeve",
+    unlocked = true,
+    
+    config = {
+        consumables = { 'c_devil' },
+        penalty = 1,
+    },
 
-  config = {
-    extrahandsize = -1,  -- -1 hand size
-    penalty       = 1,   -- 1$ penalty
-  },
-
-  loc_vars = function(self)
-    local key
-    if self.get_current_deck_key() == "b_smsn_sticky" then
-      key = self.key .. "_alt"
-    else
-      key = self.key
-    end
-    return {
-      key  = key,
-      vars = { self.config.penalty, self.config.extrahandsize },
-    }
-  end,
-
-  apply = function(self)
-    if self.get_current_deck_key() == "b_smsn_sticky" then
-      G.E_MANAGER:add_event(Event({
-        func = function()
-          SMODS.add_card{
-            set             = 'Joker',
-            area            = G.jokers,
-            skip_materialize = true,
-            key             = "j_smsn_samson",
-            no_edition      = true,
-          }
-          return true
+    loc_vars = function(self, info_queue)
+        if self.get_current_deck_key() == "b_smsn_sticky" then
+            chosen_key = self.key .. "_alt"
+            chosen_vars = {}
+        else
+            chosen_key = self.key
+            chosen_vars = { self.config.penalty }
+            
+            if info_queue then
+                info_queue[#info_queue + 1] = G.P_CENTERS.c_devil
+            end
         end
-      }))
-    else
-      if G and G.GAME and G.GAME.starting_params then
-        G.GAME.starting_params.hand_size =
-          (G.GAME.starting_params.hand_size or 0) + (self.config.extrahandsize or 0)
-      end
+        return { key = chosen_key, vars = chosen_vars }
+    end,
 
-      G.E_MANAGER:add_event(Event({
-        func = function()
-          SMODS.add_card{
-            set             = 'Joker',
-            area            = G.jokers,
-            skip_materialize = true,
-            key             = "j_smsn_beehive",
-            no_edition      = true,
-          }
-          SMODS.add_card{
-            set             = 'Joker',
-            area            = G.jokers,
-            skip_materialize = true,
-            key             = "j_smsn_honeyjar",
-            no_edition      = true,
-          }
-          return true
+    apply = function(self)
+        if self.get_current_deck_key() ~= "b_smsn_sticky" then
+            if G and G.GAME and G.GAME.modifiers then
+                G.GAME.modifiers.smsn_gold_boost = true
+            end
+            
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    SMODS.add_card{
+                        set              = 'Consumable',
+                        area             = G.consumeables,
+                        skip_materialize = true,
+                        key              = "c_devil",
+                        no_edition       = true,
+                    }
+                    return true
+                end
+            }))
+        else
+           
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    SMODS.add_card{
+                        set              = 'Joker',
+                        area             = G.jokers,
+                        skip_materialize = true,
+                        key              = "j_smsn_honeyjar", 
+                        no_edition       = true,
+                    }
+                    return true
+                end
+            }))
         end
-      }))
-    end
-  end,
+    end,
 
-  calculate = function(self, back, context)
-    if context.pre_discard
-       and #G.hand.highlighted >= 3
-       and self.get_current_deck_key() ~= "b_smsn_sticky" then
-      return {
-        dollars = -(self.config.penalty or 0),
-      }
-    end
-
-    if context.end_of_round
-       and context.beat_boss
-       and self.get_current_deck_key() == "b_smsn_sticky" then
-
-      local honeyjar = SMODS.find_card("j_smsn_honeyjar", true)
-      if honeyjar then
-        for _, v in pairs(honeyjar) do
-           v.ability.extra.odds = math.ceil(v.ability.extra.odds / 2)
-          return {
-            card = honeyjar,
-            message = "Odds Up!"
-          }
+    calculate = function(self, back, context)
+        if context.pre_discard and self.get_current_deck_key() ~= "b_smsn_sticky" then
+            ease_dollars(-self.config.penalty)
         end
-      end
     end
-  end,
 })
 
+-- FROSTED
+CardSleeves.Sleeve({
+    name = "Frosted Sleeve",
+    key = "frostedsleeve",
+    pos = { x = 3, y = 0 },
+    atlas = "smsnsleeve",
+    unlocked = true,
+    
+    config = {
+        consumables = { 'c_smsn_page_of_sweets' }, 
+        jokers = { 'j_smsn_cookiejar' }
+    },
+
+    loc_vars = function(self)
+        if self.get_current_deck_key() == "b_smsn_frosted" then
+            chosen_key = self.key .. "_alt"
+        else
+            chosen_key = self.key
+        end
+        return { key = chosen_key, vars = {} }
+    end,
+
+    apply = function(self)
+        if self.get_current_deck_key() ~= "b_smsn_frosted" then
+           
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    SMODS.add_card{
+                        set              = 'Joker',
+                        area             = G.jokers,
+                        skip_materialize = true,
+                        key              = "j_smsn_cookiejar",
+                        no_edition       = true,
+                    }
+                    SMODS.add_card{
+                        set              = 'Consumable',
+                        area             = G.consumeables,
+                        skip_materialize = true,
+                        key              = "c_smsn_page_of_sweets",
+                        no_edition       = true,
+                    }
+                    return true
+                end
+            }))
+        else
+           
+            if G and G.GAME and G.GAME.modifiers then
+                G.GAME.modifiers.smsn_frosted_combo = true
+            end
+        end
+    end,
+
+    calculate = function(self, back, context)
+        if context.playing_card_added and context.cards and self.get_current_deck_key() == "b_smsn_frosted" then
+            for _, _card in pairs(context.cards) do
+              
+                if _card.config and _card.config.center and _card.config.center.key == 'm_smsn_cookie' then
+                 
+                    smsn_apply_random_glaze(_card)
+                end
+            end
+        end
+    end
+})
+
+--GINGHAM
 CardSleeves.Sleeve({ 
-  name = "Gingham Sleeve",
-  key  = "picnicsleeve",
-  pos  = { x = 1, y = 0 },
-  atlas = "smsnsleeve",
-  unlocked = true,
+    name = "Gingham Sleeve",
+    key  = "picnicsleeve",
+    pos  = { x = 1, y = 0 },
+    atlas = "smsnsleeve",
+    unlocked = true,
 
-  config = {
-    consume    = 2,  
-    joker_slot = 1, 
-  },
+    config = {
+        consume    = 2,  
+        joker_slot = 1, 
+    },
 
-  loc_vars = function(self)
-    local key, vars
-    if self.get_current_deck_key() == "b_smsn_picnic" then
-      key = self.key .. "_alt"
-      vars = {
-      }
-    else
-      key = self.key
-      vars = { 6 }
-    end
-    return { key = key, vars = vars, self.config.consume, self.config.joker_slot }
-  end,
-
-  apply = function(self)
-    if self.get_current_deck_key() == "b_smsn_picnic" then
-      G.E_MANAGER:add_event(Event({
-        func = function()
-          SMODS.add_card{
-            set             = 'Spectral',
-            area            = G.consumeables,
-            skip_materialize = true,
-            key             = "c_smsn_retinalbloom",
-            no_edition      = true,
-          }
-          return true
+    loc_vars = function(self)
+        if self.get_current_deck_key() == "b_smsn_picnic" then
+            chosen_key = self.key .. "_alt"
+            chosen_vars = {}
+        else
+            chosen_key = self.key
+            chosen_vars = { self.config.consume, self.config.joker_slot }
         end
-      }))
-    end
-    if self.get_current_deck_key() ~= "b_smsn_picnic" then
-      if not (G and G.GAME and G.GAME.starting_params) then return end
+        return { key = chosen_key, vars = chosen_vars }
+    end,
 
-      local sp = G.GAME.starting_params
-      sp.consumable_slots = (sp.consumable_slots or 0) + (self.config.consume    or 0)
-      sp.joker_slots      = (sp.joker_slots      or 0) - (self.config.joker_slot or 0)
+    apply = function(self)
+        if self.get_current_deck_key() ~= "b_smsn_picnic" then
+          
+            if G and G.GAME and G.GAME.starting_params then
+                G.GAME.starting_params.consumable_slots = (G.GAME.starting_params.consumable_slots or 0) + (self.config.consume or 0)
+                G.GAME.starting_params.joker_slots      = (G.GAME.starting_params.joker_slots      or 0) - (self.config.joker_slot or 0)
+            end
+            
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    SMODS.add_card{
+                        set              = 'Joker',
+                        area             = G.jokers,
+                        skip_materialize = true,
+                        key              = "j_smsn_ginghamjoker",
+                        no_edition       = true,
+                    }
+                    return true
+                end
+            }))
+        else
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    for _, card in ipairs(G.playing_cards) do
+                        if card.base.suit == 'Hearts' then
+                            card:set_ability(G.P_CENTERS.m_smsn_gingham)
+                        end
+                    end
+                    return true
+                end
+            }))
+        end
     end
-  end,
 })
 
-
-
+--DEFUNCT
 CardSleeves.Sleeve({ 
   name     = "Defunct Sleeve",
   key      = "defunctsleeve",
   pos      = { x = 2, y = 0 },
   atlas    = "smsnsleeve",
   unlocked = true,
- config = { voucher = 'v_magic_trick'},
   
-
   loc_vars = function(self)
-    local key
     if self.get_current_deck_key() == "b_smsn_defunct" then
-      key = self.key .. "_alt"
+      chosen_key = self.key .. "_alt"
+      -- ALT: We inject the voucher into the config here!
+      self.config = { voucher = 'v_magic_trick' }
+      chosen_vars = { localize { type = 'name_text', key = self.config.voucher, set = 'Voucher' } }
     else
-      key = self.key
+      chosen_key = self.key
+      -- NORMAL: Empty config, no voucher!
+      self.config = {}
+      chosen_vars = {}
     end
-    return { key = key,
-    vars = { localize { type = 'name_text', key = self.config.voucher, set = 'Voucher' } }
-        }
+    return { key = chosen_key, vars = chosen_vars }
   end,
 
-  apply = function(self, back)
+  apply = function(self)
+    -- This calls Larswijn's native function, which automatically and safely redeems whatever is in self.config!
+    CardSleeves.Sleeve.apply(self)
+
     if self.get_current_deck_key() ~= "b_smsn_defunct" then
-    
+      -- NORMAL SLEEVE specific logic
       if G and G.GAME and G.GAME.starting_params then
         G.GAME.starting_params.no_faces = true
       end
@@ -183,45 +287,93 @@ CardSleeves.Sleeve({
       G.E_MANAGER:add_event(Event({
         func = function()
           SMODS.add_card{
-            set             = 'Joker',
-            area            = G.jokers,
+            set              = 'Joker',
+            area             = G.jokers,
             skip_materialize = true,
-            key             = "j_smsn_legendaryrambley",
-            no_edition      = true,
+            key              = "j_smsn_commonrambley", -- Spawning the proper Rambley!
+            no_edition       = true,
           }
           return true
         end
       }))
+    else
+      -- UPGRADED SLEEVE specific logic
+      if G and G.GAME and G.GAME.modifiers then
+        G.GAME.modifiers.smsn_defunct_combo = true
+      end
+      -- We don't need any voucher logic here at all, because CardSleeves.Sleeve.apply(self) already handled it!
     end
-
-
-  if self.get_current_deck_key() == "b_smsn_defunct" then
-    
-        G.GAME.used_vouchers[self.config.voucher] = true
-                G.GAME.starting_voucher_count = (G.GAME.starting_voucher_count or 0) + 1
-                G.E_MANAGER:add_event(Event({ -- Adding back objects of any type from a deck MUST be done within an event
-                    func = function()
-                        back:apply_to_run(nil, G.P_CENTERS[self.config.voucher])
-                        return true
-                    end
-                }))
-            end
   end,
 
   calculate = function(self, back, context)
     if context.playing_card_added and context.cards then
-      local using_defunct = (self.get_current_deck_key() == "b_smsn_defunct")
-
       for _, _card in pairs(context.cards) do
         if _card:is_face() then
-          if using_defunct then
-            _card:set_edition(G.P_CENTERS.e_polychrome, false, false)
+          if self.get_current_deck_key() == "b_smsn_defunct" then
+            _card:set_edition({polychrome = true}, true, true)
           else
-            _card:set_edition(G.P_CENTERS.e_holo, false, false)
+            _card:set_edition({holo = true}, true, true)
           end
         end
       end
     end
   end,
+})
+
+
+
+-- CUDDLY
+CardSleeves.Sleeve({
+    name = "Cuddly Sleeve",
+    key = "cuddlysleeve",
+    pos = { x = 4, y = 0 }, 
+    atlas = "smsnsleeve",
+    unlocked = true,
+    config = {},
+
+    loc_vars = function(self)
+        if self.get_current_deck_key() == "b_smsn_cuddly" then
+            chosen_key = self.key .. "_alt"
+        else
+            chosen_key = self.key
+        end
+        return {
+            key = chosen_key,
+            vars = {}
+        }
+    end,
+
+    apply = function(self, back)
+        if self.get_current_deck_key() ~= "b_smsn_cuddly" then
+        
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    guest_pool = {}
+                    for k, v in pairs(G.P_CENTERS) do
+                        if v.pools and v.pools.guest and string.match(k, "smsn_") then
+                            guest_pool[#guest_pool + 1] = k
+                        end
+                    end
+
+                    chosen_guest = 'j_joker'
+                    if #guest_pool > 0 then
+                        chosen_guest = pseudorandom_element(guest_pool, pseudoseed('cuddly_sleeve_spawn'))
+                    end
+
+                    card = create_card('Joker', G.jokers, nil, nil, nil, nil, chosen_guest, 'cuddly_spawn')
+                    card:set_edition({ holo = true }, true, true)
+                    card:add_to_deck()
+                    G.jokers:emplace(card)
+                    
+                    return true
+                end
+            }))
+        else
+    
+            if G and G.GAME and G.GAME.modifiers then
+                G.GAME.modifiers.smsn_cuddly_boost = true
+            end
+        end
+    end
 })
 

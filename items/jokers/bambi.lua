@@ -4,8 +4,7 @@ SMODS.Joker {
     pronouns = "she_they",
     atlas = "jokers",
     pos = { x = 0, y = 0 },
-    pools = { },
-
+    pools = {smsn_berry_themed = true,},
     config = { extra = { rot_active = false } },
     rarity = 2, 
     cost = 6,
@@ -25,7 +24,7 @@ SMODS.Joker {
        
         if context.using_consumeable and not context.blueprint then
            
-            if context.consumeable.ability.set == 'Berry' and context.consumeable.edition and context.consumeable.edition.key == 'e_negative' then
+            if context.consumeable.ability.set == 'berry' and context.consumeable.edition and context.consumeable.edition.key == 'e_negative' then
                 card.ability.extra.rot_active = true
                 G.E_MANAGER:add_event(Event({
                     func = function()

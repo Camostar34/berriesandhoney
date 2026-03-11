@@ -48,7 +48,7 @@ SMODS.Joker {
                     G.E_MANAGER:add_event(Event({
                         func = function()
                             SMODS.add_card({
-                                set = 'Berry',
+                                set = 'berry',
                                 area = G.consumeables
                             })
                             G.GAME.consumeable_buffer = 0

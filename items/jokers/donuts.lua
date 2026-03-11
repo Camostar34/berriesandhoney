@@ -20,6 +20,9 @@ SMODS.Joker {
     eternal_compat = false,
     perishable_compat = true,
     demicolon_compat = false,
+    pools = {
+    Food = true
+  },
 
     loc_vars = function(self, info_queue, card)
         return {

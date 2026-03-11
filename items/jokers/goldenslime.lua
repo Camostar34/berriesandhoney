@@ -9,6 +9,7 @@ SMODS.Joker {
      },
     pools = {
         slimerancher = true,
+        smsn_sticky = true,
      },
     config = {
         extra = {

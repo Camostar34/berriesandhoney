@@ -12,7 +12,7 @@ SMODS.Joker {
         y = 1,
      },
     pools = {
-        rambley = true,
+        rambley = true, smsn_berry_themed = true,
      },
     rarity = 3,
     cost = 8,

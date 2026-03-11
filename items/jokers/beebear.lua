@@ -1,6 +1,7 @@
 SMODS.Joker {
     key = "beebear",
     pronouns = "he_him",
+     pools = {smsn_sticky = true, },
      enhancement_gate = 'm_gold',
     atlas = "jokers",
     pos = {

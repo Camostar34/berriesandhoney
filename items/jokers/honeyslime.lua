@@ -9,6 +9,8 @@ SMODS.Joker {
      },
     pools = {
         slimerancher = true,
+        smsn_sticky = true,
+        smsn_berry_themed = true,
      },
     config = {
         extra = {
@@ -32,8 +34,7 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-        if context.using_consumeable and context.consumeable and context.consumeable.config.center and
-            context.consumeable.config.center.set == "Berry" and
+        if context.berry_activate and
             SMODS.pseudorandom_probability(card, "honeyslime", 1, card.ability.extra.odds) then
             local eligible = {}
             for _, v in ipairs(G.hand.cards) do if not v.seal then eligible[#eligible + 1] = v end end

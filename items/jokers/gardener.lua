@@ -4,7 +4,7 @@ SMODS.Joker {
     pronouns = "any_all",
     atlas = "jokers",
     pos = { x = 2, y = 1 },
-
+    pools = {smsn_berry_themed = true,},
     config = { extra = { every = 3, handsplayed = 0} },
     rarity = 1,
     cost = 5,
@@ -27,7 +27,7 @@ SMODS.Joker {
                         G.E_MANAGER:add_event(Event({
                     trigger = "immediate",
                     func = (function()
-                            SMODS.add_card({set = 'Berry'})
+                            SMODS.add_card({set = 'berry'})
                             play_sound('polychrome1', 1.2 + math.random() * 0.1, 0.8)
                             card:juice_up(0.3, 0.4)
                             card.ability.extra.handsplayed = 0

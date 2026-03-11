@@ -6,7 +6,7 @@ SMODS.Joker {
         x = 4,
         y = 9,
      },
-    pools = {},
+    pools = {smsn_berry_themed = true,},
     config = {
         extra = {
             xmult = 3,

@@ -4,7 +4,7 @@ SMODS.Joker {
     pronouns = "she_they",
     atlas = "jokers",
     pos = { x = 0, y = 0 },
-    pools = { Food = true },
+    pools = { Food = true, smsn_sticky = true, },
     config = { extra = { cards = 3, subtract = 1 } },
     rarity = 2,
     cost = 5,

@@ -4,7 +4,7 @@ SMODS.Joker {
 
     atlas = "jokers",
     pos = { x = 6, y = 7 }, --67 HAHAHAHAHHAHAHA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    pools = { food = true},
+    pools = { Food = true},
     config = {extra = {bonus = 12, suit = 'Spades'}},
     rarity = 2,
     cost = 6,

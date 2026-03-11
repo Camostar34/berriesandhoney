@@ -13,7 +13,7 @@ SMODS.Joker {
     eternal_compat = true,
     perishable_compat = true,
     demicolon_compat = true,
-
+    pools = {smsn_berry_themed = true,},
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.plus } }
     end,

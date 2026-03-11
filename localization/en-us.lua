@@ -58,8 +58,33 @@ return {
             b_smsn_picnic = {
                 name = "Gingham Deck",
                 text = {
-                    "{C:attention}+#1#{} Consumable slots", "{C:red}#2#{} Joker slot",
-                    "{C:dark_edition}Berry Cards{} may", "appear in the shop",
+                    "{C:diamonds}Diamonds{} are also {C:attention}Gingham Cards{}",
+                    "start with {C:attention}Gingham Joker{}",
+                },
+            },
+
+            b_smsn_organic = {
+                name = "Bountiful Deck",
+                text = {
+                    "{C:attention}+#1#{} Consumable slots",
+                    "{C:red}#2#{} Joker slot",
+                    "{C:attention}Picnic Packs{} and {C:attention}Berry{}",
+                    "themed Jokers are {C:attention}3X{}",
+                    "more likely to appear",
+                },
+            },
+
+             b_smsn_frosted = {
+                name = "Frosted Deck",
+                text = {
+                    "Start with {C:attention}Cookie Jar{}", "and {C:tarot}Page of Sweets{}",
+                },
+            },
+
+            b_smsn_cuddly = {
+                name = "Cuddly Deck",
+                text = {
+                    "Start with a", "{C:mult}Holographic{} {C:attention}Guest Joker{}", "from {C:attention}Berries & Honey{}",
                 },
             },
             b_smsn_rokuyo = {
@@ -76,14 +101,16 @@ return {
             b_smsn_sticky = {
                 name = "Sticky Deck",
                 text = {
-                    "{C:red}#2#{} hand size", "Lose {C:money}$#1#{} when {C:red}discarding{}", "three or more cards",
-                    "Start run with", "{C:attention}Beehive{} and {C:attention}Honey Jar{}",
+                    "Lose {C:money}$#1#{} per {C:red}discard{}",
+                    "{C:money}Gold{} and {C:attention}Honey{} themed",
+                    "Jokers are {C:attention}3X{} more likely",
+                    "to appear",
                 },
             },
             b_smsn_defunct = {
                 name = "Defunct Deck",
                 text = {
-                    "Start with {C:attention}Rambley The Raccoon{}", "and no face cards in your deck",
+                    "Start with a", "{C:blue}Foil{} {C:attention}Rambley Railroad{}", "and no face cards in your deck",
                     "Face cards added to deck", "become {C:dark_edition}Holographic{}",
                 },
             },
@@ -93,44 +120,101 @@ return {
             sleeve_smsn_picnicsleeve = {
                 name = "Gingham Sleeve",
                 text = {
-                    "{C:attention}+2{} Consumable slots", "{C:red}-1{} Joker slot", "{C:dark_edition}Berry Cards{} may",
-                    "appear in the shop",
+                    "{C:diamonds}Diamonds{} are also {C:attention}Gingham Cards{}",
+                    "Start with {C:attention}Gingham Joker{}",
                 },
             },
             sleeve_smsn_picnicsleeve_alt = {
                 name = "Gingham Sleeve",
                 text = {
-                    "{C:spectral}Berry{} Cards are", "{C:attention}2x{} more likely to appear{},",
-                    "Start with {C:spectral}Retinal Bloom{}",
+                    "{C:hearts}Hearts{} are also {C:attention}Gingham Cards{}",
+                },
+            },
+
+            sleeve_smsn_organicsleeve = {
+                name = "Bountiful Sleeve",
+                text = {
+                    "{C:attention}+#1#{} Consumable slots",
+                    "{C:red}-#2#{} Joker slot",
+                    "{C:attention}Picnic Packs{} and {C:attention}Berry{}",
+                    "themed Jokers are {C:attention}3X{}",
+                    "more likely to appear",
+                },
+            },
+            sleeve_smsn_organicsleeve_alt = {
+                name = "Bountiful Sleeve",
+                text = {
+                    "Start the run with",
+                    "{C:spectral}Retinal Bloom{} and",
+                    "{C:attention}Berry Picking{}",
+                },
+            },
+
+            sleeve_smsn_frostedsleeve = {
+                name = "Frosted Sleeve",
+                text = {
+                    "Start with {C:attention}Cookie Jar{}", 
+                    "and {C:tarot}Page of Sweets{}",
+                },
+            },
+            sleeve_smsn_frostedsleeve_alt = {
+                name = "Frosted Sleeve",
+                text = {
+                    "{C:attention}Cookie Cards{} added to",
+                    "your deck gain a",
+                    "{C:attention}random glaze{}",
+                },
+            },
+
+            sleeve_smsn_cuddlysleeve = {
+                name = "Cuddly Sleeve",
+                text = {
+                    "Start with a", 
+                    "{C:mult}Holographic{} {C:attention}Guest Joker{}", 
+                    "from {C:attention}Berries & Honey{}",
+                },
+            },
+            sleeve_smsn_cuddlysleeve_alt = {
+                name = "Cuddly Sleeve",
+                text = {
+                    "{C:attention}Guest{} and {C:attention}OC{} Jokers",
+                    "are {C:attention}3X{} more likely",
+                    "to appear",
                 },
             },
 
             sleeve_smsn_stickysleeve = {
                 name = "Sticky Sleeve",
                 text = {
-                    "{C:red}-1{} hand size", "Lose {C:money}$1{} when {C:red}discarding{}", "three or more cards",
-                    "Start run with", "{C:attention}Beehive{} and {C:attention}Honey Jar{}",
+                    "Lose {C:money}$#1#{} per {C:red}discard{}",
+                    "{C:money}Gold{} and {C:attention}Honey{} themed",
+                    "Jokers are {C:attention}3X{} more likely",
+                    "Start with {C:tarot}The Devil{}"
                 },
             },
             sleeve_smsn_stickysleeve_alt = {
                 name = "Sticky Sleeve",
                 text = {
-                    "{C:attention}Honey Jar{}'s denominator is", "halved when a {C:attention}Boss Blind{},",
-                    "is defeated", "Start with an", "additional {C:attention}Samson{}",
+                    "Start the run with", 
+                    "{C:attention}Honey Dipper{}",
                 },
             },
 
             sleeve_smsn_defunctsleeve = {
                 name = "Defunct Sleeve",
                 text = {
-                    "Start with {C:attention}Rambley The Raccoon{}", "and no face cards in your deck",
-                    "Face cards added to deck", "become {C:dark_edition}Holographic{}",
+                    "Start with {C:blue}Foil{} {C:attention}Rambley Railroad{}", 
+                    "and no face cards in your deck",
+                    "Face cards added to deck", 
+                    "become {C:dark_edition}Holographic{}",
                 },
             },
             sleeve_smsn_defunctsleeve_alt = {
                 name = "Defunct Sleeve",
                 text = {
-                    "Start the run with", "{C:attention}Magic Trick{}", "Face cards added to deck",
+                    "Start the run with", 
+                    "{C:attention}Magic Trick{}", 
+                    "Face cards added to deck",
                     "become {C:dark_edition}Polychrome{}",
                 },
             },
@@ -291,7 +375,7 @@ return {
                 text = {
                     {
                         "Gain {C:attention}+1{} Joker slot and", "{C:attention}+1{} Consumable slot every",
-                        "{C:attention}#1#{} {C:inactive}[#2#]{} rerolls without", "buying a card",
+                        "{C:attention}#1#{} {C:inactive}[#2#]{} {C:green}rerolls{} without", "buying a card",
                         "{s:0.7,C:inactive}(Does not reset when a card is bought){}",
                     },
 
@@ -301,7 +385,7 @@ return {
             j_smsn_femtanyl = {
                 name = { "KATAMARI", "{s:0.75}by FEMTANYL" },
                 text = {
-                    "{X:mult,C:white}x#1#{} Mult for every", "reroll done this run",
+                    "{X:mult,C:white}x#1#{} Mult for every", "{C:green}reroll{} done this run",
                     "{C:inactive,s:0.8}(Currently {X:mult,C:white}x#2#{}{C:inactive,s:0.8} Mult)",
                 },
             },
@@ -448,11 +532,6 @@ return {
                 text = {
                     "{C:attention}Gingham Cards{} are considered Wild Cards", "and cannot be {C:attention}debuffed{}",
                 },
-            },
-
-            j_smsn_cookiemonster = {
-                name = "Cookie Monster",
-                text = { "Gains {X:chips,C:white}x#1#{} Chips when a", "{C:attention}Cookie Card{} is destroyed" },
             },
 
             j_smsn_cookiejar = {
@@ -616,7 +695,7 @@ return {
                 name = { "American Brunch", "{s:0.75}By The Buttertones" },
                 text = {
                     "Create {C:attention}#1#{} {C:dark_edition}Berry Cards{}", "if scoring hand contains",
-                    "{C:attention}4{} or more suits",
+                    "{C:attention}3{} or more suits",
                     "{C:inactive,s:0.8}(Must have room)",
                 },
             },
@@ -859,14 +938,6 @@ return {
                 },
             },
 
-            j_smsn_crazyglazer = {
-                name = "Crazy Glazer",
-                text = {
-                    "Cards drawn during a round", "have a {C:green}#1# in #2#{} chance",
-                    "to gain a random {C:attention}Glaze{}",
-                },
-            },
-
             j_smsn_fireblanket = {
                 name = "Fire Blanket",
                 text = {
@@ -971,7 +1042,7 @@ return {
                 name = "Cinnamoroll",
                 text = {
                     "Create a {C:attention}Polychrome Tag{}",
-                    "after {C:attention}#1#{} rerolls",
+                    "after {C:attention}#1#{} {C:green}rerolls{}",
                 },
             },
 
@@ -1240,13 +1311,6 @@ return {
              },
         },
 
-        Spectral = {
-            c_smsn_retinalbloom = {
-                name = "Retinal Bloom",
-                text = { "Add a {C:blue}Freshness Seal{}", "to {C:attention}1{} selected", "card in your hand" },
-            },
-        },
-
         Enhanced = {
             m_smsn_gingham = {
                 name = "Gingham Card",
@@ -1263,7 +1327,7 @@ return {
 
         },
 
-        Berry = {
+        berry = {
             c_smsn_cranberries = {
                 name = "Cranberries",
                 text = {
@@ -1299,8 +1363,8 @@ return {
             c_smsn_grapes = {
                 name = "Grapes",
                 text = {
-                    "{C:green}+#1#{} to all listed probabilties", "Resets after scoring",
-                    "{C:inactive,s:0.8}(Currently #3#)",
+                    "{C:green}+#1#{} to all listed probabilties", "{C:attention}Resets{} after scoring",
+                     "{C:inactive,s:0.8}(Can be used up to three times,", "{C:inactive,s:0.8}Currently #3#)",
                 },
             },
 
@@ -1332,7 +1396,7 @@ return {
 
             c_smsn_crepes = {
                 name = "Crepes",
-                text = { "One {C:attention}free{} reroll", "Activates when entering shop" },
+                text = { "{C:attention}#1#{} free {C:green}reroll{}", "Activates when entering shop", "{C:inactive,s:0.8}(Currently #2#)" },
             },
 
             c_smsn_booberry = {
@@ -1349,7 +1413,7 @@ return {
                 text = {
                     "{C:mult}+#1#{} Mult, {C:green}#2# in #3#{} chance to",
                     "create a random {C:spectral}Spectral{} card", "Always {C:attention}scores first{}",
-                    "{C:inactive,s:0.8}(Currently #3#)",
+                    "{C:inactive,s:0.8}(Currently #4#)",
                 },
             },
 
@@ -1372,14 +1436,53 @@ return {
             c_smsn_yew = {
                 name = "Yew Berry",
                 text = {
-                    "Your next hand will be considered", "your {C:attention}most played hand{}",
-                    "{C:inactive,s:0.8}(Currently #3#)",
+                    "Your next hand will be considered", "and contain your {C:attention}most played hand",
+                    "{C:inactive,s:0.8}(#2#, Currently #1#)",
+                },
+            },
+
+              c_smsn_picnicbasket = {
+                name = "Picnic Basket",
+                text = {
+                    "Create {C:attention}#1#{}", "Food Joker",
                 },
             },
 
             c_smsn_cuberry = {
                 name = "Cuberry",
                 text = { "Retrigger the first", "{C:attention}#1#{} scored cards", "{C:inactive,s:0.8}(Currently #2#)" },
+            },
+
+             c_smsn_huckleberry = {
+                name = "Huckleberry",
+                text = {
+                    "{X:chips,C:white}x#1#{} Chips when you score", "your next hand", "Always {C:attention}scores first{}",
+                    "{C:inactive,s:0.8}(Currently #2#)",
+                },
+            },
+
+                         c_smsn_haskaps = {
+                name = "Haskaps",
+                text = {
+                    "{C:blue}+#1#{} and {X:chips,C:white}x#2#{} Chips when you score", "your next hand", "Always {C:attention}scores first{}",
+                    "{C:inactive,s:0.8}(Currently #3#)",
+                },
+            },
+
+                 c_smsn_concord = {
+                name = "Concord Grapes",
+                text = {
+                    "{X:purple,C:white}x#1#{} Chips and Mult when you score", "your next hand", "Always {C:attention}scores first{}",
+                    "{C:inactive,s:0.8}(Currently #3#)",
+                },
+            },
+
+                c_smsn_miraclefruit = {
+                name = "{C:edition}Miracle Berry{}",
+                text = {
+                    "{C:attention}Debuffed{} cards played", "in your next hand", "score normally",
+                    "{C:inactive,s:0.8}(Currently #1#)",
+                },
             },
 
             c_smsn_preserves = {
@@ -1390,18 +1493,93 @@ return {
             c_smsn_donut = {
                 name = "Jelly Donut",
                 text = {
-                    "Adds Chips and Mult equal to", "{C:attention}#1#x{} the planet card values", "of played hand",
-                    "Always {C:attention}scores first{}", "{C:inactive,s:0.8}(Currently #3#)",
+                    "Adds {C:chips}Chips{} and {C:mult}Mult{} equal to", "{C:attention}#1#x{} the {C:planet}Planet Card{} values", "of played hand",
+                    "Always {C:attention}scores first{}", "{C:inactive,s:0.8}(Currently #2#)",
                 },
             },
 
             c_smsn_riceball = {
                 name = "Jelly Donut?",
-                text = { "What???????" },
+                text = { "What???????", "{C:inactive,s:0.8}(Currently #1#)",},
              },
         },
 
         Tarot = {
+
+             c_smsn_picnic = {
+                name = "The Picnic",
+                text = {
+                    "Enhances {C:attention}#1#{} selected",
+                    "cards into a",
+                    "{C:attention}#2#",
+                },
+            },
+
+            c_smsn_snack = {
+                name = "The Snack",
+                text = {
+                    "Enhances {C:attention}#1#{} selected",
+                    "cards into a",
+                    "{C:attention}#2#",
+                },
+            },
+
+            c_smsn_page_of_sweets = {
+                name = "The Page of Sweets",
+                text = {
+                    "Applies a random {C:dark_edition}Glaze{}",
+                    "to all cards in hand",
+                    "that do not have an Edition"
+                }
+            },
+            c_smsn_shortcake = {
+                name = "The Shortcake",
+                text = {
+                    "Adds {C:dark_edition}Strawberry Glaze{}",
+                    "to up to {C:attention}#1#{} selected",
+                    "cards in your hand"
+                }
+            },
+            c_smsn_loaf = {
+                name = "The Loaf",
+                text = {
+                    "Adds {C:dark_edition}Lemon Poppy Glaze{}",
+                    "to up to {C:attention}#1#{} selected",
+                    "cards in your hand"
+                }
+            },
+            c_smsn_muffin = {
+                name = "The Muffin",
+                text = {
+                    "Adds {C:dark_edition}Blueberry Glaze{}",
+                    "to up to {C:attention}#1#{} selected",
+                    "cards in your hand"
+                }
+            },
+            c_smsn_stack = {
+                name = "The Stack",
+                text = {
+                    "Adds {C:dark_edition}Maple Glaze{}",
+                    "to up to {C:attention}#1#{} selected",
+                    "cards in your hand"
+                }
+            },
+            c_smsn_phyllo = {
+                name = "The Phyllo",
+                text = {
+                    "Adds {C:dark_edition}Honey Glaze{}",
+                    "to up to {C:attention}#1#{} selected",
+                    "cards in your hand"
+                }
+            },
+            c_smsn_tart = {
+                name = "The Tart",
+                text = {
+                    "Adds {C:dark_edition}Sour Glaze{}",
+                    "to up to {C:attention}#1#{} selected",
+                    "cards in your hand"
+                }
+            },
 
         c_smsn_shark = {
         name = "Shark",
@@ -1437,6 +1615,18 @@ return {
         },
 
         Spectral = {
+
+              c_smsn_retinalbloom = {
+                name = "Retinal Bloom",
+                text = { "Add a {C:blue}Freshness Seal{}", "to {C:attention}1{} selected", "card in your hand" },
+            },
+
+              c_smsn_cloying = {
+                name = "Cloying",
+                text = { "{C:attention}Glazed Cards{} in your deck", "gain a random permament {C:dark_edition}Edition{}", },
+            },
+
+
             c_smsn_yharon = {
         name = "Yharon",
         text = {
@@ -1462,7 +1652,7 @@ return {
             smsn_freshness_seal = {
                 name = "Freshness Seal",
                 text = {
-                    "Creates a random {C:dark_edition}Berry{}", "at the end of the round if held in hand",
+                    "Create a random {C:dark_edition}Berry Card{}", "when discarded",
                     "{C:inactive,s:0.8}(Must have room)",
                 },
             },
@@ -1470,14 +1660,67 @@ return {
     },
 
     misc = {
+
         quips = {
         capu_hello1 = { "Hello! :3" },
         capu_hello2 = { "I'm Cappuchino!!!" },
         capu_hello3 = { "Hello! I'm Cappuchino!" },
-        capu_hello4 = { "boku wa cappuchino deeesu~ :3" },
+        capu_hello4 = { "{f:smsn_madou}ぼくはカプチーノですぅぅぅ~ :3" },
         capu_capu = { "Cappuchino!!" },
-        capu_ya = { "ya!!" }
-    },
+        capu_ya = { "ya!!" },
+
+            -- Samson Quips
+        smsn_samson_loss_1 = { "Oof, a sticky situation?" },
+        smsn_samson_loss_2 = { "We'll get 'em next time!" },
+        smsn_samson_win_1 = { "Sweet victory!" },
+        smsn_samson_win_2 = { "Right on the {C:money}honey{}!" },
+        smsn_samson_win_3 = { "Myehehee, great job!" },
+        smsn_samson_endless_1 = { "Thanks for playing!!" },
+        smsn_samson_endless_2 = { "Too sweet to last..." },
+        smsn_samson_endless_3 = { "Take a stretch break!" },
+
+            -- Emmy Quips
+        smsn_emmy_loss_1 = { "A shame...", },
+        smsn_emmy_loss_2 = { "Oh, don't fret. We just need to guide", "things a bit closer next time." },
+        smsn_emmy_win_1 = { "Another perfect batch!"},
+        smsn_emmy_win_2 = { "We earned this! Go ahead,", "take all the time you need." },
+        smsn_emmy_endless_1 = { "Mmmmhmhmhm~", "Do come again." },
+
+        -- Rambley Game Over Quips
+        smsn_rambley_loss_1 = { "W-wait, don't leave me!" },
+        smsn_rambley_loss_2 = { "We can always try again, right?" },
+        smsn_rambley_loss_3 = { "DON'T GO!!!" },
+        smsn_rambley_loss_4 = { "Hold your head high, buddy!" },
+        smsn_rambley_win_1 = { "I knew you could do it!" },
+        smsn_rambley_win_2 = { "AMAZING work, buddy!" },
+        smsn_rambley_win_3 = { "You did INDIGO-TASTIC!" },
+        smsn_rambley_endless_1 = { "You'll come back soon, right?" },
+        smsn_rambley_endless_2 = { "I had a BLAST today, buddy!" },
+        smsn_rambley_endless_3 = { "Indigo Park is always waiting", "for ya!" },
+
+        -- Mycom Game Over Quips
+        smsn_mycom_loss_1 = { "{f:smsn_madou}何処へゆく？{}" },
+        smsn_mycom_win_1 = { "{f:smsn_madou}ご主人様..." },
+        smsn_mycom_endless_1 = { "{f:smsn_madou}手のなる方へ~" },
+        smsn_mycom_endless_2 = { "{f:smsn_madou}クルクル回る" },
+
+        -- Hercule Game Over Quips
+        smsn_hercule_loss_1 = { "The winds simply shifted.", "Take my hand, it's okay." },
+        smsn_hercule_loss_2 = { "Please don't be discouraged.", "Even strong gales must rest." },
+        smsn_hercule_loss_3 = { "A gentle breeze wasn't", "quite enough this time." },
+        smsn_hercule_loss_4 = { "It's okay.", "They say heaven wasn't","built in a day." },
+        
+        smsn_hercule_win_1 = { "A warm breeze." },
+        smsn_hercule_win_2 = { "We found our path." },
+        smsn_hercule_win_3 = { "Safe and sound." },
+        
+        smsn_hercule_endless_1 = { "Oh, look at you... you're exhausted.", "Come here, let me hold you." },
+        smsn_hercule_endless_2 = { "You've pushed yourself far too hard.", "No more fighting today, please." },
+        smsn_hercule_endless_3 = { "I couldn't pull us any further...", "I am so sorry." },
+
+
+
+        },
         
 
         poker_hands = {
@@ -1495,9 +1738,9 @@ return {
         },
 
         dictionary = {
-            k_smsn_Berry_cards = "Berry Cards",
+            b_berry_cards = "Berry Cards",
             k_plus_berry = "+1 Berry",
-            k_smsn_berry = "Berry Card",
+            k_berry = "Berry Card",
             k_plus_commonrambley = "All Aboard!",
             k_plus_uncommonrambley = "YMMY BRRY",
             k_plus_rarerambley = "Bleep Bloop",
@@ -1540,6 +1783,7 @@ return {
 
             -- Seals
             smsn_freshness_seal = "Freshness Seal",
+            
 
         },
     },

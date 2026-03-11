@@ -7,6 +7,7 @@ SMODS.Joker {
         x = 7,
         y = 10,
      },
+    pools = {smsn_sticky = true, },
     config = {
         extra = {
             money = 2,

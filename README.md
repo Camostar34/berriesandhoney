@@ -23,14 +23,32 @@ Requires Steamodded [smods-1.0.0-beta-1016c](https://github.com/Steamodded/smods
 
 # Crossmods
 So far, there is crossmod content with: 
-- Partner
 - Card Sleeves
 - Starspace
 - Neonflames
+------
+Because of how Sticky and Organic Deck's effect is worded, other berry and gold/honey themed jokers from other mods are also likely to appear if you have them installed. 
+
+- Paperback
+- Phanta
+- Entropy
+- Celeste Card Collection
+- Neonflames
+- Shimmerberry
+- Ortalab
+- Polterworx
+- Cryptid
+- Beelatro
+- More Fluff
+- RCBalatro
+
+...all have jokers that are more likely to appear on these decks!
+These effects are hardcoded, so if you know a joker you think would fit, then let me know. 
+
 
 ### Credits
+- GhostSalt - Helped coded almost half the jokers in the mod lol, check out the collection to see all the things she's done! I can't thank her enough!
 - candycaneanniahlator(etherware2) - Honeycomb Toffee's effect, Oops! All Berries Art, Cannery Art, general Code Help, Feedback, Playtesting, and being a wonderful slime friend 
-- GhostSalt - Code for Berryboy Joker, Jade Penguin, Boykisser, and Cheese & Jeremy
 - cassknows - Glaze Editions
 - Astro - Katamari Damacy art, Feedback and Playtesting
 - lord-ruby - KATAMARI art

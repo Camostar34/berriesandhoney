@@ -5,7 +5,7 @@ SMODS.Joker {
     pronouns = "she_her",
     atlas = "jokers",
     pos = { x = 7, y = 5 },
-    pools = { },
+    pools = {smsn_berry_themed = true,},
     config = { extra = { mult = 7} },
     rarity = 1,
     unlocked = true,
@@ -22,7 +22,7 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
        
-                if context.other_consumeable and context.other_consumeable.ability.set == 'Berry' then
+                if context.other_consumeable and context.other_consumeable.ability.set == 'berry' then
             return {
                 mult = card.ability.extra.mult,
                 card = other_consumeable
