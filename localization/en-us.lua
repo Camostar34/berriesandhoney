@@ -77,7 +77,7 @@ return {
              b_smsn_frosted = {
                 name = "Frosted Deck",
                 text = {
-                    "Start with {C:attention}Cookie Jar{}", "and {C:tarot}Page of Sweets{}",
+                    "Start with {C:attention}Cookie Jar{}", "and {C:tarot}The Page of Sweets{}",
                 },
             },
 
