@@ -1,8 +1,7 @@
 SMODS.Joker {
-
     key = "thegoteam",
     name = "Thunder, Lightning, Strike!!",
-     pronouns = "he_him",
+    pronouns = "he_him",
     atlas = "crossmodjokers",
     pos = { x = 6, y = 0 },
     config = { extra = { mult = 20, money = 4} },
@@ -21,18 +20,32 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
        
+        if context.joker_main and context.poker_hands["star_flash"] and next(context.poker_hands["star_flash"]) then
+            
+            local has_queen = false
+            for _, played_card in ipairs(context.full_hand) do
+                if played_card:get_id() == 12 then
+                    has_queen = true
+                end
+            end
 
+            if has_queen then
+                return {
+                    mult = card.ability.extra.mult,
+                    dollars = card.ability.extra.money
+                }
+            end
+        end
     end,
 }
 
 SMODS.Joker { 
-
     key = "kuchinohanabi",
     name = "Kuchinohanabi",
-     pronouns = "they_them",
+    pronouns = "they_them",
     atlas = "crossmodjokers",
     pos = { x = 5, y = 0 },
-    config = { extra = { reward = 12} },
+    config = { extra = { reward = 12, kuchinohanabi_valid = true} },
     rarity = 2,
     unlocked = true,
     discovered = true,
@@ -47,46 +60,34 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-       
-
+        if context.setting_blind and not context.blueprint then
+            card.ability.extra.kuchinohanabi_valid = true
+        end
+ 
+        
+        if context.before and not context.blueprint then
+            if not context.poker_hands["star_flash"] or not next(context.poker_hands["star_flash"]) then
+                card.ability.extra.kuchinohanabi_valid = false
+            end
+        end
     end,
+
+    
+    calc_dollar_bonus = function(self, card)
+      
+        if card.ability.extra.kuchinohanabi_valid and G.GAME.current_round.hands_played > 0 then
+            return card.ability.extra.reward
+        end
+    end
 }
 
 SMODS.Joker { 
-
-    key = "gushers",
-    name = "Gushers",
-
-    atlas = "crossmodjokers",
-    pos = { x = 0, y = 0 },
-    config = { extra = { } },
-    rarity = 2,
-    unlocked = true,
-    discovered = true,
-    cost = 5,
-    blueprint_compat = false,
-    eternal_compat = true,
-    perishable_compat = true,
-    demicolon_compat = true,
-
-    loc_vars = function(self, info_queue, card)
-        return { vars = {} }
-    end,
-
-    calculate = function(self, card, context)
-       
-
-    end,
-}
-
-SMODS.Joker { 
-
     key = "grenade",
     name = "Flash Grenade",
-     pronouns = "she_it",
+    pronouns = "she_it",
     atlas = "crossmodjokers",
-    pos = { x = 8, y = 0 },
-    config = { extra = {xchips = 1.25} },
+    pos = { x = 0, y = 1 },
+    config = { extra = {can_use = true, flash_replaced = false, top_hand = 'High Card'} },
     rarity = 2,
     unlocked = true,
     discovered = true,
@@ -97,11 +98,65 @@ SMODS.Joker {
     demicolon_compat = true,
 
     loc_vars = function(self, info_queue, card)
-        return { vars = {card.ability.extra.xchips} }
+
+        return { vars = {card.ability.extra.can_use} }
     end,
 
     calculate = function(self, card, context)
-       
+        
+   
+        if context.setting_blind and not context.blueprint then
+      
+            if card.ability.extra.can_use == false then
+                card.ability.extra.can_use = true
+                card.ability.extra.flash_replaced = false
+                return {
+                    message = localize('k_active_ex'),
+                    colour = G.C.FILTER
+                }
+            end
+            
+    
+            card.ability.extra.can_use = true
+            card.ability.extra.flash_replaced = false
+        end
+
+        if context.evaluate_poker_hand then
+            if card.ability.extra.can_use == true and context.poker_hands["star_flash"] and next(context.poker_hands["star_flash"]) then
+                
+                card.ability.extra.top_hand = 'High Card'
+                if G.GAME and G.GAME.hands then
+                    for k, v in pairs(G.GAME.hands) do
+                        if v.played > G.GAME.hands[card.ability.extra.top_hand].played then
+                            card.ability.extra.top_hand = k
+                        end
+                    end
+                end
+                
+                card.ability.extra.flash_replaced = true
+                
+                return {
+                    replace_scoring_name = card.ability.extra.top_hand,
+                    replace_display_name = localize(card.ability.extra.top_hand, 'poker_hands'),
+                    replace_poker_hands = { 
+                        [card.ability.extra.top_hand] = context.poker_hands["star_flash"] 
+                    }
+                }
+            else
+                card.ability.extra.flash_replaced = false
+            end
+        end
+
+        if context.before and not context.blueprint then
+            if card.ability.extra.flash_replaced and card.ability.extra.can_use == true then
+                card.ability.extra.can_use = false
+                card.ability.extra.flash_replaced = false
+                return {
+                    message = "Boom!",
+                    colour = G.C.FILTER
+                }
+            end
+        end
 
     end,
 }

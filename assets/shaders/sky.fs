@@ -1,3 +1,4 @@
+// SHADER BY .drift ON SHADERTOY! https://www.shadertoy.com/view/4tdSWr
 extern number time;
 extern number bg_alpha; 
 

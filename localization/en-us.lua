@@ -1248,7 +1248,7 @@ return {
                 name = "Astro",
                 text = {
                     {
-                        "Effects that give", "{C:red}+Mult{} instead give", "{C:attention}#1#{} times that",
+                        "Effects that give", "{C:red}+Mult{} instead give", "{C:attention}x#1#{} times that",
                         "amount in {C:chips}+Chips{}",
                     },
                 },

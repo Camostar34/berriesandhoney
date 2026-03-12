@@ -6,18 +6,21 @@ A "kitchen sink + self insert" mod with a general theme of picnics/food/cottagec
 Requires Steamodded [smods-1.0.0-beta-1016c](https://github.com/Steamodded/smods) and [Lovely](https://github.com/ethangreen-dev/lovely-injector)
 
 ## Additions:
-- Adds almost 120 Jokers (as of now)
-- - 36 Common
-- - 56 Uncommon
+- Adds 125 Jokers
+- - 37 Common
+- - 63 Uncommon
 - - 21 Rare
 - - 5 Legendaries 
-- - 4 "Shitpost Jokers", which are semi-serious jokers based on funny ideas and inside jokes. There is an option to not have them appear in pools in-game. 
-- 21 Berries, a new consumable type
-- 3 Decks 
-- 2 Spectral Cards
+- - 5 "Shitpost Jokers", which are semi-serious jokers based on funny ideas and inside jokes. There is an option to not have them appear in pools in-game. 
+- 23 Berries, a new consumable type
+- 7 Decks 
+- 3 Blinds
+- 1 New Hand Type, called a Honeypot!
+- 4 Spectral Cards
+- 13 Tarots
 - 1 Seal
 - 2 Enhancements
-- 5 New Editions called Glazes, which are powerful but temporary
+- 6 New Editions called Glazes, which are powerful but temporary
 
 
 
@@ -49,6 +52,7 @@ These effects are hardcoded, so if you know a joker you think would fit, then le
 ### Credits
 - GhostSalt - Helped coded almost half the jokers in the mod lol, check out the collection to see all the things she's done! I can't thank her enough!
 - MillieAmp - Picnic Pack Music! 
+- TOMOSUKE / Orange Lounge - Title Screen Music (Dimanche)
 - candycaneanniahlator(etherware2) - Honeycomb Toffee's effect, Oops! All Berries Art, Cannery Art, general Code Help, Feedback, Playtesting, and being a wonderful slime friend 
 - cassknows - Glaze Editions
 - Astro - Katamari Damacy art, Feedback and Playtesting
