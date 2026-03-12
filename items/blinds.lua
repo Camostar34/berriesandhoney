@@ -1,7 +1,7 @@
 SMODS.Blind {
     key = "mess",
     name = "The Mess",
-    dollars = 8,
+    -- dollars = 8, Why?
     mult = 2,
     boss = { min = 1 },
     boss_colour = HEX("ffd459"),
@@ -76,7 +76,7 @@ SMODS.ScreenShader {
 SMODS.Blind {
     key = "grizzly",
     name = "The Grizzly",
-    dollars = 8,
+    -- dollars = 8, Boss Blinds tend to reward $5, so I'm removing these.
     mult = 2,
     boss = { min = 4 },
     boss_colour = HEX("c6926a"),
@@ -145,7 +145,7 @@ SMODS.Blind {
 SMODS.Blind {
     key = "preserves",
     name = "The Preserves",
-    dollars = 3,
+    --dollars = 3, Same here.
     mult = 2,
     boss = { min = 1 },
     boss_colour = HEX("ad4826"),
