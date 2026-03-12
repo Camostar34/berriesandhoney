@@ -11,7 +11,6 @@ Requires Steamodded [smods-1.0.0-beta-1016c](https://github.com/Steamodded/smods
 - - 63 Uncommon
 - - 21 Rare
 - - 5 Legendaries 
-- - 5 "Shitpost Jokers", which are semi-serious jokers based on funny ideas and inside jokes. There is an option to not have them appear in pools in-game. 
 - 23 Berries, a new consumable type
 - 7 Decks 
 - 3 Blinds
