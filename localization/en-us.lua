@@ -1622,7 +1622,7 @@ return {
             c_smsn_yharon = {
                 name = "Yharon",
                 text = {
-                    "Doubles {C:chips}Chips{} and {C:chips}Bonus Chip{} values,",
+                    "Doubles {C:chips}Chips{} and {C:chips}Bonus Chip{} values",
                     "of all cards in hand",
                     "{C:red}-2{} hand size"
                 }
