@@ -1,0 +1,29 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = "G.STATE = G.STATES.TAROT_PACK"
+position = "after"
+match_indent = true
+payload = '''
+if self.config.center.kind == "berry" then
+    SMSN_set_berry_background()
+end
+'''
+
+[[patches]]
+[patches.pattern]
+target = "functions/common_events.lua"
+pattern = "G.booster_pack:remove()"
+position = "before"
+match_indent = true
+payload = '''
+if G.GAME and G.GAME.smsn_using_berry_bg then
+    SMSN_restore_run_background()
+end
+'''

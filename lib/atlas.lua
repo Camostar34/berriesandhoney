@@ -34,7 +34,12 @@ SMODS.Atlas({
 	py = 95,
 })
 
-
+SMODS.Atlas{
+    key = 'boosters',
+    path = 'camostar_boosters.png', 
+    px = 71,
+    py = 96,
+}
 
 
 SMODS.Atlas({

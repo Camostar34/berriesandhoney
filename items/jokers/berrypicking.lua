@@ -34,7 +34,7 @@ SMODS.Joker {
 function smsn_modify_berry_packs(amt)
    
     for _, v in pairs(G.P_CENTERS) do
-        if v.kind == 'Berry' and v.set == 'Booster' then
+        if v.kind == 'berry' and v.set == 'Booster' then
             v.config.extra = v.config.extra + amt
             v.config.choose = v.config.choose + amt
         end
@@ -43,7 +43,7 @@ function smsn_modify_berry_packs(amt)
  
     if G.shop_booster and G.shop_booster.cards then
         for i = 1, #G.shop_booster.cards do
-            if G.shop_booster.cards[i].config.center.kind == 'Berry' then
+            if G.shop_booster.cards[i].config.center.kind == 'berry' then
                 G.shop_booster.cards[i].ability.extra = G.shop_booster.cards[i].ability.extra + amt
                 G.shop_booster.cards[i].ability.choose = G.shop_booster.cards[i].ability.choose + amt
             end

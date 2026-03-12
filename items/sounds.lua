@@ -6,10 +6,10 @@ SMODS.Sound({
     sync = true,
     select_music_track = function()
         return (G.pack_cards and G.pack_cards.cards and G.pack_cards.cards[1] and 
-                G.pack_cards.cards[1].ability.set == "Berry") and 10 or false
+                G.pack_cards.cards[1].ability.set == "berry") and 10 or false
     end
 })
-
+-- Music by MillieAmp! 
 
 
 SMODS.Sound({

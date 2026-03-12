@@ -584,7 +584,7 @@ return {
                 name = "Little Lad",
                 text = {
                     "Stores effects when a scoring", "{C:dark_edition}Berry Card{} is used",
-                    "{C:inactive,s:0.8}(Currently {C:blue}+#1#{C:inactive,s:0.8} Chips, {C:red}+#2#{C:inactive,s:0.8} Mult, and {X:mult,C:white}x#3#{C:inactive,s:0.8} Mult)",
+                    "{C:inactive,s:0.8}(Currently {C:blue}+#1#{C:inactive,s:0.8} Chips, {X:chips,C:white}x#2#{C:inactive,s:0.8} Chips, {C:red}+#3#{C:inactive,s:0.8} Mult, and {X:mult,C:white}x#4#{C:inactive,s:0.8} Mult)",
                 },
             },
 
@@ -1648,6 +1648,34 @@ return {
                     "{C:inactive,s:0.8}(Must have room)",
                 },
             },
+
+             p_smsn_berry_jumbo = {
+                name = "Jumbo Picnic Pack",
+                group_name = "Picnic Pack",
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{C:dark_edition} Berry Cards{} to",
+                    "add to your consumables",
+                },
+            },
+            p_smsn_berry_mega = {
+                name = "Mega Picnic Pack",
+                group_name = "Picnic Pack",
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{C:dark_edition} Berry Cards{} to",
+                    "add to your consumables",
+                },
+            },
+            p_smsn_berry_normal = {
+                name = "Picnic Pack",
+                group_name = "Picnic Pack",
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{C:dark_edition} Berry Cards{} to",
+                    "add to your consumables",
+                },
+            },
         },
     },
 
@@ -1746,6 +1774,8 @@ return {
             k_smsn_disappeared_ex = "Disappeared!",
             k_smsn_yoink_ex = "Yoink!",
             k_smsn_tag = "+1 Tag!",
+
+            k_smsn_picnic_pack = "Picnic Pack",
 
             k_oc = "Original Character",
             k_guest = "Guest Joker",

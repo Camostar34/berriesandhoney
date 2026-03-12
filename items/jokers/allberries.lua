@@ -38,7 +38,7 @@ function get_pack(_key, _type)
         
 
         if G.shop_booster and #G.shop_booster.cards == 0 then
-            return G.P_CENTERS["p_smsn_berrypack"]
+            return G.P_CENTERS["p_smsn_berry_mega"]
         end
     end
 
