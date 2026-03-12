@@ -84,7 +84,7 @@ return {
             b_smsn_cuddly = {
                 name = "Cuddly Deck",
                 text = {
-                    "Start with a", "{C:mult}Holographic{} {C:attention}Guest Joker{}", "from {C:attention}Berries & Honey{}",
+                    "Start with a", "{C:mult}Holographic{} {C:attention}Guest Joker{}", "from {C:attention}Berries and Honey{}",
                 },
             },
             b_smsn_rokuyo = {
@@ -171,7 +171,7 @@ return {
                 text = {
                     "Start with a", 
                     "{C:mult}Holographic{} {C:attention}Guest Joker{}", 
-                    "from {C:attention}Berries & Honey{}",
+                    "from {C:attention}Berries and Honey{}",
                 },
             },
             sleeve_smsn_cuddlysleeve_alt = {
