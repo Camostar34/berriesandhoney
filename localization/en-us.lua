@@ -1096,7 +1096,7 @@ return {
                 name = "Evil Sappy (Yappy)",
                 text = {
                     "{X:mult,C:white}x#1#{} Mult", "Gains {X:mult,C:white}x#2#{} per card scored",
-                    "with a {C:attention}Permament Bonus{}", "then removes card bonuses",
+                    "with a {C:attention}Permanent Bonus{}", "then removes card bonuses",
 
                 },
             },
@@ -1615,7 +1615,7 @@ return {
 
               c_smsn_cloying = {
                 name = "Cloying",
-                text = { "{C:attention}Glazed Cards{} in your deck", "gain a random permament {C:dark_edition}Edition{}", },
+                text = { "{C:attention}Glazed Cards{} in your deck", "gain a random permanent {C:dark_edition}Edition{}", },
             },
 
 
