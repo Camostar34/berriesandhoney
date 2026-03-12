@@ -25,9 +25,9 @@ Requires Steamodded [smods-1.0.0-beta-1016c](https://github.com/Steamodded/smods
 
 # Crossmods
 So far, there is crossmod content with: 
-- Card Sleeves
-- Starspace
-- Neonflames
+- [Card Sleeves](https://github.com/larswijn/CardSleeves)
+- [Starspace](https://github.com/Balatro-Starspace/Starspace/tree/main)
+- [Neonflames](https://github.com/etherware-novice/neonflame?tab=readme-ov-file)
 ------
 Because of how Sticky and Organic Deck's effect is worded, other berry and gold/honey themed jokers from other mods are also likely to appear if you have them installed. 
 
@@ -49,11 +49,11 @@ These effects are hardcoded, so if you know a joker you think would fit, then le
 
 
 ### Credits
-- GhostSalt - Helped coded almost half the jokers in the mod lol, check out the collection to see all the things she's done! I can't thank her enough!
+- GhostSalt - Helped coded almost half the jokers in the mod lol, and she helped a lot with the wiki! Check out the collection to see all the things she's done! I can't thank her enough!
 - MillieAmp - Picnic Pack Music! 
 - TOMOSUKE / Orange Lounge - Title Screen Music (Dimanche)
 - candycaneanniahlator(etherware2) - Honeycomb Toffee's effect, Oops! All Berries Art, Cannery Art, general Code Help, Feedback, Playtesting, and being a wonderful slime friend 
 - cassknows - Glaze Editions
-- Astro - Katamari Damacy art, Feedback and Playtesting
+- Astro - Katamari Damacy art
 - lord-ruby - KATAMARI art
 - Offical Balatro Server for coding help
