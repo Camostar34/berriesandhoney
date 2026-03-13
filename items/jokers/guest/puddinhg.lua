@@ -21,7 +21,9 @@ SMODS.Joker {
     end,
 
     calc_dollar_bonus = function(self, card)
-        return G.GAME.strawberries_used * card.ability.extra.payout or nil
+        if G.GAME.strawberries_used and G.GAME.strawberries_used > 0 then
+            return G.GAME.strawberries_used * card.ability.extra.payout
+        end
     end,
     credits = {
 		character = "puddinhgexists"              -- you can also leave out fields if you wish
