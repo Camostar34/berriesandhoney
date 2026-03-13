@@ -1,4 +1,6 @@
 
+![alt text](thumbnail.png)
+------
 # Berries and Honey - A Picnic of Jokers and Snacks! 
 A "kitchen sink + self insert" mod with a general theme of picnics/food/cottagecore, featuring my OCs, a couple of friend OCs, and a new consumable type of Berries, which provide quick score or effects that typically last for one hand. 
 
