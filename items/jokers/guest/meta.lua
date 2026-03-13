@@ -3,7 +3,7 @@ SMODS.Joker {
     name = "Meta",
  pronouns = "she_her",
     atlas = "jokers",
-    pos = { x = 0, y = 0 },
+    pos = { x = 3, y = 13 },
    pools = { guest = true, },
     config = { extra = {  } },
     rarity = 3,
