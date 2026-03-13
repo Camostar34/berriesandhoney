@@ -1,11 +1,12 @@
 SMODS.Back({
     key = "defunct",
     name = "Defunct Deck",
-    config = {}, 
+    config = {no_faces = true}, 
     atlas = "backs",
     pos = { x = 2, y = 0 },
 
     apply = function(self, back)
+        G.GAME.starting_params.no_faces = true
         G.E_MANAGER:add_event(Event({
             func = function()
                 rambley_card = create_card('Joker', G.jokers, nil, nil, nil, nil, 'j_smsn_commonrambley')

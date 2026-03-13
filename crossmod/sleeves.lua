@@ -61,7 +61,7 @@ CardSleeves.Sleeve({
 CardSleeves.Sleeve({
     name = "Sticky Sleeve",
     key = "stickysleeve",
-    pos = { x = 0, y = 0 }, -- Adjust to match your atlas!
+    pos = { x = 0, y = 0 },
     atlas = "smsnsleeve",
     unlocked = true,
     
@@ -262,24 +262,23 @@ CardSleeves.Sleeve({
   loc_vars = function(self)
     if self.get_current_deck_key() == "b_smsn_defunct" then
       chosen_key = self.key .. "_alt"
-      -- ALT: We inject the voucher into the config here!
       self.config = { voucher = 'v_magic_trick' }
       chosen_vars = { localize { type = 'name_text', key = self.config.voucher, set = 'Voucher' } }
     else
       chosen_key = self.key
-      -- NORMAL: Empty config, no voucher!
-      self.config = {}
+  
+      self.config = {remove_faces = true}
       chosen_vars = {}
     end
     return { key = chosen_key, vars = chosen_vars }
   end,
 
   apply = function(self)
-    -- This calls Larswijn's native function, which automatically and safely redeems whatever is in self.config!
+
     CardSleeves.Sleeve.apply(self)
 
     if self.get_current_deck_key() ~= "b_smsn_defunct" then
-      -- NORMAL SLEEVE specific logic
+
       if G and G.GAME and G.GAME.starting_params then
         G.GAME.starting_params.no_faces = true
       end
@@ -290,18 +289,18 @@ CardSleeves.Sleeve({
             set              = 'Joker',
             area             = G.jokers,
             skip_materialize = true,
-            key              = "j_smsn_commonrambley", -- Spawning the proper Rambley!
+            key              = "j_smsn_commonrambley",
             no_edition       = true,
           }
           return true
         end
       }))
     else
-      -- UPGRADED SLEEVE specific logic
+   
       if G and G.GAME and G.GAME.modifiers then
         G.GAME.modifiers.smsn_defunct_combo = true
       end
-      -- We don't need any voucher logic here at all, because CardSleeves.Sleeve.apply(self) already handled it!
+    
     end
   end,
 

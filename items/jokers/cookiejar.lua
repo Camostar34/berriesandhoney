@@ -64,7 +64,7 @@ pools = { Food = true},
             end
 
             if card.ability.extra.rounds <= 0 and not context.blueprint then 
-                 if card.ability.extra.uses <= 0 then
+                 if card.ability.extra.rounds <= 0 then
                 G.E_MANAGER:add_event(Event({
                     func = function()
                         card:start_dissolve()
