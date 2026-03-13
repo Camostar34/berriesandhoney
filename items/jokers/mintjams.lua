@@ -57,7 +57,7 @@ SMODS.Joker {
                     }))
 
                     return {
-                        message = localize('k_plus_commonrambley'),
+                        message = localize('k_plus_berry'),
                         colour = G.C.SECONDARY_SET.Tarot,
                         card = card
                     }
