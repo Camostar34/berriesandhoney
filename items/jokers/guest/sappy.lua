@@ -6,15 +6,15 @@ SMODS.Joker {
     pos = {
         x = 2,
         y = 4,
-     },
+    },
     pools = {
         guest = true,
         smsn_sticky = true,
-     },
+    },
     config = {
         extra = {
             draw_bonus = 0,
-         },
+        },
     },
     rarity = 2,
     cost = 6,
@@ -26,7 +26,7 @@ SMODS.Joker {
     demicolon_compat = true,
 
     loc_vars = function(self, info_queue, card)
-        info_queue[#info_queue+1] = G.P_SEALS.Gold
+        info_queue[#info_queue + 1] = G.P_SEALS.Gold
         return {}
     end,
 
@@ -37,10 +37,16 @@ SMODS.Joker {
 
         if context.hand_drawn and card.ability.extra.draw_bonus > 0 then
             local v = context.blueprint_card or card
-            v:juice_up()
-            for i = 1, card.ability.extra.draw_bonus do
-                draw_card(G.deck, G.hand, i * 100 / card.ability.extra.draw_bonus, 'up', true)
-            end
+
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    v:juice_up()
+                    for i = 1, card.ability.extra.draw_bonus do
+                        draw_card(G.deck, G.hand, i * 100 / card.ability.extra.draw_bonus, 'up', true)
+                    end
+                    return true
+                end
+            }))
             card.ability.extra.draw_bonus = 0
         end
     end,
@@ -48,5 +54,5 @@ SMODS.Joker {
         character = "Candycanearter07",
         idea = "Candycanearter07",
         code = "GhostSalt",
-     },
+    },
 }
