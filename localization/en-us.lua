@@ -641,8 +641,8 @@ return {
             j_smsn_apiary = {
                 name = "Apiary",
                 text = {
-                    "{C:attention}Gold Cards{} give money", "when {C:attention}drawn{} instead",
-                    "at the end of the round",
+                    "Played cards give {C:red}+#1#{} Mult", "per {C:attention}Gold Card{} in",
+                    "your full deck", "{C:inactive,s:0.8}(Currently {C:mult}+#2#{}{C:inactive,s:0.8} Mult)",
                 },
             },
 
