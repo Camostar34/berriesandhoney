@@ -1078,7 +1078,7 @@ return {
                 name = "Flash Grenade",
                 text = {
                     "Playing a {C:attention}Flash{}", "counts as your", "{C:attention}most played Poker Hand{}",
-                    "{C:inactive,s:0.8}(Usable once per round)",
+                    "{C:inactive,s:0.8}(Usable once per round, currently #1#)",
                 },
             },
 
@@ -1492,7 +1492,7 @@ return {
 
             c_smsn_riceball = {
                 name = "Jelly Donut?",
-                text = { "What???????", "{C:inactive,s:0.8}(Currently #1#)",},
+                text = { "Creates a {C:planet}Planet Card{}","of played hand", "{C:inactive,s:0.8}(Currently #1#)","{C:inactive,s:0.8,E:2}Nothing beats a Jelly Filled donut!"},
             },
         },
 

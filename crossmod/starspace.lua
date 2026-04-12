@@ -81,12 +81,12 @@ SMODS.Joker {
     end
 }
 
+--[[
 SMODS.Joker { 
     key = "grenade",
     name = "Flash Grenade",
-    pronouns = "she_it",
-    atlas = "crossmodjokers",
-    pos = { x = 0, y = 1 },
+    atlas = "crossmodjokers", -- change as you wish
+    pos = { x = 0, y = 1 }, -- change as you wish
     config = { extra = {can_use = true, flash_replaced = false, top_hand = 'High Card'} },
     rarity = 2,
     unlocked = true,
@@ -95,11 +95,10 @@ SMODS.Joker {
     blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,
-    demicolon_compat = true,
 
     loc_vars = function(self, info_queue, card)
 
-        return { vars = {card.ability.extra.can_use} }
+        return { vars = { card.ability.extra.can_use and "Active" or "Inactive" } }
     end,
 
     calculate = function(self, card, context)
@@ -218,3 +217,4 @@ SMODS.Joker {
     end
   end
 }
+]]

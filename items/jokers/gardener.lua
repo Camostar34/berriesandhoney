@@ -27,7 +27,7 @@ SMODS.Joker {
                         G.E_MANAGER:add_event(Event({
                     trigger = "immediate",
                     func = (function()
-                            SMODS.add_card({set = 'berry'})
+                            SMSN_create_random_berry("gardener")
                             play_sound('polychrome1', 1.2 + math.random() * 0.1, 0.8)
                             card:juice_up(0.3, 0.4)
                             card.ability.extra.handsplayed = 0

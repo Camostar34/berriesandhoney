@@ -15,7 +15,7 @@ local files = {
         "items/centers",
       "items/editions",
       "items/pokerhands",
-      "items/sounds"
+      "items/sounds",
       
 
 }
