@@ -88,8 +88,17 @@ function Game:start_run(args)
     game_start_ref(self, args)
     G.smsn_TRAY = UIBox {
         definition = create_UIBox_HUD_smsn_tray(),
-        config = { align = ('cli'), offset = { x = G.ROOM.T.w * 20.625 / 20, y = 0 }, major = G.ROOM_ATTACH, draw_layers = { 'card' } } }
+        config = { align = ('cli'), offset = { x = G.ROOM.T.w * 20.625 / 20, y = 0 }, major = G.ROOM_ATTACH, instance_type = 'DROPDOWN' } }
     G.smsn_TRAYAREA = UIBox {
         definition = init_trayArea(),
-        config = { align = ('cli'), offset = { x = 1.275, y = 0 }, major = G.smsn_TRAY, draw_layers = { 'card' } } }
+        config = { align = ('cli'), offset = { x = 1.275, y = 0 }, major = G.smsn_TRAY, instance_type = 'DROPDOWN' } }
+end
+
+local cae = CardArea.emplace
+function CardArea:emplace(card, ...)
+    if self == G.consumeables and card.ability.set == 'smsn_Berry' then
+        cae(card, G.smsn_tray, ...)
+        return
+    end
+    return cae(self, card, ...)
 end
