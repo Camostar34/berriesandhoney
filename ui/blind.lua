@@ -3,6 +3,7 @@
 -- could not for the life of me
 -- figure out how to do this better
 -- :P
+--[[
 CreditLib.blind_credits = {
     -- names indicate how many available strings
     one = {
@@ -124,3 +125,4 @@ SMODS.current_mod.calculate = function(self, context)
         -- )
     end
 end
+]]

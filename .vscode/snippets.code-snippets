@@ -1,0 +1,45 @@
+{
+	"row": {
+		"scope": "lua",
+		"prefix": "row",
+		"body": [
+			"{",
+			"    n = G.UIT.R,",
+			"    config = {},",
+			"    nodes = {${1:}},",
+			"},"
+		]
+	},
+	"col": {
+		"scope": "lua",
+		"prefix": "col",
+		"body": [
+			"{",
+			"    n = G.UIT.C,",
+			"    config = {},",
+			"    nodes = {${1:}},",
+			"},"
+		]
+	},
+	"root": {
+		"scope": "lua",
+		"prefix": "root",
+		"body": [
+			"{",
+			"    n = G.UIT.ROOT,",
+			"    config = {},",
+			"    nodes = {${1:}},",
+			"}"
+		]
+	},
+	"obj": {
+		"scope": "lua",
+		"prefix": "obj",
+		"body": [
+			"{",
+			"    n = G.UIT.O,",
+			"    config = {object = ${1:}},",
+			"},"
+		]
+	}
+}

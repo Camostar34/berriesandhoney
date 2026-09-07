@@ -1,0 +1,28 @@
+{
+    "Lua.diagnostics.globals": [
+        "Gwaaatro",
+        "Spectrallib",
+        "CardSleeves",
+        "regtable",
+        "love",
+    ],
+    "Lua.diagnostics.disable": [
+        "empty-block",
+        "duplicate-set-field",
+        "cast-local-type",
+        "lowercase-global",
+        "undefined-global",
+        "undefined-field",
+        "redundant-parameter",
+        "param-type-mismatch",
+        "assign-type-mismatch",
+        "missing-fields"
+    ],
+    "Lua.workspace.library": [
+        "../smods-main",
+        "../lovely",
+        "${3rd}/love2d/library"
+    ],
+    "Lua.runtime.version": "LuaJIT",
+    "Lua.workspace.checkThirdParty": false,
+}

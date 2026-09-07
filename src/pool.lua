@@ -40,6 +40,5 @@ function SMODS.create_mod_badges(obj, badges)
             badges[#badges+1] = create_badge(localize("k_" .. key), custom_colors[p.color] or G.ARGS.LOC_COLOURS[p.color])
         end
     end
-
     return scmb(obj, badges)
 end

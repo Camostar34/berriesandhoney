@@ -1,226 +1,26 @@
-to_big = to_big or function(num)
-    return num
-end
+Samson = {}
+assert(SMODS.load_file("src/loading.lua"))()(Samson)
 
-local files = {
-      "lib/atlas",
-      "lib/pool",
-      "items/item",
-      "items/shadowconsumables",
-     "items/berries",
-     "items/seals",
-     "items/boosters",
-     "items/blinds",
-     "items/globals",
-        "items/centers",
-      "items/editions",
-      "items/pokerhands",
-      "items/sounds",
-      
+SMODS.current_mod.optional_features = function() return { quantum_enhancements = true } end
 
+Samson.load_table {
+    src = { "atlas", "pool", "load_orders" },
+    ui = { "$lua" }, -- $lua uses regex/gmatch so it basically loads all lua files unfiltered after the listed ones
+    items = {
+        "item", "shadowconsumables", "berries", "seals", "boosters",
+        "blinds", "globals", "centers", "editions", "pokerhands", "sounds"
+    },
 }
-
-
-local my_decks = {
-    "organic",     
-    "sticky",     
-    "frosted",    
-    "picnic",
-    "defunct",
-    "rokuyo",
-    "cuddly",     
-}
-
-
-
-
---used because there is no custom order SMODS function yet, please can someone add one
-
-joker_order = {
-    ------- OC Jokers
-	"samson",
-    "bash",
-    "hercule",
-    "emmy",
-    "sytoroonson",
-    ---- Picnic Themed jokers 
-    "tamago",
-    "grilledcheese",
-    "clubsandwich",
-    "ruben",
-    "fruitsando",
-    -----
-    "muffintray",
-    "donuts",
-    "pipingbag",
-    "ginghamjoker",
-    "cookiejar",
-    ----
-    "cookiemonster",
-    "peanutbutter",
-    "weightlossshake",
-    "dieting",
-    "bountifuljoker",
-    -----
-    "crazyglazer",
-    "fireblanket",
-    "peoplepleaser",
-    "doubledipping",
-    "frostingknife",
-    ---- berry themed jokers --
-    "gardener",
-    "uncrustable",
-    "berrypicking",
-    "secondhelping",
-    "memory",
-    ----
-    "cannery",
-    "mintjams",
-    "airfreshener",
-    "sticker",
-    "compost",
-    ----
-    "cherrybomb",
-    "americanbrunch",
-    "strawbnyan",
-    "allberries",
-    "twistedgarden",
-    ----
-    "razzby",
-    "strawberrygirl",
-    "strabby",
-    "chantilly",
-    "pepperjelly",
-    ---- Rambleberry Jokers
-    "commonrambley",
-    "uncommonrambley",
-    "rarerambley",
-    "legendaryrambley",
-    "shitpost/rambleydumpy",
-    ---- honey themed jokers --
-    "fortunecookie",
-    "goldentooth",
-    "piggybank",
-    "coughdrops",
-    "mouse",
-    ----
-    "honeycombtoffee",
-    "chamoille",
-    "hothoney",
-    "honeybutterchips",
-    "golddigger",
-    ----
-    "beehive",
-    "koban",
-    "honeyjar",
-    "goldenparachute",
-    "hunnabee",
-    ----
-    "honeyslime",
-    "goldenoreo",
-    "goldenslime",
-    "workerbee",
-    "beebear",
-    ----
-    "stingy",
-    "bumbling",
-    "colony",
-    "meltingpot",
-    "bearclaws",
-    ----
-    "meadbarrel",
-    "sparklingmead",
-    "apiary",
-    "crystalized",
-    "honeyqueen", 
-    ---- Legendary / Retro Jokers
-    "littlelad",
-    "rivalshercule",
-    "rivalssamson",
-    "rivalsemmy",
-    "paddington",
-    ------- Misc / Kitchen sink jokers 
-    "damacy",
-    "femtanyl",
-    "mycom",
-    "bambi",
-    "teteatete",
-    ---
-    "buttercream",
-    "flowworm",
-    "negativeflowworm",
-    "hamtaro",
-    "ricepudding",
-    ----
-    "cappuchino",
-    "cinnamoroll",
-    "gudetama",
-    "hatsukemo",
-    "monokuma",
-    ---- These are the Other OC jokers. Too much on the first page will  make people think this is a self insert mod. 
-	"denali",
-    "luzia",
-    "joylon",
-    "calvana",
-    "grouphug",
-    ---- shitpost jokers
-    "shitpost/boykisser",
-    "shitpost/manicface",
-    "shitpost/keepyapping",
-     "shitpost/pooh",
-     "shitpost/berryboy",
-    -------
-
-
-        ---- GUEST JOKERS --
-    "guest/gordon",
-    "guest/puddinhg",
-    "guest/sappy",
-    "guest/ghost",
-    "guest/cassknows",
-    ----
-    "guest/astro",
-    "guest/cheese",
-    "guest/jadepenguin",
-    "guest/cozy",
-    "guest/meta",
-   
-    ----
-    "guest/rose",
-    "guest/ruby",
-    "guest/shadow",
-    "guest/peapod",
-    "guest/gud",
-
-}
-
--- load all jokers
-for i = 1, #joker_order do
-	assert(SMODS.load_file("items/jokers/" .. joker_order[i] .. ".lua"))()
-end
-
-for _, file_name in ipairs(my_decks) do
-    SMODS.load_file("items/backs/" .. file_name .. ".lua")()
-end
-
-
-SMODS.current_mod.optional_features = function()
-    return { quantum_enhancements = true,
-    	
-}
-end
 
 if CardSleeves then
     assert(SMODS.load_file("crossmod/sleeves.lua"))()
 end
 
-local crossmodfiles = {
-   "nflame",
-   "starspace",
-
-}
-
-
+for i, v in pairs({ "nflame", "starspace" }) do
+    if next(SMODS.find_mod(v)) then
+        assert(SMODS.load_file("crossmod/" .. v .. ".lua"))()
+    end
+end
 
 SMODS.current_mod.menu_cards = function()
     return {
@@ -229,28 +29,14 @@ SMODS.current_mod.menu_cards = function()
     }
 end
 
-for i, v in pairs(files) do
-    assert(SMODS.load_file(v..".lua"))()
-end
-
-for i, v in pairs(crossmodfiles) do
- if next(SMODS.find_mod(v)) then
-     assert(SMODS.load_file("crossmod/" .. v .. ".lua"))()
- end
-end
-
-
-
-
 SMODS.Shader {
     key = "honey_swirl",
     path = "honey_swirl.fs"
 }
 
-
 SMSN_Colors = {
     honey_live = HEX('ffc800'),
-    honey_base = HEX('ff7b00') 
+    honey_base = HEX('ff7b00')
 }
 
 local honey_palette = {
@@ -258,15 +44,14 @@ local honey_palette = {
     HEX('f7b212'), -- #f7b212
     HEX('ffaa00'), -- #ffaa00
     HEX('ffd000'), -- #ffd000
-    HEX('ffb300')   -- #ffb300
+    HEX('ffb300')  -- #ffb300
 }
-
 
 local ref_update = Game.update
 function Game:update(dt)
     ref_update(self, dt)
     if G.TIMERS and G.TIMERS.REAL then
-        local time = G.TIMERS.REAL / 2.5 
+        local time = G.TIMERS.REAL / 2.5
         local total_colors = #honey_palette
         local index = math.floor(time) % total_colors + 1
         local next_index = (index % total_colors) + 1
@@ -277,60 +62,52 @@ function Game:update(dt)
     end
 end
 
-
 local oldfunc = Game.main_menu
 Game.main_menu = function(change_context)
     local ret = oldfunc(change_context)
-    
+
     G.SPLASH_BACK:define_draw_steps({
         {
-         
-            shader = "smsn_honey_swirl", 
+
+            shader = "smsn_honey_swirl",
             send = {
-                { name = "time", ref_table = G.TIMERS, ref_value = "REAL_SHADER" },
-                { name = "vort_speed", val = 0.5 }, 
-                { name = "colour_1", ref_table = SMSN_Colors, ref_value = "honey_live" },
-                { name = "colour_2", ref_table = SMSN_Colors, ref_value = "honey_base" },
+                { name = "time",       ref_table = G.TIMERS,    ref_value = "REAL_SHADER" },
+                { name = "vort_speed", val = 0.5 },
+                { name = "colour_1",   ref_table = SMSN_Colors, ref_value = "honey_live" },
+                { name = "colour_2",   ref_table = SMSN_Colors, ref_value = "honey_base" },
             },
         },
     })
-    
+
     return ret
 end
 
-
-G.SMSN_GAMEOVER_CHARS = {
-    {
-        id = "samson",
-        get_center = function() return G.P_CENTERS.j_smsn_samson end,
-        triggers = { "j_smsn_samson", "j_smsn_honeyjar", "j_smsn_secretsamson", "j_smsn_rivalssamson" },
-        quips = { loss = 2, win = 3, endless = 2 }
-    },
-    {
-        id = "emmy",
-        get_center = function() return G.P_CENTERS.j_smsn_emmy end,
-        triggers = { "j_smsn_emmy", "j_smsn_memory", "j_smsn_twistedgarden", "j_smsn_rivalsemmy", "j_smsn_secondhelping", },
-        quips = { loss = 2, win = 2, endless = 1 }
-    },
-    {
-        id = "rambley",
-        get_center = function() return G.P_CENTERS.j_smsn_legendaryrambley end,
-        triggers = { "j_smsn_commonrambley", "j_smsn_uncommonrambley", "j_smsn_rarerambley", "j_smsn_rambleydumpy", "j_smsn_legendaryrambley", },
-        quips = { loss = 4, win = 3, endless = 3 }
-    },
-    {
-        id = "hercule",
-        get_center = function() return G.P_CENTERS.j_smsn_hercule end,
-        triggers = { "j_smsn_hercule", "j_smsn_rivalshercule", },
-        quips = { loss = 4, win = 3, endless = 3 }
-    },
-    {
-        id = "mycom",
-        get_center = function() return G.P_CENTERS.j_smsn_mycom end,
-        triggers = { "j_smsn_mycom", },
-        quips = { loss = 1, win = 1, endless = 2 }
-    },
-}
+G.SMSN_GAMEOVER_CHARS = { {
+    id = "samson",
+    get_center = function() return G.P_CENTERS.j_smsn_samson end,
+    triggers = { "j_smsn_samson", "j_smsn_honeyjar", "j_smsn_secretsamson", "j_smsn_rivalssamson" },
+    quips = { loss = 2, win = 3, endless = 2 }
+}, {
+    id = "emmy",
+    get_center = function() return G.P_CENTERS.j_smsn_emmy end,
+    triggers = { "j_smsn_emmy", "j_smsn_memory", "j_smsn_twistedgarden", "j_smsn_rivalsemmy", "j_smsn_secondhelping", },
+    quips = { loss = 2, win = 2, endless = 1 }
+}, {
+    id = "rambley",
+    get_center = function() return G.P_CENTERS.j_smsn_legendaryrambley end,
+    triggers = { "j_smsn_commonrambley", "j_smsn_uncommonrambley", "j_smsn_rarerambley", "j_smsn_rambleydumpy", "j_smsn_legendaryrambley", },
+    quips = { loss = 4, win = 3, endless = 3 }
+}, {
+    id = "hercule",
+    get_center = function() return G.P_CENTERS.j_smsn_hercule end,
+    triggers = { "j_smsn_hercule", "j_smsn_rivalshercule", },
+    quips = { loss = 4, win = 3, endless = 3 }
+}, {
+    id = "mycom",
+    get_center = function() return G.P_CENTERS.j_smsn_mycom end,
+    triggers = { "j_smsn_mycom", },
+    quips = { loss = 1, win = 1, endless = 2 }
+} }
 
 function SMSN_get_gameover_char_data()
     if not (G.SMSN_GAMEOVER_CHARS and G.jokers and G.jokers.cards) then
@@ -361,10 +138,10 @@ function SMSN_roll_gameover_quip(char_data, state)
     local quip_num = math.random(1, max_quips)
 
     if G.GAME
-    and max_quips > 1
-    and G.GAME.smsn_last_gameover_char == char_data.id
-    and G.GAME.smsn_last_gameover_state == state
-    and G.GAME.smsn_last_gameover_quip == quip_num then
+        and max_quips > 1
+        and G.GAME.smsn_last_gameover_char == char_data.id
+        and G.GAME.smsn_last_gameover_state == state
+        and G.GAME.smsn_last_gameover_quip == quip_num then
         quip_num = (quip_num % max_quips) + 1
     end
 
@@ -442,15 +219,15 @@ end
 function CreditLib.ensure_credits_available(obj)
     -- normalize into obj.credits.*
     if obj.credits then
-        obj.credits.art       = obj.credits.art       or {}
-        obj.credits.idea      = obj.credits.idea      or obj.credits.concept or {}
-        obj.credits.code      = obj.credits.code      or {}
+        obj.credits.art       = obj.credits.art or {}
+        obj.credits.idea      = obj.credits.idea or obj.credits.concept or {}
+        obj.credits.code      = obj.credits.code or {}
         obj.credits.character = obj.credits.character or {}
-    elseif obj.credit then  -- 3xCredit compatibility
-        obj.credits = {}
-        obj.credits.art       = obj.credit.art       or {}
-        obj.credits.idea      = obj.credit.idea      or obj.credit.concept or {}
-        obj.credits.code      = obj.credit.code      or {}
+    elseif obj.credit then -- 3xCredit compatibility
+        obj.credits           = {}
+        obj.credits.art       = obj.credit.art or {}
+        obj.credits.idea      = obj.credit.idea or obj.credit.concept or {}
+        obj.credits.code      = obj.credit.code or {}
         obj.credits.character = obj.credit.character or {}
     else
         -- nothing to normalize; leave obj.credits nil
@@ -461,7 +238,6 @@ end
 function CreditLib.add_credit_to_card(ref_table, index, credits)
     ref_table[index].credit = credits
 end
-
 
 local create_mod_badges_ref = SMODS.create_mod_badges
 ---@diagnostic disable-next-line: duplicate-set-field
@@ -497,7 +273,7 @@ function SMODS.create_mod_badges(obj, badges)
         -- Math reproduced from DynaText:update_text
         for _, c in utf8.chars(text) do
             local tx = font.FONT:getWidth(c) * (0.33 * size) * G.TILESCALE * font.FONTSCALE
-                    + 2.7 * 1 * G.TILESCALE * font.FONTSCALE
+                + 2.7 * 1 * G.TILESCALE * font.FONTSCALE
             calced_text_width = calced_text_width + tx / (G.TILESIZE * G.TILESCALE)
         end
         local scale_fac = calced_text_width > max_text_width and max_text_width / calced_text_width or 1
@@ -523,39 +299,37 @@ function SMODS.create_mod_badges(obj, badges)
     local badge = {
         n = G.UIT.R,
         config = { align = "cm" },
-        nodes = {
-            {
-                n = G.UIT.R,
-                config = {
-                    align = "cm",
-                    colour = bg_color,
-                    r = 0.1,
-                    minw = 2 / min_scale_fac,
-                    minh = 0.36,
-                    emboss = 0.05,
-                    padding = 0.03 * 0.9,
-                },
-                nodes = {
-                    { n = G.UIT.B, config = { h = 0.1, w = 0.03 } },
-                    {
-                        n = G.UIT.O,
-                        config = {
-                            object = DynaText({
-                                string  = ct,          -- guaranteed non-empty table
-                                colours = { text_color },
-                                silent  = true,
-                                float   = true,
-                                shadow  = true,
-                                offset_y = -0.03,
-                                spacing = 1,
-                                scale   = 0.33 * 0.9,
-                            }),
-                        },
-                    },
-                    { n = G.UIT.B, config = { h = 0.1, w = 0.03 } },
-                },
+        nodes = { {
+            n = G.UIT.R,
+            config = {
+                align = "cm",
+                colour = bg_color,
+                r = 0.1,
+                minw = 2 / min_scale_fac,
+                minh = 0.36,
+                emboss = 0.05,
+                padding = 0.03 * 0.9,
             },
-        },
+            nodes = { {
+                n = G.UIT.B, config = { h = 0.1, w = 0.03 }
+            }, {
+                n = G.UIT.O,
+                config = {
+                    object = DynaText({
+                        string   = ct, -- guaranteed non-empty table
+                        colours  = { text_color },
+                        silent   = true,
+                        float    = true,
+                        shadow   = true,
+                        offset_y = -0.03,
+                        spacing  = 1,
+                        scale    = 0.33 * 0.9,
+                    })
+                }
+            }, {
+                n = G.UIT.B, config = { h = 0.1, w = 0.03 }
+            } }
+        } }
     }
 
     badges[#badges + 1] = badge

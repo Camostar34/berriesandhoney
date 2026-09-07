@@ -88,6 +88,20 @@ SMODS.Atlas({
 	py = 95
 })
 
+SMODS.Atlas({
+	key = "traytex",
+	path = "traytex.png",
+	px = 200,
+	py = 100
+})
+
+SMODS.Atlas({
+	key = "traybutton",
+	path = "traybutton.png",
+	px = 20,
+	py = 100
+})
+
 SMODS.Atlas {
   key = 'balatro', -- The key MUST be balatro, unsure if case-sensitive
   path = 'smsn_logo.png', -- Starts in ...\assets\1x and ...\assets\2x
