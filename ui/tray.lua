@@ -93,12 +93,3 @@ function Game:start_run(args)
         definition = init_trayArea(),
         config = { align = ('cli'), offset = { x = 1.275, y = 0 }, major = G.smsn_TRAY, instance_type = 'DROPDOWN' } }
 end
-
-local cae = CardArea.emplace
-function CardArea:emplace(card, ...)
-    if self == G.consumeables and card.ability.set == 'smsn_Berry' then
-        cae(card, G.smsn_tray, ...)
-        return
-    end
-    return cae(self, card, ...)
-end
